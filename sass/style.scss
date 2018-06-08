@@ -555,7 +555,7 @@ body {
 		margin-bottom: 40px;
 	}
 	@media (min-width: $screen-sm-min) {
-		.col-content {padding: 0 0 0 20px;}
+		.col-content {padding: 0 0 0 20px; width: 100%;}
 		.row-mod {display: flex}
 		.col-footer {width: 25%;}
 		.col-footer-wide {width: 75%; flex-grow: 1}

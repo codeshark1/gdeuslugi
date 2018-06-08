@@ -1597,7 +1597,8 @@ body {
     margin-bottom: 40px; }
   @media (min-width: 768px) {
     .footer-site .col-content {
-      padding: 0 0 0 20px; }
+      padding: 0 0 0 20px;
+      width: 100%; }
     .footer-site .row-mod {
       display: -webkit-box;
       display: -ms-flexbox;
