@@ -1,0 +1,53 @@
+$screen-xs:                  576px;
+$screen-xs-min:              $screen-xs;
+$screen-phone:               $screen-xs-min;
+
+$screen-sm:                  768px;
+$screen-sm-min:              $screen-sm;
+$screen-tablet:              $screen-sm-min;
+
+$screen-md:                  992px;
+$screen-md-min:              $screen-md;
+$screen-desktop:             $screen-md-min;
+
+$screen-lg:                  1200px;
+$screen-lg-min:              $screen-lg;
+$screen-lg-desktop:          $screen-lg-min;
+
+$screen-xs-max:              ($screen-sm-min - 1);
+$screen-sm-max:              ($screen-md-min - 1);
+$screen-md-max:              ($screen-lg-min - 1);
+
+@mixin resetUl() {list-style: none;padding: 0;margin: 0;}
+@mixin clearfix() {
+    &:before,
+    &:after {
+        content: "";
+        display: table;
+    }
+    &:after {clear: both;}
+}
+
+$base-text: #666666;
+$heading-text: #333333;
+$blue-dark: #2E3047;
+$blue-darker: #1F2033;
+$green: #1B998B;
+$green-text: #126E63;
+$action: #FAC917;
+$gray-text: #ACACAC;
+$link-text: #0066CC;
+
+$gray-light: #e3e3e3;
+$gray: #A6A6A6;
+$blue-bright: #0099ff;
+
+
+@mixin shadow() {
+  box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}
+
+@mixin borderr() {
+    border: 1px solid #CCCCCC;
+    border-radius: 3px;
+}
