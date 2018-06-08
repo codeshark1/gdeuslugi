@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=cyrillic');
 @import '_variables';
 @import '_base+common';
 @import '_plugins';
@@ -243,8 +244,8 @@ body {
 	justify-content: center;
 	.heading {line-height: 1; color: #fff}
 	.heading, .subheading {margin-bottom: 1rem;}
-	.subheading {font-weight: 600; font-size: 1.1rem;
-		b {font-weight: 600; color: $action}
+	.subheading {font-weight: 700; font-size: 1.1rem;
+		b {font-weight: 700; color: $action}
 	}
 	.icn {fill: #fff; width: 16px;vertical-align: text-top;margin-right: 4px;}
 }
