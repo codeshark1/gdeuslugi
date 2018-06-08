@@ -1288,6 +1288,9 @@ body {
   .btn-categs.active svg {
     -webkit-transform: rotate(90deg);
             transform: rotate(90deg); }
+  @media (min-width: 992px) {
+    .btn-categs {
+      display: none; } }
 
 @media (max-width: 991px) {
   .menu-categs {
@@ -1317,6 +1320,9 @@ body {
   color: #333333; }
   .menu-categs .current-menu-item a span {
     color: #666666; }
+@media (min-width: 992px) {
+  .menu-categs {
+    display: block !important; } }
 
 .nav-menu-inline .menu-item {
   display: inline-block;
@@ -1329,8 +1335,9 @@ body {
 /* ==========================================================================
    CONTENT
    ========================================================================== */
-.main-content .col-sidebar {
-  margin: 0 -15px; }
+@media (max-width: 1199px) {
+  .main-content .col-sidebar {
+    margin: 0 -15px; } }
 
 @media (min-width: 992px) {
   .row-mod {

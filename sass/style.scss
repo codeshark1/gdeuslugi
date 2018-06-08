@@ -258,12 +258,15 @@ body {
 	&.active {
 		svg {transform: rotate(90deg)}
 	}
+	@media (min-width: $screen-md-min) {
+		display: none;
+	}	
 }
 .menu-categs {
 	@media (max-width: $screen-sm-max) {
 		display: none;
 	}
-  a {
+  	a {
 	  color: #fff;
 	  padding: 20px 40px 20px 24px;
 	  border: 1px solid rgb(54, 57, 114);
@@ -292,6 +295,9 @@ body {
 			span {color: $base-text}
 		}
 	}
+	@media (min-width: $screen-md-min) {
+		display: block !important;
+	}
 }
 
 .nav-menu-inline {  
@@ -310,7 +316,9 @@ body {
    CONTENT
    ========================================================================== */
 .main-content .col-sidebar {
-	margin: 0 -15px;
+	@media (max-width: $screen-md-max) {
+		margin: 0 -15px;
+	}
 }
 
 @media (min-width: $screen-md-min) {
