@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
 
     function menu_nested(menu_id) {
         $(menu_id).find('ul').hide();
-        $(menu_id).find('.menu-item--has-children a').click(function(e){
+        $(menu_id).find('.menu-item--has-children>a').click(function(e){
             e.preventDefault();
             $(this).siblings('.sub-menu').slideDown();
             if ( $(this).parent().hasClass('menu-item--active') ) {
@@ -98,7 +98,7 @@ jQuery(document).ready(function($){
     /*FILTER--*/
 
 
-    /*CAROUSEL*/
+    /*CAROUSEL/SLIDER*/
     $('#slider').slick({
       speed: 300,
       slidesToShow: 1,
@@ -109,7 +109,16 @@ jQuery(document).ready(function($){
       prevArrow: "<button type='button' type='button' class='slick-prev'><i class='fas fa-chevron-left'></i></button>",
       nextArrow: "<button type='button' type='button' class='slick-next'><i class='fas fa-chevron-right'></i></button>"
     });
-
+    $('#carousel-gallery').slick({
+        speed: 300,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        dots: false,
+        variableWidth: true,
+        responsive:true,        
+        prevArrow: "<button type='button' type='button' class='slick-prev'><i class='fas fa-chevron-left'></i></button>",
+        nextArrow: "<button type='button' type='button' class='slick-next'><i class='fas fa-chevron-right'></i></button>"        
+    });
 
     /*BANNER*/
     /*Padding*/
@@ -149,4 +158,21 @@ jQuery(document).ready(function($){
     });
     /*--BANNER*/
 
+
+    /* TABS */
+    function tabs() {
+        $('.tabs-tabcontent').hide();
+        $('.tabs-tabcontent:first-child').show();
+        $('.tab-button a').click(function(e) {
+            e.preventDefault();
+            if ( ! $(this).parent('li').hasClass('tab-button-active')) {
+                $(this).parents('.tabs-buttons').siblings('.tabs-wrapper').find('.tabs-tabcontent').hide();
+                $(this).parents('.tabs-buttons').find('.tab-button-active').removeClass('tab-button-active');
+                $(this).parent().addClass('tab-button-active');
+                var clicked = $(this).attr('href');
+                $(clicked).fadeIn('fast');
+            }
+        });
+    }
+    tabs();
 });

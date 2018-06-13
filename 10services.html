@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Главная - GdeUslugi</title>
+    <title>Все услуги - GdeUslugi</title>
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
@@ -58,22 +58,34 @@
     </div><!-- /.header-site__top -->
 </header>
 
-<div class="b-hero">
+<div class="b-hero-form">
     <div class="container">
-        <div class="b-hero-col">
-            <h3 class="heading">Ищите исполнителя?</h3>
-            <p class="subheading"><b>20 396 специалистов</b> готовы выполнить ваш заказ</p>
-            <a href="#" class="btn btn-main">Создать заявку</a>
-        </div><!-- /.b-hero-col -->
-        <div class="b-hero-col">
-            <p class="subheading"><b>260 актуальных заказов</b> на сегодня</p>
-            <p>
-                <svg class="icn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 2c5.514 0 10 4.486 10 10s-4.486 10-10 10-10-4.486-10-10 4.486-10 10-10zm0-2c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm1 12v-6h-2v8h7v-2h-5z"/></svg>
-                2 минуты назад новый заказ
-            </p>
-        </div><!-- /.b-hero-col -->
-    </div><!-- /.container -->    
-</div><!-- /.b-hero -->
+        <form role="search" class="form-hero" action="/">
+            <div class="row-mod">
+                <div class="form-hero-col-1">
+                    <div class="form-hero-col-1_wrap">
+                        <div class="form-hero-col-1_input">
+                            <label for="form-hero-inp-1" class="lbl lbl--top">Специальность или услуга</label>
+                            <input type="text" id="form-hero-inp-1">
+                        </div><!-- /.form-hero-col-1_input -->
+                        <div class="form-hero-col-1_input">
+                            <label for="form-hero-inp-2" class="lbl lbl--top">Метро или район</label>
+                            <input type="text" id="form-hero-inp-2">
+                        </div><!-- /.form-hero-col-1_input -->
+                    </div><!-- /.form-hero-col-1_wrap -->
+
+                    <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">С отзывами</label>
+                    <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Документы проверены</label>
+                    <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Есть фото работ</label>
+                    <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">С гарантией</label>                    
+                </div><!-- /.form-hero-col-1 -->
+                <div class="form-hero-col-2">
+                    <button type="submit" class="btn btn-main">Выбрать</button>
+                </div><!-- /.form-hero-col-1 -->                
+            </div><!-- /.row-mod -->
+        </form><!-- /.form-hero -->
+    </div><!-- /.container -->
+</div><!-- /.b-hero-form -->
 
 <main class="main-content">
     <div class="container">
@@ -124,131 +136,97 @@
                         <path d="M32.5 0C14.5519 0 0 14.328 0 32C0 49.672 14.5519 64 32.5 64C50.4481 64 65 49.672 65 32C65 14.328 50.4481 0 32.5 0ZM29.1077 31.4199C28.8558 35.524 26.9749 41.668 19.4471 47.648C19.0855 47.928 18.663 48.068 18.2406 48.068C17.6516 48.068 17.0706 47.8039 16.6846 47.2919C16.0184 46.412 16.1727 45.148 17.0339 44.468C21.4937 40.9266 23.597 37.438 24.5263 34.5399C24.9208 33.3098 23.5218 32.356 22.2299 32.356V32.356C18.923 32.356 16.2458 29.6161 16.2458 26.2361C16.2458 22.8561 18.927 20.1161 22.2299 20.1161C22.9686 20.1161 23.6477 20.3037 24.2948 20.5589C24.3034 20.5623 24.3119 20.5536 24.3083 20.5451V20.5451C24.3045 20.5363 24.3136 20.5276 24.3223 20.5316L24.9883 20.8441L25.0117 20.8533C25.0366 20.8631 25.0602 20.8762 25.0817 20.8921V20.8921L25.8815 21.4498C25.9792 21.5179 26.0705 21.5945 26.1545 21.6788L26.4426 21.9681C27.9175 23.412 29.5384 26.168 29.1077 31.4199ZM48.8069 31.416C48.5549 35.5201 46.674 41.6641 39.1421 47.6441C38.7805 47.9281 38.3581 48.0681 37.9356 48.0681C37.3466 48.0681 36.7657 47.8001 36.3797 47.288C35.7134 46.404 35.8677 45.1441 36.729 44.4641C41.1874 40.9209 43.2907 37.4348 44.2205 34.5382C44.6133 33.3144 43.2102 32.356 41.9249 32.356V32.356C38.6222 32.356 35.9408 29.6161 35.9408 26.2361C35.9408 22.8561 38.614 20.1161 41.9249 20.1161C42.6674 20.1161 43.3464 20.3035 43.9933 20.5586C44.0016 20.5619 44.0096 20.5532 44.0055 20.5452V20.5452C44.0013 20.537 44.0099 20.5282 44.0182 20.5321L44.6833 20.8441L44.7067 20.8533C44.7317 20.8631 44.7552 20.8762 44.7768 20.8921V20.8921L45.5807 21.4526C45.6756 21.5188 45.7646 21.5931 45.8466 21.6747L46.1418 21.9681C47.6165 23.412 49.2293 26.168 48.8069 31.416Z">
                     </svg>
                     <p>Gdeuslugi.ru поможет найти любого специалиста в сфере строительствы ремонта и других услуг. Сотни частных специалистов ждут вашего заказа. Наш сервис экономит вам время и деньги.</p>
-                </div><!-- /.b-about -->
+                </div><!-- /.b-about -->          
             </aside><!-- /.col-sidebar -->
             <div class="col-content site-content">
-                <section class="section-major section-padding">                    
-                    <h1 class="heading">Услуги от частных мастеров в Санкт - Петербурге</h1>
-                    <div class="row">
-                        <div class="b-categ col-sm-6">
-                            <h2 class="heading heading-special">Строительные услуги</h2>
-                            <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>
-                            <ul class="list-links">
-                                <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
-                                <li><a href="#">Кровельные работы <span>(96)</span></a></li>
-                                <li><a href="#">Бетонные работы <span>(54)</span></a></li>
-                                <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
-                                <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
-                                <li><a href="#">Строительство заборов <span>(74)</span></a></li>
-                                <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
-                                <li><a href="#">Сварочные работы <span>(25)</span></a></li>
-                            </ul>
-                            <p class="heading-all"><a href="#">Другие рубрики категории</a></p>
-                        </div><!-- /.b-categ col -->
-                        <div class="b-categ col-sm-6">
-                            <h2 class="heading heading-special">Строительные услуги</h2>
-                            <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>
-                            <ul class="list-links">
-                                <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
-                                <li><a href="#">Кровельные работы <span>(96)</span></a></li>
-                                <li><a href="#">Бетонные работы <span>(54)</span></a></li>
-                                <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
-                                <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
-                                <li><a href="#">Строительство заборов <span>(74)</span></a></li>
-                                <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
-                                <li><a href="#">Сварочные работы <span>(25)</span></a></li>
-                            </ul>
-                            <p class="heading-all"><a href="#">Другие рубрики категории</a></p>
-                        </div><!-- /.b-categ col -->
-                        <div class="b-categ col-sm-6">
-                            <h2 class="heading heading-special">Строительные услуги</h2>
-                            <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>
-                            <ul class="list-links">
-                                <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
-                                <li><a href="#">Кровельные работы <span>(96)</span></a></li>
-                                <li><a href="#">Бетонные работы <span>(54)</span></a></li>
-                                <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
-                                <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
-                                <li><a href="#">Строительство заборов <span>(74)</span></a></li>
-                                <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
-                                <li><a href="#">Сварочные работы <span>(25)</span></a></li>
-                            </ul>
-                            <p class="heading-all"><a href="#">Другие рубрики категории</a></p>
-                        </div><!-- /.b-categ col -->
-                        <div class="b-categ col-sm-6">
-                            <h2 class="heading heading-special">Строительные услуги</h2>
-                            <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>
-                            <ul class="list-links">
-                                <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
-                                <li><a href="#">Кровельные работы <span>(96)</span></a></li>
-                                <li><a href="#">Бетонные работы <span>(54)</span></a></li>
-                                <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
-                                <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
-                                <li><a href="#">Строительство заборов <span>(74)</span></a></li>
-                                <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
-                                <li><a href="#">Сварочные работы <span>(25)</span></a></li>
-                            </ul>
-                            <p class="heading-all"><a href="#">Другие рубрики категории</a></p>
-                        </div><!-- /.b-categ col -->
-                    </div><!-- /.row -->
-                </section><!-- /.section-major -->
-                
-                <section class="section-major">
-                    <h2 class="heading">Лучшие специалисты</h2>
-                    <div class="row-cards">                        
-                        <div class="card card-specialist">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span class="num">4.0</span>
-                            </div>                            
-                            <a href="#" class="btn-fav"><i class="far fa-star"></i></a>
+                <h1 class="heading">Все услуги</h1>
 
-                            <img class="userpic" src="images/userpic2.jpg" alt="Алексей Петров">
-                            <h3 class="name">Алексей Петров</h3>
-                            <p class="speciality">Газификация</p>
-                            <p class="description">Моя эпопея с неработающими окнами длилась несколько лет, сквозняки, шум и пыль с улицы стали постоянными спутниками нашей семьи!</p>
-                            <a href="#" class="btn btn-second">Посмотреть</a>
-                        </div><!-- /.card -->
-                        <div class="card card-specialist">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span class="num">4.0</span>
-                            </div>                            
-                            <a href="#" class="btn-fav"><i class="far fa-star"></i></a>
+                <h2 class="heading-special">Строительные услуги</h2>
+                <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
+                <ul class="list-columns-3 list-links">
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>                                        
+                </ul>
 
-                            <img class="userpic" src="images/userpic2.jpg" alt="Алексей Петров">
-                            <h3 class="name">Алексей Петров</h3>
-                            <p class="speciality">Газификация</p>
-                            <p class="description">Моя эпопея с неработающими окнами длилась несколько лет, сквозняки, шум и пыль с улицы стали постоянными спутниками нашей семьи!</p>
-                            <a href="#" class="btn btn-second">Посмотреть</a>
-                        </div><!-- /.card -->
-                        <div class="card card-specialist">
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="far fa-star"></i>
-                                <span class="num">4.0</span>
-                            </div>                            
-                            <a href="#" class="btn-fav"><i class="far fa-star"></i></a>
+                <h2 class="heading-special">Строительные услуги</h2>
+                <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
+                <ul class="list-columns-3 list-links">
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>                                        
+                </ul>
 
-                            <img class="userpic" src="images/userpic2.jpg" alt="Алексей Петров">
-                            <h3 class="name">Алексей Петров</h3>
-                            <p class="speciality">Газификация</p>
-                            <p class="description">Моя эпопея с неработающими окнами длилась несколько лет, сквозняки, шум и пыль с улицы стали постоянными спутниками нашей семьи!</p>
-                            <a href="#" class="btn btn-second">Посмотреть</a>
-                        </div><!-- /.card -->
-                    </div><!-- /.row-cards -->
-                </section><!-- section-major -->
+                <h2 class="heading-special">Строительные услуги</h2>
+                <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
+                <ul class="list-columns-3 list-links">
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>                                        
+                </ul>
 
                 <div id="slider" class="b-slider-order section-major">
                     <section class="slide" style="background-image: url(images/photo-slider-1.jpg)">
@@ -285,60 +263,65 @@
                             <a href="#" class="btn btn-main">Создать заказ</a>
                         </div>
                     </section>
-                </div><!-- slider -->
+                </div><!-- slider -->                
 
-                <section class="section-major">
-                    <h2 class="heading">Последние заказы</h2>
-                    <div class="row-cards">
-                        <div class="card card-order-brief">
-                            <p class="section">Неквалифицированный труд</p>
-                            <p class="title">Подработка зрителем в Москве</p>
-                            <p class="descript">Приглашаем зрителей на съемки тв передач</p>
+                <h2 class="heading-special">Строительные услуги</h2>
+                <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
+                <ul class="list-columns-3 list-links">
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>                                        
+                </ul>
 
-                            <div class="footer">
-                                <p class="p-compare"><a href="#" class="link-local">Сравнить цены</a></p>
-                                <p class="p-comments"><i class="fas fa-comment"></i><span class="comment-count">2</span></p>
-                            </div>
-                        </div><!-- /.card -->
-                        <div class="card card-order-brief">
-                            <p class="section">Неквалифицированный труд</p>
-                            <p class="title">Подработка зрителем в Москве</p>
-                            <p class="descript">Приглашаем зрителей на съемки тв передач</p>
-
-                            <div class="footer">
-                                <p class="p-compare"><a href="#" class="link-local">Сравнить цены</a></p>
-                                <p class="p-comments"><i class="fas fa-comment"></i><span class="comment-count">2</span></p>
-                            </div>
-                        </div><!-- /.card -->
-                        <div class="card card-order-brief">
-                            <p class="section">Неквалифицированный труд</p>
-                            <p class="title">Подработка зрителем в Москве</p>
-                            <p class="descript">Приглашаем зрителей на съемки тв передач</p>
-
-                            <div class="footer">
-                                <p class="p-compare"><a href="#" class="link-local">Сравнить цены</a></p>
-                                <p class="p-comments"><i class="fas fa-comment"></i><span class="comment-count">2</span></p>
-                            </div>
-                        </div><!-- /.card -->
-                    </div><!-- row-cards -->
-                </section><!-- /.section-major -->
-
-                <section class="section-major">
-                    <h2 class="heading">Статьи</h2>
-                    <article class="card card-cols card-article">
-                        <div href="#" class="card-img">
-                            <img src="images/photo-news-1.jpg" alt="pic">                    
-                        </div><!-- /.card-img -->
-                        <div class="info">
-                            <p class="p-small-number">25 мая 2018</p>
-                            <h2 class="heading">Как мы делали теплицу</h2>
-                            <p class="excerpt">
-                                Теплица очень нужная вещь в органическом земледелии. И мы решили поставить ее по нескольким причинам. Как мы делали теплицу <br>
-                                В наших широтах летом иногда выпадает град размером с перепелиное яйцо и это очень сказывается на урожае. град.Теплица дает возможность выращивать более теплолюбивые растения, которые очень любят наши детки, такие как помидоры, перец... </p>                            
-                                <a href="#" class="readmore">Читать историю</a>
-                        </div><!-- /.info -->
-                    </article><!-- /.card -->
-                </section><!-- /.section-major -->
+                <h2 class="heading-special">Строительные услуги</h2>
+                <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
+                <ul class="list-columns-3 list-links">
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>
+                    <li><a href="#">Строительство домов и коттеджей <span>(66)</span></a></li>
+                    <li><a href="#">Кровельные работы <span>(96)</span></a></li>
+                    <li><a href="#">Бетонные работы <span>(54)</span></a></li>
+                    <li><a href="#">Установка межкомнатных дверей <span>(81)</span></a></li>
+                    <li><a href="#">Устройство перегородок <span>(25)</span></a></li>
+                    <li><a href="#">Строительство заборов <span>(74)</span></a></li>
+                    <li><a href="#">Установка окон и откосов <span>(24)</span></a></li>
+                    <li><a href="#">Сварочные работы <span>(25)</span></a></li>                                        
+                </ul>
 
                 <div class="b-about">
                     <svg class="icn" viewBox="0 0 65 64" xmlns="http://www.w3.org/2000/svg">

@@ -29,7 +29,6 @@ small {font-size: 100%;display: inline-block;}
 
 .link-local {
 	border-bottom: 1px dotted;
-	display: inline-block; 
 }
 
 /* ==========================================================================
@@ -39,7 +38,7 @@ small {font-size: 100%;display: inline-block;}
   font-family: Roboto,sans-serif;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  font-size: .875rem;
+  font-size: 16px;
   letter-spacing: .04em;
   text-decoration: none;
   --mdc-ripple-fg-size: 0;
@@ -69,7 +68,7 @@ small {font-size: 100%;display: inline-block;}
   background-color: transparent;
   transition: all .15s;
   border-radius: 3px;
-
+  padding: 16px 40px;
   svg {margin-right: 4px;
     &:last-child {margin-right: 0;}
   }
@@ -79,7 +78,6 @@ small {font-size: 100%;display: inline-block;}
 .btn-main {
   $btn-main-bg: $action;
   background: $btn-main-bg;
-  padding: 16px 40px;
   font-weight: 500;
   color: $heading-text !important;
   font-weight: 600;
@@ -89,30 +87,28 @@ small {font-size: 100%;display: inline-block;}
 }
 
 
-
-
-
-.btn-stroked {
-  border-style: solid;
-  padding-right: 14px;
-  padding-left: 14px;
-  border-width: 2px;
-  line-height: 32px;
-}
-
 .btn-second {
   $btn-2-bg: $green;
   background: $btn-2-bg;
   color: #fff;
   font-weight: 400;
-  font-size: 1.1rem;
-  padding: 16px 40px;
+  font-size: 1.1rem;  
   &:hover {
     background: rgba($btn-2-bg, .9);
   }
 }
 
-
+@mixin btn-stroked() {
+  border: 1px solid $green;  
+  font-size: 16px;
+  padding: 8px 14px;
+  color: $green-text;
+  border-radius: 3px;
+}
+.btn-stroked {
+  @include btn-stroked();
+  &:hover {background: $green-text; color: #fff}
+}
 /* ==========================================================================
   COMMON
   ========================================================================== */
@@ -131,15 +127,19 @@ textarea {
   width: 100%;
   border: 1px solid rgba(#000, .07);
   padding: 8px;
-  margin: 0;
+  margin: 0 0 16px 0;
   font-size: 1rem;
   transition: all .3s ease-in-out;
   box-shadow: inset 1px 1px 5px 0 rgba(#000, .05);
+  height: 50px;
+  font-family: Roboto, sans-serif;
+  color: #000 !important;
+  border-radius: 3px;
+  @media (min-width: $screen-sm-min) {margin-bottom: 24px;}
 }
 select {padding: 8px 4px;}
 textarea {
   resize: vertical;
-  margin-bottom: 8px; 
   min-height: 100px;
 }
 .row-form textarea {margin-bottom: 0;}
@@ -164,20 +164,23 @@ input.checkbox, input.radio {margin: 0 8px 0 0; vertical-align: baseline;}
 input:disabled+label {color:$gray;}
 
 .lbl {  
-  font-weight: 500;
+  font-weight: 400;
   display: block;
+  font-size: 16px;
+  color: $heading-text;
 }
 .lbl--top {
   display: block;
-  margin-bottom: 4px;  
+  margin-bottom: 16px;
+  line-height: 1;  
 }
 .lbl--side {
   display: inline-block;
   margin-bottom: 4px;  
 }
 .lbl-inline {
-  display: inline-block;
-  margin-right: 8px;  
+  display: inline-block !important;
+  margin-right: 16px;  
   &:last-child {margin-right: 0;}
 }
 .lbl-warn {
@@ -373,26 +376,30 @@ fieldset {
 .pagination, .pagination-mob {
   display: flex;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
+  margin-bottom: 40px;
   .pgn-page {
     display: inline-block;
+    margin-left: -1px;   
   }
-  a {font-size: 12px;}
-  .mdc-button {
-    padding-left: 15px;
-    padding-right: 15px;
-    min-width: auto;
-    border-width: 1px;
+  .pgn-page-prev {margin: 0 16px 0 0;}
+  .pgn-page-next {margin: 0 0 0 16px;}
+  a, .pgn-page-dots {
+    @include btn-stroked();
+    border-radius: 0;
+    background: #fff;
+    display: inline-block;
+    font-size: 16px;
   }
+  .pgn-page-prev, .pgn-page-next {a {border-radius: 3px;}}
+  .pgn-page-active a {background: $green-text; color: #fff}
 }
 .pagination {
   @media (max-width: $screen-xs-max) {
     display: none;
   }
-  [rel="last"] svg {margin-left: 4px;}  
 }
 .pagination-mob {
+  justify-content: center;
   @media (min-width: $screen-sm-min) {
     display: none;
   }
@@ -423,6 +430,15 @@ fieldset {
   }
 }
 
+.visible-sm, .visible-xs {
+  display: none;
+}
+.visible-xs {
+  @media (max-width: $screen-xs-max) {display: block;}
+}
+.visible-sm {
+  @media (max-width: $screen-sm-max) {display: block;}
+}
 /* ==========================================================================
    CONTENT
    ========================================================================== */
@@ -433,7 +449,9 @@ fieldset {
 }
 .heading-special {
   color: $green-text;
+  margin-bottom: .5rem !important;
 }
+
 
 .h-index {
   font-size: 1.7rem;
