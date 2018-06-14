@@ -106,6 +106,7 @@ body {
 		padding: 0 40px 0 12px;
 		margin: 0;
 		color: #fff !important;
+		border-radius: 0;
 		@media (min-width: $screen-lg-min) {
 			padding: 0 40px 0 24px;
 		}
@@ -140,6 +141,7 @@ body {
 		vertical-align: middle;
 		text-align: center;
 		padding-right: 8px;
+		font-size: 16px;
 	}
 	.b-userpic {
 		position: relative;
@@ -417,7 +419,8 @@ body {
 @media (min-width: $screen-md-min) {
 	.row-mod {display: flex;} 
 	.col-sidebar {width: 355px; flex-shrink: 0;}
-	.col-content {padding: 20px 0 0 20px;overflow: hidden; flex-grow: 1}	
+	.col-content {padding: 20px 0 0 0;overflow: hidden; flex-grow: 1}	
+	.col-sidebar+.col-content {padding-left: 20px;}
 }
 
 @media (min-width: $screen-sm-min) {

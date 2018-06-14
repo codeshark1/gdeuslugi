@@ -1520,7 +1520,8 @@ body {
     font-weight: 500;
     padding: 0 40px 0 12px;
     margin: 0;
-    color: #fff !important; }
+    color: #fff !important;
+    border-radius: 0; }
     @media (min-width: 1200px) {
       .form-search-header .search-field {
         padding: 0 40px 0 24px; } }
@@ -1551,7 +1552,8 @@ body {
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    padding-right: 8px; }
+    padding-right: 8px;
+    font-size: 16px; }
   .b-login .b-userpic {
     position: relative;
     width: 30px;
@@ -1876,11 +1878,14 @@ body {
         flex-shrink: 0; }
 
   .col-content {
-    padding: 20px 0 0 20px;
+    padding: 20px 0 0 0;
     overflow: hidden;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
-            flex-grow: 1; } }
+            flex-grow: 1; }
+
+  .col-sidebar + .col-content {
+    padding-left: 20px; } }
 @media (min-width: 768px) {
   .row-cards {
     display: -webkit-box;
