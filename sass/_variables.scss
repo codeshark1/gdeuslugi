@@ -51,3 +51,9 @@ $blue-bright: #0099ff;
     border: 1px solid #CCCCCC;
     border-radius: 3px;
 }
+
+@mixin link-local($color) {
+    color: $color; 
+    border-bottom: 1px dashed $color;
+    &:hover {border-bottom: 1px solid $color; text-decoration: none;}
+}

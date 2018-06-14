@@ -175,4 +175,8 @@ jQuery(document).ready(function($){
         });
     }
     tabs();
+
+    $('.slick-arrow').click(function(e){
+        e.stopPropagation();
+    });
 });

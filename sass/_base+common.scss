@@ -19,7 +19,11 @@ body {margin: 0; background: #fff;}
 img {max-width: 100%;max-height: 100%;}
 a {
   text-decoration: none;
+  color: $link-text;
+  transition: all .15s;
+  &:hover {text-decoration: underline;}
 }
+
 table {width: 100%;}
 p, ul {margin: 0;}
 ul {padding: 0; list-style: none;}
@@ -28,7 +32,7 @@ small {font-size: 100%;display: inline-block;}
 
 
 .link-local {
-	border-bottom: 1px dotted;
+	@include link-local($link-text);
 }
 
 /* ==========================================================================
@@ -72,6 +76,8 @@ small {font-size: 100%;display: inline-block;}
   svg {margin-right: 4px;
     &:last-child {margin-right: 0;}
   }
+
+  &:hover {text-decoration: none;}
 }
 
 
@@ -389,6 +395,10 @@ fieldset {
     background: #fff;
     display: inline-block;
     font-size: 16px;
+  }
+  a:hover {
+    text-decoration: none;
+    background: rgba($green, .5);
   }
   .pgn-page-prev, .pgn-page-next {a {border-radius: 3px;}}
   .pgn-page-active a {background: $green-text; color: #fff}
