@@ -1994,6 +1994,8 @@ body {
   vertical-align: text-bottom;
   background: #fff; }
   .btn-fav .path {
+    -webkit-transition: all .15s;
+    transition: all .15s;
     fill: #fff;
     stroke: #126e63; }
   .btn-fav:hover .path, .btn-fav.active .path {

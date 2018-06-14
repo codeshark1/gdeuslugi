@@ -516,6 +516,7 @@ body {
 	vertical-align: text-bottom;
 	background: #fff;
 	.path {
+		transition: all .15s;
 		fill:#fff;
 		stroke: #126e63;
 	}
