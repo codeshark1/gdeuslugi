@@ -571,7 +571,7 @@ body {
 	@media (min-width: $screen-md-min) {min-height: 320px;}
 	position: relative;
 	padding-bottom: 80px;
-	.section {font-size: 0.8rem; margin-bottom: .5rem;}
+	.section {font-size: 0.8rem; margin-bottom: .5rem; color: $green-text}
 	.title {font-weight: 600; margin-bottom: .5rem;}	
 	.footer {
 		background: $green-text;
@@ -836,7 +836,7 @@ body {
 		font-size: 1rem;
 		margin: 8px 0 0 0;
 	}
-	.speciality {font-size: 0.8rem;}
+	.speciality {font-size: 0.8rem; color: $green-text;font-weight: 500;}
 	.description {font-size: 0.9rem; margin-top: 12px;}
 	.btn {margin-top: 28px; width: 100%;}
 	@media (max-width: $screen-sm-max) {

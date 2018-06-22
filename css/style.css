@@ -525,6 +525,10 @@ fieldset {
   color: #126E63;
   margin-bottom: .5rem !important; }
 
+.heading-all a {
+  font-weight: bold;
+  color: #2E3047; }
+
 .h-index {
   font-size: 1.7rem; }
   .h-index:after {
@@ -2188,7 +2192,8 @@ body {
       min-height: 320px; } }
   .card-order-brief .section {
     font-size: 0.8rem;
-    margin-bottom: .5rem; }
+    margin-bottom: .5rem;
+    color: #126E63; }
   .card-order-brief .title {
     font-weight: 600;
     margin-bottom: .5rem; }
@@ -2480,7 +2485,9 @@ body {
     font-size: 1rem;
     margin: 8px 0 0 0; }
   .card-specialist .speciality {
-    font-size: 0.8rem; }
+    font-size: 0.8rem;
+    color: #126E63;
+    font-weight: 500; }
   .card-specialist .description {
     font-size: 0.9rem;
     margin-top: 12px; }

@@ -467,7 +467,9 @@ fieldset {
   color: $green-text;
   margin-bottom: .5rem !important;
 }
-
+.heading-all {
+  a {font-weight: bold; color: $blue-dark}
+}
 
 .h-index {
   font-size: 1.7rem;
