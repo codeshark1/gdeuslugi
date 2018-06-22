@@ -171,6 +171,12 @@ body {
 		margin: 0 10px 0 0;
 	}
 }
+.b-login-links {
+	text-align: center;
+	a {display: inline-block;
+		&:first-child {margin-right: 8px;}
+	}
+}
 
 .header-site__top_i {
 	@media (min-width: $screen-sm-min) {
@@ -299,6 +305,16 @@ body {
 
 	}
 }
+.form-hero {
+	input[type="text"], 
+	input[type="email"], 
+	input[type="password"], 
+	input[type="url"], 
+	input[type="tel"], 
+	input[type="number"], 
+	input[type="date"], 
+	select {height: 50px}	
+}
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
@@ -317,28 +333,26 @@ body {
 	@media (max-width: $screen-sm-max) {
 		display: none;
 	}
+	.menu-item {
+		position: relative;
+		span {
+			display: block;
+			position: absolute;
+			top: 16px;
+			right: 16px;
+			color: rgba(#fff, .4);
+		}
+	}
   	a {
 	  color: #fff;
-	  padding: 20px 40px 20px 24px;
+	  padding: 16px 40px 16px 24px;
 	  border: 1px solid rgb(54, 57, 114);
-	  border-top: none;
-	  position: relative;
-	  background: $blue-dark;
+	  border-top: none;	  
+	  background: $blue-dark;	  
 	  &:hover {
 		  text-decoration: none;
 		  background: rgba($blue-dark, .95)
 	  }
-	  span {
-		  display: block;
-		  position: absolute;
-		  top: 0;
-		  bottom: 0;
-		  margin: auto;
-		  right: 12px;
-		  height: 15px;
-		  line-height: 1;
-		  color: rgba(#fff, .4);
-		}
 	}
 	.sub-menu {
 		a {background: $green; border-color: #126E63}
@@ -406,6 +420,12 @@ body {
 /* ==========================================================================
    CONTENT
    ========================================================================== */
+.main-content {
+	margin-top: 24px;
+	@media (min-width: $screen-lg-min) {
+		margin-top: 40px;
+	}
+}
 
 .main-content .col-sidebar {
 	@media (max-width: $screen-sm-max) {
@@ -419,8 +439,8 @@ body {
 @media (min-width: $screen-md-min) {
 	.row-mod {display: flex;} 
 	.col-sidebar {width: 355px; flex-shrink: 0;}
-	.col-content {padding: 20px 0 0 0;overflow: hidden; flex-grow: 1}	
-	.col-sidebar+.col-content {padding-left: 20px;}
+	.col-content {overflow: hidden; flex-grow: 1}	
+	.col-sidebar+.col-content {padding-left: 40px;}
 }
 
 @media (min-width: $screen-sm-min) {
@@ -1049,7 +1069,7 @@ body {
 	background: #E5E5E5;
 	padding: 20px 40px 40px 20px;
 	margin-bottom: 20px;
-	.lbl--top {margin-bottom: 12px;}
+	.lbl-top {margin-bottom: 12px;}
 
 	hr {
 		background: #c4c4c4;

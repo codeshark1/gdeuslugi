@@ -50,6 +50,11 @@ small {
 .container {
   max-width: 1440px; }
 
+.row-mod {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
 .link-local {
   color: #0066CC;
   border-bottom: 1px dashed #0066CC; }
@@ -136,6 +141,12 @@ small {
     background: #126E63;
     color: #fff; }
 
+.btn-icon {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer; }
+
 /* ==========================================================================
   COMMON
   ========================================================================== */
@@ -156,9 +167,6 @@ textarea {
   font-size: 1rem;
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
-  -webkit-box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.05);
-          box-shadow: inset 1px 1px 5px 0 rgba(0, 0, 0, 0.05);
-  height: 50px;
   font-family: Roboto, sans-serif;
   color: #000 !important;
   border-radius: 3px; }
@@ -220,7 +228,7 @@ input:disabled + label {
   font-size: 16px;
   color: #333333; }
 
-.lbl--top {
+.lbl-top {
   display: block;
   margin-bottom: 16px;
   line-height: 1; }
@@ -510,7 +518,7 @@ fieldset {
    ========================================================================== */
 .heading {
   font-size: 24px;
-  margin: 1rem 0 1.5rem 0;
+  margin: 0 0 1.5rem 0;
   color: #333333; }
 
 .heading-special {
@@ -982,6 +990,34 @@ fieldset {
 .footer-site {
   padding: 28px 0; }
 
+.b-modal {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: 20px; }
+  .b-modal .header {
+    height: 40px;
+    background: #2E3047;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    margin: -20px -20px 0 -20px;
+    padding: 8px 20px 0; }
+  .b-modal .form {
+    margin-top: 28px; }
+  .b-modal .btn-main {
+    width: 100%;
+    margin-bottom: 20px; }
+  .b-modal .btn-icon {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    z-index: 2; }
+
 /* ==========================================================================
    PLUGINS
    ========================================================================== */
@@ -1417,6 +1453,104 @@ body:last-child .blueimp-gallery > .slides > .slide > .video-content:not(.video-
 * + html .blueimp-gallery > .slides > .slide > .video-content > a {
   left: 50%;
   margin-left: -64px; }
+/* MODAL */
+.blocker {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  z-index: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background-color: #000;
+  background-color: rgba(0, 0, 0, 0.75);
+  text-align: center; }
+
+.blocker:before {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -0.05em; }
+
+.blocker.behind {
+  background-color: transparent; }
+
+.modal {
+  display: none;
+  vertical-align: middle;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px #000;
+  -o-box-shadow: 0 0 10px #000;
+  -ms-box-shadow: 0 0 10px #000;
+  box-shadow: 0 0 10px #000;
+  text-align: left; }
+
+.modal a.close-modal {
+  position: absolute;
+  top: 4px;
+  right: 20px;
+  display: block;
+  width: 30px;
+  height: 30px;
+  text-indent: -9999px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 0C4.935 0 0 4.934 0 11s4.935 11 11 11 11-4.934 11-11S17.065 0 11 0zm0 21.154C5.401 21.154.846 16.599.846 11S5.401.846 11 .846 21.154 5.401 21.154 11 16.599 21.154 11 21.154z' fill='%23fff'/%3E%3Cpath d='M15.107 6.894a.423.423 0 0 0-.598 0L11 10.402 7.492 6.894a.423.423 0 1 0-.598.598L10.402 11 6.894 14.51a.423.423 0 1 0 .598.598L11 11.6l3.509 3.508a.422.422 0 0 0 .598 0 .423.423 0 0 0 0-.598L11.6 11l3.508-3.508a.423.423 0 0 0 0-.598z' fill='%23fff'/%3E%3C/svg%3E"); }
+
+.modal-spinner {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateY(-50%) translateX(-50%);
+          transform: translateY(-50%) translateX(-50%);
+  padding: 12px 16px;
+  border-radius: 5px;
+  background-color: #111;
+  height: 20px; }
+
+.modal-spinner > div {
+  border-radius: 100px;
+  background-color: #fff;
+  height: 20px;
+  width: 2px;
+  margin: 0 1px;
+  display: inline-block;
+  -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+  animation: sk-stretchdelay 1.2s infinite ease-in-out; }
+
+.modal-spinner .rect2 {
+  -webkit-animation-delay: -1.1s;
+  animation-delay: -1.1s; }
+
+.modal-spinner .rect3 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1s; }
+
+.modal-spinner .rect4 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s; }
+
+@-webkit-keyframes sk-stretchdelay {
+  0%,40%,100% {
+    -webkit-transform: scaleY(0.5); }
+  20% {
+    -webkit-transform: scaleY(1); } }
+@keyframes sk-stretchdelay {
+  0%,40%,100% {
+    transform: scaleY(0.5);
+    -webkit-transform: scaleY(0.5); }
+  20% {
+    transform: scaleY(1);
+    -webkit-transform: scaleY(1); } }
 body {
   font-family: Roboto, sans-serif;
   color: #666666; }
@@ -1580,6 +1714,13 @@ body {
       padding: 12px 0;
       margin: 0 10px 0 0; } }
 
+.b-login-links {
+  text-align: center; }
+  .b-login-links a {
+    display: inline-block; }
+    .b-login-links a:first-child {
+      margin-right: 8px; }
+
 @media (min-width: 768px) {
   .header-site__top_i {
     display: -webkit-box;
@@ -1741,6 +1882,16 @@ body {
                 flex-grow: 1;
         margin-right: 16px; } }
 
+.form-hero input[type="text"],
+.form-hero input[type="email"],
+.form-hero input[type="password"],
+.form-hero input[type="url"],
+.form-hero input[type="tel"],
+.form-hero input[type="number"],
+.form-hero input[type="date"],
+.form-hero select {
+  height: 50px; }
+
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
@@ -1762,26 +1913,23 @@ body {
 @media (max-width: 991px) {
   .menu-categs {
     display: none; } }
+.menu-categs .menu-item {
+  position: relative; }
+  .menu-categs .menu-item span {
+    display: block;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    color: rgba(255, 255, 255, 0.4); }
 .menu-categs a {
   color: #fff;
-  padding: 20px 40px 20px 24px;
+  padding: 16px 40px 16px 24px;
   border: 1px solid #363972;
   border-top: none;
-  position: relative;
   background: #2E3047; }
   .menu-categs a:hover {
     text-decoration: none;
     background: rgba(46, 48, 71, 0.95); }
-  .menu-categs a span {
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-    right: 12px;
-    height: 15px;
-    line-height: 1;
-    color: rgba(255, 255, 255, 0.4); }
 .menu-categs .sub-menu a {
   background: #1B998B;
   border-color: #126E63; }
@@ -1859,6 +2007,12 @@ body {
 /* ==========================================================================
    CONTENT
    ========================================================================== */
+.main-content {
+  margin-top: 24px; }
+  @media (min-width: 1200px) {
+    .main-content {
+      margin-top: 40px; } }
+
 @media (max-width: 991px) {
   .main-content .col-sidebar {
     margin: 0 -15px !important; } }
@@ -1878,14 +2032,13 @@ body {
         flex-shrink: 0; }
 
   .col-content {
-    padding: 20px 0 0 0;
     overflow: hidden;
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
             flex-grow: 1; }
 
   .col-sidebar + .col-content {
-    padding-left: 20px; } }
+    padding-left: 40px; } }
 @media (min-width: 768px) {
   .row-cards {
     display: -webkit-box;
@@ -2606,7 +2759,7 @@ body {
   background: #E5E5E5;
   padding: 20px 40px 40px 20px;
   margin-bottom: 20px; }
-  .form-offer .lbl--top {
+  .form-offer .lbl-top {
     margin-bottom: 12px; }
   .form-offer hr {
     background: #c4c4c4;

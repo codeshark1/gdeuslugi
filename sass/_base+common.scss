@@ -29,7 +29,7 @@ p, ul {margin: 0;}
 ul {padding: 0; list-style: none;}
 small {font-size: 100%;display: inline-block;}
 .container {max-width: 1440px;}
-
+.row-mod {justify-content: space-between}
 
 .link-local {
 	@include link-local($link-text);
@@ -115,6 +115,13 @@ small {font-size: 100%;display: inline-block;}
   @include btn-stroked();
   &:hover {background: $green-text; color: #fff}
 }
+
+.btn-icon {
+  background:none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 /* ==========================================================================
   COMMON
   ========================================================================== */
@@ -136,8 +143,7 @@ textarea {
   margin: 0 0 16px 0;
   font-size: 1rem;
   transition: all .3s ease-in-out;
-  box-shadow: inset 1px 1px 5px 0 rgba(#000, .05);
-  height: 50px;
+  //box-shadow: inset 1px 1px 5px 0 rgba(#000, .05);
   font-family: Roboto, sans-serif;
   color: #000 !important;
   border-radius: 3px;
@@ -175,7 +181,7 @@ input:disabled+label {color:$gray;}
   font-size: 16px;
   color: $heading-text;
 }
-.lbl--top {
+.lbl-top {
   display: block;
   margin-bottom: 16px;
   line-height: 1;  
@@ -454,7 +460,7 @@ fieldset {
    ========================================================================== */
 .heading {
   font-size: 24px;
-  margin: 1rem 0 1.5rem 0;
+  margin: 0 0 1.5rem 0;
   color: $heading-text;  
 }
 .heading-special {
@@ -850,4 +856,32 @@ fieldset {
    ========================================================================== */
 .footer-site {
   padding: 28px 0;
+}
+
+
+.b-modal {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+  background: #FFFFFF;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: 20px;
+  .header {
+    height: 40px;
+    background: $blue-dark;
+    color:#fff;
+    font-size: 18px;
+    font-weight: normal;
+    margin: -20px -20px 0 -20px;
+    padding: 8px 20px 0;
+  }
+  .form {margin-top: 28px;}
+  .btn-main {width: 100%; margin-bottom: 20px;}
+  .btn-icon {
+    position: absolute;
+    right: 20px;
+    top: 8px;
+    z-index: 2;
+  }
 }
