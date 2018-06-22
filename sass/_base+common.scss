@@ -673,7 +673,6 @@ fieldset {
 .card-img {
   position: relative;
   display: block;
-  margin-bottom: 8px; 
 
   img {width: 100%; transition: all .15s;display: inline-block;}
   .label {
@@ -707,12 +706,15 @@ fieldset {
 /* card-cols */
 .card-cols {
   margin-bottom: 18px;
+  @media (max-width: $screen-sm-max) {
+    .card-img {margin-bottom: 16px;}
+  }
   @media (min-width: $screen-md-min) {
     .h-card {margin-top: 0;}
     display: flex;
     justify-content: space-between;
-    .card-img {width: 43%;}
-    .info {width: 54%;}    
+    .card-img {width: 37%;}
+    .info {width: 63%; padding-left: 16px;}
   }
 }
 

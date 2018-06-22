@@ -615,7 +615,7 @@ body {
 /* ARTICLE */
 .card-article {
 	.p-small-number {margin-bottom: 0;}
-	.heading {margin: 1rem 0;}
+	.heading {margin: .5rem 0;}
 	.readmore {color: $link-text; margin-top: 1rem;display: inline-block;}
 }
 .article-main {
@@ -816,7 +816,7 @@ body {
 /* specialist */
 .rating {
 	color: $action;
-	font-size: 14px;
+	font-size: 16px;
 	display: inline-block;
 	.num {color: $base-text}
 }
