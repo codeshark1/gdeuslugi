@@ -522,7 +522,7 @@ body {
 
 /* CATEGS LIST */
 .b-categ {
-	margin-bottom: 3rem;
+	margin-bottom: 32px;
 	.heading {margin: 0 0 1rem 0}	
 }
 .list-links {
@@ -579,11 +579,11 @@ body {
 }
 
 .card-order-brief {	
-	@media (min-width: $screen-md-min) {min-height: 320px;}
+	//@media (min-width: $screen-md-min) {min-height: 320px;}
 	position: relative;
 	padding-bottom: 80px;
-	.section {font-size: 0.8rem; margin-bottom: .5rem; color: $green-text}
-	.title {font-weight: 600; margin-bottom: .5rem;}	
+	.section {font-size: 0.8rem; margin-bottom: 8px; color: $green-text}
+	.title {font-weight: 600; margin-bottom: 8px;}	
 	.footer {
 		background: $green-text;
 		color: #fff;
@@ -597,7 +597,7 @@ body {
 		a {color: #fff}
 	}
 	@media (max-width: $screen-sm-max) {
-		margin-bottom: 18px;
+		margin-bottom: 16px;
 	}	
 }
 .p-compare {
@@ -631,7 +631,7 @@ body {
 .card-article {
 	.p-small-number {margin-bottom: 0;}
 	.heading {margin: .5rem 0;}
-	.readmore {color: $link-text; margin-top: 1rem;display: inline-block;}
+	.readmore {color: $link-text; margin-top: 8px;display: inline-block;}
 }
 .article-main {
 	.heading {margin-bottom: 8px;}
@@ -777,7 +777,7 @@ body {
 }
 .readmore {
 	color: $green-text;
-	font-weight: 600;
+	font-weight: 500;
 }
 .card-order {
 	position: relative;
@@ -1404,8 +1404,10 @@ body {
 }
 .site-content {
 	.b-about {
-		margin: 30px -15px -40px;
-		@media (min-width: $screen-md-min) {display: none;}
+		@media (max-width: $screen-sm-max) {
+			margin: 30px -15px -40px;
+		}
+		//@media (min-width: $screen-md-min) {display: none;}
 	}
 }
 
@@ -1423,7 +1425,7 @@ body {
 .footer-site {
 	background: url('../images/photo-footer.jpg') 50% 50% no-repeat;
 	background-size: cover;
-	margin-top: 40px;
+	margin-top: 32px;
 	a {
 		font-size: 14px;
 		@include link(#fff);

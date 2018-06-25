@@ -719,8 +719,8 @@ fieldset {
 
 /* card-cols */
 .card-cols {
-  margin-bottom: 18px;
   @media (max-width: $screen-sm-max) {
+    margin-bottom: 18px;
     .card-img {margin-bottom: 16px;}
   }
   @media (min-width: $screen-md-min) {
