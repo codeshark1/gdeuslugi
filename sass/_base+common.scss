@@ -38,7 +38,7 @@ small {font-size: 100%;display: inline-block;}
 .link-local {
 	@include link-local($link-text);
 }
-
+.t-right {text-align: right;}
 /* ==========================================================================
    BUTTONS
    ========================================================================== */
