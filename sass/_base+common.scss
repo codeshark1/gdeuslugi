@@ -17,11 +17,15 @@ html {
 }
 body {margin: 0; background: #fff;}
 img {max-width: 100%;max-height: 100%;}
+
+
 a {
-  text-decoration: none;
-  color: $link-text;
+  text-decoration: none;  
   transition: all .15s;
-  &:hover {text-decoration: underline;}
+  &:hover {
+    text-decoration: none;
+  }
+  @include link($link-text);
 }
 
 table {width: 100%;}
@@ -59,7 +63,7 @@ small {font-size: 100%;display: inline-block;}
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  border: none;
+  border: none !important;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -87,8 +91,13 @@ small {font-size: 100%;display: inline-block;}
   font-weight: 500;
   color: $heading-text !important;
   font-weight: 600;
+  box-shadow: 
+    0 0 5px 0 rgba($btn-main-bg, .75),
+    inset 0 0 10px 0 rgba(rgb(238, 191, 22), .75)
+  ;
   &:hover {
     background: lighten($btn-main-bg, 5%);
+    box-shadow: 0 0 10px 0 $btn-main-bg;
   }
 }
 
@@ -349,9 +358,6 @@ fieldset {
   @media (min-width: $screen-sm-min) {display: none;}
 }
 
-.nav-menu {
-  a {display: block;}
-}
 .nav-menu-inline {  
   .menu-item {
     display: inline-block;
@@ -462,6 +468,9 @@ fieldset {
   font-size: 24px;
   margin: 0 0 1.5rem 0;
   color: $heading-text;  
+}
+.section-major:first-child {
+  .heading {margin-top: 8px;}
 }
 .heading-special {
   color: $green-text;
@@ -674,7 +683,12 @@ fieldset {
   position: relative;
   display: block;
 
-  img {width: 100%; transition: all .15s;display: inline-block;}
+  img {
+    width: 100%; 
+    transition: all .15s;
+    display: inline-block;
+    vertical-align: bottom;
+  }
   .label {
     background: rgba(#000, .75);
     position: absolute;

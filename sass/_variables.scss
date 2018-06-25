@@ -36,7 +36,8 @@ $green: #1B998B;
 $green-text: #126E63;
 $action: #FAC917;
 $gray-text: #ACACAC;
-$link-text: #0066CC;
+//$link-text: #0066CC;
+$link-text: $blue-dark;
 
 $gray-light: #e3e3e3;
 $gray: #A6A6A6;
@@ -50,6 +51,12 @@ $blue-bright: #0099ff;
 @mixin borderr() {
     border: 1px solid #CCCCCC;
     border-radius: 3px;
+}
+
+@mixin link($color) {
+    color: $color; 
+    border-bottom: 1px solid rgba($color,.3);
+    &:hover {border-bottom: 1px solid $color;}
 }
 
 @mixin link-local($color) {

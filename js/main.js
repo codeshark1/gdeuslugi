@@ -186,4 +186,19 @@ jQuery(document).ready(function($){
         });
         return false;
     });    
+
+    /* COMPARE LINK VISUALS */
+    $('.link-compare').click(function(e){
+        e.preventDefault();
+    });
+    tippy('.link-compare', {
+        trigger: 'click',
+        animation: 'perspective',
+        onShown(instance) {                            
+            function delayHide() {
+                instance.hide();
+            }
+            setTimeout(delayHide, 2000);
+        }
+    });    
 });
