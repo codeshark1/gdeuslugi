@@ -528,6 +528,9 @@ fieldset {
   margin: 0 0 1.5rem 0;
   color: #333333; }
 
+.card .heading {
+  line-height: 1.1; }
+
 .section-major:first-child .heading {
   margin-top: 8px; }
 
@@ -2166,7 +2169,8 @@ body {
   width: 24px;
   display: inline-block;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='24px' height='24px'%3E%3Cpath fill='%23fff' stroke='%23666' d='M12,.5A11.5,11.5,0,1,1,.5,12,11.5,11.5,0,0,1,12,.5Zm.44,6.09L13.63,8.7a1.46,1.46,0,0,0,1,.73L17,9.91a.5.5,0,0,1,.27.83l-1.64,1.79a1.47,1.47,0,0,0-.39,1.18l.28,2.41a.5.5,0,0,1-.7.51l-2.21-1a1.49,1.49,0,0,0-1.24,0l-2.21,1a.5.5,0,0,1-.7-.51l.28-2.41a1.47,1.47,0,0,0-.39-1.18L6.72,10.74A.5.5,0,0,1,7,9.91l2.37-.48a1.5,1.5,0,0,0,1-.73l1.18-2.11A.51.51,0,0,1,12.44,6.59Z'/%3E%3C/svg%3E");
-  border: none !important; }
+  border: none !important;
+  background-repeat: no-repeat; }
   .btn-fav .path {
     -webkit-transition: all .15s;
     transition: all .15s;
@@ -2483,11 +2487,24 @@ body {
 
 /* specialist */
 .rating {
-  color: #FAC917;
+  color: rgba(250, 201, 23, 0.5);
   font-size: 16px;
   display: inline-block; }
   .rating .num {
     color: #666666; }
+
+.rating-low [data-prefix="fas"] path {
+  fill: rgba(250, 201, 23, 0.5);
+  stroke: rgba(250, 201, 23, 0.5); }
+
+.rating-mid {
+  color: #CD7F32; }
+
+.rating-mid [data-prefix="fas"] path {
+  fill: #CD7F32; }
+
+.rating-high {
+  color: #FFD700; }
 
 .card-specialist {
   text-align: center;
