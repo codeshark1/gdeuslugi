@@ -359,7 +359,7 @@ body {
 	.sub-menu {
 		a {background: $green; border-color: #126E63}
 	}
-	.current-menu-item {
+	.menu-item .current-menu-item {
 		a {
 			background: #fff;
 			color: $heading-text;
@@ -408,16 +408,52 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	margin-bottom: 32px;
 }
 .tab-button {
-	display: inline-block;
 	flex-grow: 1;
 	text-align: center;
-	.btn {padding: 8px 14px;display: block; color: $green-text; font-weight: 500;}
+	margin: 0 2px;
+	.btn {		
+		display: block; 		
+		font-weight: 500;
+		padding: 8px 4px;
+		color: $base-text;
+		background: rgba($blue-dark, .1);
+	}
+	@media (min-width: $screen-sm-min) {
+		margin: 0 10px;
+		.btn {padding: 16px;}
+	}
+	&:first-child {margin-left: 0;}
+	&:last-child {margin-right: 0;}
 }
 .tab-button-active {
-	a {@include btn-stroked}
-	a:hover {background: none;color: $green}
+	.btn {
+		background: $blue-dark; 
+		color: #fff;
+		&:hover {background: $blue-dark;}
+	}
+}	
+
+.card-specialist-detailed {
+	.tabs-buttons {
+		margin-bottom: 0;
+		.btn {background: none;}
+	}
+	.tab-button-active {
+		.btn {
+			@include btn-stroked;
+			font-size: 14px;
+			padding: 8px 14px;
+			background: none;
+			color: $green-text;			
+		}
+		.btn:hover {
+			background: none;
+			color: $green;
+		}
+	}
 }
 /* ==========================================================================
    CONTENT
@@ -458,6 +494,13 @@ body {
 		flex-wrap: wrap;
 		.card {		
 			width: 49%;
+			margin: 0 0 20px 0;
+		}
+	}
+	.row-cards-3 {
+		flex-wrap: wrap;
+		.card {		
+			width: 32%;
 			margin: 0 0 20px 0;
 		}
 	}
@@ -630,9 +673,10 @@ body {
 }
 /* ARTICLE */
 .card-article {
+	margin-bottom: 16px;
 	.p-small-number {margin-bottom: 0;}
 	.heading {margin: .5rem 0;}
-	.readmore {color: $link-text; margin-top: 8px;display: inline-block;}
+	.readmore {color: $link-text; margin-top: 8px;display: inline-block;}	
 }
 .article-main {
 	.heading {margin-bottom: 8px;}
@@ -824,21 +868,18 @@ body {
 }
 
 
-.b-carousel-gallery {
-	.item {margin-right: 20px;}
-}
 
 /* specialist */
 .rating {
-	color: rgba($action, .5);
+	color: rgba($action, .3);
 	font-size: 16px;
 	display: inline-block;	
 	.num {color: $base-text}
 }
-.rating-low [data-prefix="fas"] path {fill: rgba($action, .5); stroke: rgba($action, .5)}
-
+.rating-low [data-prefix="fas"] path {fill: rgba($action, .3);}
 .rating-mid {color: #CD7F32}
 .rating-mid [data-prefix="fas"] path {fill: #CD7F32}
+.rating-silver {color: #C0C0C0}
 .rating-high {color: #FFD700}
 
 .card-specialist {
@@ -882,7 +923,7 @@ body {
 	.t-location {margin-right: 16px;}
 	.btn-fav {position: absolute;right: 20px;top: 20px;}
 	.title {
-		margin: 20px 0 8px 0;
+		margin: 16px 0 8px 0;
 		font-size: 16px;
 		font-weight: 600;	
 		color: $heading-text;
@@ -895,18 +936,16 @@ body {
 		z-index: 1;
 		.title {margin: 0;}
 	}
-	.tabs-buttons {margin-top: 20px;}
-	.tab-button a {font-size: 14px;font-weight: 700;color: $green}
+	.tabs-buttons {margin: 16px 0;}
+	.tab-button .btn {font-size: 14px;font-weight: 700;color: $green}
 	hr {
 		background: #ccc; 
 		height: 1px;
-		margin: 20px -20px 0;
+		margin: 0 -16px;
 		border: none;
 	}
 	.b-user-header {margin: 20px 0;}
-	.tabs-tabcontent {
-		a {color: $link-text}
-	}
+
 	.comment {margin-bottom: 12px;font-size: 14px;line-height: 1.75;}
 	.comment+a {font-size: 14px;}	
 	.btn {width: 100%;margin-top: 20px;}
@@ -915,6 +954,7 @@ body {
 	margin-top: 20px;
 	position: relative;
 	font-size: 0;
+	display: inline-block;
 	a {
 		display: inline-block;
 		max-width: 100px;
@@ -1232,33 +1272,6 @@ body {
 	.list-details {margin-bottom: 8px;}
 	p {margin: -4px 0 8px 0; line-height: 1.75;}
 	.link-local {margin:0 16px 16px 0; display: inline-block;}
-
-	.tabs-buttons {
-		justify-content: space-between;
-		margin-bottom: 36px;
-	}
-	.tab-button {
-		&:first-child {margin-left: 0;}
-		&:last-child {margin-right: 0;}
-		margin: 0 2px;
-		a {
-			border: 1px solid $blue-dark;
-			padding: 8px 4px;
-			color: $base-text;
-			&:hover {background: rgba($blue-dark, .1);}
-		}
-		@media (min-width: $screen-sm-min) {
-			margin: 0 10px;
-			a {padding: 16px;}
-		}
-	}
-	.tab-button-active {
-		a {
-			background: $blue-dark; 
-			color: #fff;
-			&:hover {background: $blue-dark;}
-		}
-	}
 
 	.row-prices {
 		margin-top: 40px;

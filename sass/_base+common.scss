@@ -114,7 +114,7 @@ small {font-size: 100%;display: inline-block;}
 }
 
 @mixin btn-stroked() {
-  border: 1px solid $green;  
+  border: 1px solid $green !important;
   font-size: 16px;
   padding: 8px 14px;
   color: $green-text;
@@ -171,8 +171,8 @@ input[type=url]:focus,
 input[type=tel]:focus,
 input[type=number]:focus,
 textarea:focus {
-  box-shadow: 0 0 5px rgba($link-text, .5);
-  border: 1px solid $link-text;
+  box-shadow: 0 0 5px #669ff3;
+  border: 1px solid #669ff3;
 }
 input[type="number"] {padding-right: 0;}
 

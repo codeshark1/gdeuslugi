@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
     navigation_show('#nav-toggle','#menu-categs');
 
     function menu_nested(menu_id) {
-        $(menu_id).find('ul').hide();
+        $(menu_id).find('ul').not('.current-menu-item ul').hide();
         $(menu_id).find('.menu-item--has-children>a').click(function(e){
             e.preventDefault();
             $(this).siblings('.sub-menu').slideDown();

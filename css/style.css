@@ -142,7 +142,7 @@ small {
     background: rgba(27, 153, 139, 0.9); }
 
 .btn-stroked {
-  border: 1px solid #1B998B;
+  border: 1px solid #1B998B !important;
   font-size: 16px;
   padding: 8px 14px;
   color: #126E63;
@@ -209,9 +209,9 @@ input[type=url]:focus,
 input[type=tel]:focus,
 input[type=number]:focus,
 textarea:focus {
-  -webkit-box-shadow: 0 0 5px rgba(46, 48, 71, 0.5);
-          box-shadow: 0 0 5px rgba(46, 48, 71, 0.5);
-  border: 1px solid #2E3047; }
+  -webkit-box-shadow: 0 0 5px #669ff3;
+          box-shadow: 0 0 5px #669ff3;
+  border: 1px solid #669ff3; }
 
 input[type="number"] {
   padding-right: 0; }
@@ -459,7 +459,7 @@ fieldset {
   .pagination .pgn-page-next, .pagination-mob .pgn-page-next {
     margin: 0 0 0 16px; }
   .pagination a, .pagination .pgn-page-dots, .pagination-mob a, .pagination-mob .pgn-page-dots {
-    border: 1px solid #1B998B;
+    border: 1px solid #1B998B !important;
     font-size: 16px;
     padding: 8px 14px;
     color: #126E63;
@@ -1138,11 +1138,26 @@ fieldset {
   height: 30px;
   background: #1B998B;
   border-radius: 100%;
-  text-align: center; }
+  text-align: center;
+  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3); }
 .b-carousel-gallery .slick-prev {
-  left: 10px; }
+  left: 16px; }
 .b-carousel-gallery .slick-next {
-  right: 10px; }
+  right: 16px; }
+.b-carousel-gallery .item {
+  margin-right: 20px;
+  border: none !important;
+  position: relative; }
+  .b-carousel-gallery .item::after {
+    content: "";
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='%23fff' viewBox='0 0 24 24'%3E%3Cpath d='M13 10h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2zm8.172 14l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z'/%3E%3C/svg%3E") no-repeat;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -12px 0 0 -12px; }
 
 /*
  * blueimp Gallery CSS
@@ -1957,10 +1972,10 @@ body {
 .menu-categs .sub-menu a {
   background: #1B998B;
   border-color: #126E63; }
-.menu-categs .current-menu-item a {
+.menu-categs .menu-item .current-menu-item a {
   background: #fff;
   color: #333333; }
-  .menu-categs .current-menu-item a span {
+  .menu-categs .menu-item .current-menu-item a span {
     color: #666666; }
 @media (min-width: 992px) {
   .menu-categs {
@@ -1983,7 +1998,7 @@ body {
   .nav-menu-content .menu-item {
     display: inline-block; }
   .nav-menu-content .menu-item-active a {
-    border: 1px solid #1B998B;
+    border: 1px solid #1B998B !important;
     font-size: 16px;
     padding: 8px 14px;
     color: #126E63;
@@ -2004,27 +2019,52 @@ body {
           justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-bottom: 32px; }
 
 .tab-button {
-  display: inline-block;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  text-align: center; }
+  text-align: center;
+  margin: 0 2px; }
   .tab-button .btn {
-    padding: 8px 14px;
     display: block;
-    color: #126E63;
-    font-weight: 500; }
+    font-weight: 500;
+    padding: 8px 4px;
+    color: #666666;
+    background: rgba(46, 48, 71, 0.1); }
+  @media (min-width: 768px) {
+    .tab-button {
+      margin: 0 10px; }
+      .tab-button .btn {
+        padding: 16px; } }
+  .tab-button:first-child {
+    margin-left: 0; }
+  .tab-button:last-child {
+    margin-right: 0; }
 
-.tab-button-active a {
-  border: 1px solid #1B998B;
+.tab-button-active .btn {
+  background: #2E3047;
+  color: #fff; }
+  .tab-button-active .btn:hover {
+    background: #2E3047; }
+
+.card-specialist-detailed .tabs-buttons {
+  margin-bottom: 0; }
+  .card-specialist-detailed .tabs-buttons .btn {
+    background: none; }
+.card-specialist-detailed .tab-button-active .btn {
+  border: 1px solid #1B998B !important;
   font-size: 16px;
   padding: 8px 14px;
   color: #126E63;
-  border-radius: 3px; }
-.tab-button-active a:hover {
+  border-radius: 3px;
+  font-size: 14px;
+  padding: 8px 14px;
+  background: none;
+  color: #126E63; }
+.card-specialist-detailed .tab-button-active .btn:hover {
   background: none;
   color: #1B998B; }
 
@@ -2081,6 +2121,13 @@ body {
         flex-wrap: wrap; }
     .row-cards-2 .card {
       width: 49%;
+      margin: 0 0 20px 0; }
+
+  .row-cards-3 {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .row-cards-3 .card {
+      width: 32%;
       margin: 0 0 20px 0; } }
 .p-small-number {
   color: #ACACAC;
@@ -2267,14 +2314,16 @@ body {
     top: -2px; }
 
 /* ARTICLE */
-.card-article .p-small-number {
-  margin-bottom: 0; }
-.card-article .heading {
-  margin: .5rem 0; }
-.card-article .readmore {
-  color: #2E3047;
-  margin-top: 8px;
-  display: inline-block; }
+.card-article {
+  margin-bottom: 16px; }
+  .card-article .p-small-number {
+    margin-bottom: 0; }
+  .card-article .heading {
+    margin: .5rem 0; }
+  .card-article .readmore {
+    color: #2E3047;
+    margin-top: 8px;
+    display: inline-block; }
 
 .article-main .heading {
   margin-bottom: 8px; }
@@ -2482,26 +2531,25 @@ body {
   .card-order-detailed .t-ordernumber a {
     color: #2E3047; }
 
-.b-carousel-gallery .item {
-  margin-right: 20px; }
-
 /* specialist */
 .rating {
-  color: rgba(250, 201, 23, 0.5);
+  color: rgba(250, 201, 23, 0.3);
   font-size: 16px;
   display: inline-block; }
   .rating .num {
     color: #666666; }
 
 .rating-low [data-prefix="fas"] path {
-  fill: rgba(250, 201, 23, 0.5);
-  stroke: rgba(250, 201, 23, 0.5); }
+  fill: rgba(250, 201, 23, 0.3); }
 
 .rating-mid {
   color: #CD7F32; }
 
 .rating-mid [data-prefix="fas"] path {
   fill: #CD7F32; }
+
+.rating-silver {
+  color: #C0C0C0; }
 
 .rating-high {
   color: #FFD700; }
@@ -2559,7 +2607,7 @@ body {
     right: 20px;
     top: 20px; }
   .card-specialist-detailed .title {
-    margin: 20px 0 8px 0;
+    margin: 16px 0 8px 0;
     font-size: 16px;
     font-weight: 600;
     color: #333333; }
@@ -2571,20 +2619,18 @@ body {
     .card-specialist-detailed .b-name .title {
       margin: 0; }
   .card-specialist-detailed .tabs-buttons {
-    margin-top: 20px; }
-  .card-specialist-detailed .tab-button a {
+    margin: 16px 0; }
+  .card-specialist-detailed .tab-button .btn {
     font-size: 14px;
     font-weight: 700;
     color: #1B998B; }
   .card-specialist-detailed hr {
     background: #ccc;
     height: 1px;
-    margin: 20px -20px 0;
+    margin: 0 -16px;
     border: none; }
   .card-specialist-detailed .b-user-header {
     margin: 20px 0; }
-  .card-specialist-detailed .tabs-tabcontent a {
-    color: #2E3047; }
   .card-specialist-detailed .comment {
     margin-bottom: 12px;
     font-size: 14px;
@@ -2598,7 +2644,8 @@ body {
 .gallery-specialist {
   margin-top: 20px;
   position: relative;
-  font-size: 0; }
+  font-size: 0;
+  display: inline-block; }
   .gallery-specialist a {
     display: inline-block;
     max-width: 100px;
@@ -2970,33 +3017,6 @@ body {
 .worker .link-local {
   margin: 0 16px 16px 0;
   display: inline-block; }
-.worker .tabs-buttons {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin-bottom: 36px; }
-.worker .tab-button {
-  margin: 0 2px; }
-  .worker .tab-button:first-child {
-    margin-left: 0; }
-  .worker .tab-button:last-child {
-    margin-right: 0; }
-  .worker .tab-button a {
-    border: 1px solid #2E3047;
-    padding: 8px 4px;
-    color: #666666; }
-    .worker .tab-button a:hover {
-      background: rgba(46, 48, 71, 0.1); }
-  @media (min-width: 768px) {
-    .worker .tab-button {
-      margin: 0 10px; }
-      .worker .tab-button a {
-        padding: 16px; } }
-.worker .tab-button-active a {
-  background: #2E3047;
-  color: #fff; }
-  .worker .tab-button-active a:hover {
-    background: #2E3047; }
 .worker .row-prices {
   margin-top: 40px; }
   @media (min-width: 600px) and (max-width: 767px), (min-width: 992px) {
