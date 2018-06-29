@@ -29,7 +29,7 @@ jQuery(document).ready(function($){
             }
         });
     }
-    menu_nested('.menu-categs');
+    //menu_nested('.menu-categs');
 
 
 

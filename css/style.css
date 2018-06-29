@@ -124,7 +124,7 @@ small {
 .btn-main {
   background: #FAC917;
   font-weight: 500;
-  color: #333333 !important;
+  color: #585858 !important;
   font-weight: 600;
   -webkit-box-shadow: 0 0 5px 0 rgba(250, 201, 23, 0.75), inset 0 0 10px 0 rgba(238, 191, 22, 0.75);
           box-shadow: 0 0 5px 0 rgba(250, 201, 23, 0.75), inset 0 0 10px 0 rgba(238, 191, 22, 0.75); }
@@ -1956,22 +1956,39 @@ body {
   .menu-categs .menu-item span {
     display: block;
     position: absolute;
-    top: 16px;
+    top: 21px;
     right: 16px;
-    color: rgba(255, 255, 255, 0.4); }
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 14px;
+    line-height: 1; }
 .menu-categs a {
   color: #fff;
   padding: 16px 40px 16px 24px;
   border: 1px solid #363972;
   border-top: none;
-  background: #2E3047;
   display: block; }
-  .menu-categs a:hover {
-    text-decoration: none;
-    background: rgba(46, 48, 71, 0.95); }
-.menu-categs .sub-menu a {
+.menu-categs > .menu-item > a {
+  background: #2E3047; }
+  .menu-categs > .menu-item > a:hover {
+    background: rgba(46, 48, 71, 0.9); }
+.menu-categs > .menu-item > .sub-menu > .menu-item > a {
   background: #1B998B;
-  border-color: #126E63; }
+  border-color: #126E63;
+  padding-left: 32px; }
+  .menu-categs > .menu-item > .sub-menu > .menu-item > a:hover {
+    background: rgba(27, 153, 139, 0.9); }
+.menu-categs > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item span {
+  color: #ACACAC; }
+.menu-categs > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item a {
+  background: #f1f0f0;
+  color: #666666;
+  padding-left: 40px;
+  border-color: #ACACAC; }
+  .menu-categs > .menu-item > .sub-menu > .menu-item > .sub-menu > .menu-item a:hover {
+    background: #fff; }
+.menu-categs > .menu-item > .sub-menu > .menu-item > .sub-menu > .current-menu-item a {
+  color: #126E63;
+  background: #fff; }
 .menu-categs .menu-item .current-menu-item a {
   background: #fff;
   color: #333333; }
@@ -2036,7 +2053,7 @@ body {
     background: rgba(46, 48, 71, 0.1); }
   @media (min-width: 768px) {
     .tab-button {
-      margin: 0 10px; }
+      margin: 0 4px; }
       .tab-button .btn {
         padding: 16px; } }
   .tab-button:first-child {
@@ -2447,7 +2464,8 @@ body {
   .list-details .item:last-child {
     margin-right: 0; }
 .list-details a {
-  color: #2E3047; }
+  color: #2E3047;
+  font-size: 0.9em; }
 
 .t-location {
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24'%3E%3Cpath d='M12 0c-4.198 0-8 3.403-8 7.602 0 4.198 3.469 9.21 8 16.398 4.531-7.188 8-12.2 8-16.398 0-4.199-3.801-7.602-8-7.602zm0 11c-1.657 0-3-1.343-3-3s1.343-3 3-3 3 1.343 3 3-1.343 3-3 3z'/%3E%3C/svg%3E") 0 50% no-repeat;
@@ -2642,7 +2660,7 @@ body {
     margin-top: 20px; }
 
 .gallery-specialist {
-  margin-top: 20px;
+  margin-top: 16px;
   position: relative;
   font-size: 0;
   display: inline-block; }
@@ -2672,14 +2690,14 @@ body {
       margin: auto; }
 
 .card-specialist-combo {
-  margin-bottom: 20px; }
+  margin-bottom: 16px; }
   .card-specialist-combo .heading {
-    margin: 0 0 .4rem 0; }
+    margin: -13px 0 8px 0; }
   .card-specialist-combo_header {
     margin-bottom: 1rem;
     position: relative;
     padding: 10px 0 0 100px;
-    min-height: 80px; }
+    min-height: 70px; }
   .card-specialist-combo .b-userpic {
     position: absolute;
     left: 0;
@@ -2687,15 +2705,15 @@ body {
     width: 80px; }
   .card-specialist-combo .description {
     line-height: 1.75;
-    margin-bottom: 1rem; }
+    margin-bottom: 16px; }
     .card-specialist-combo .description a {
       color: #126E63;
       font-weight: 500; }
   .card-specialist-combo .title {
     font-weight: 700;
-    margin-bottom: 0.5rem; }
+    margin-bottom: 8px; }
   .card-specialist-combo .list-works {
-    margin-bottom: .5rem; }
+    margin-bottom: 8px; }
   .card-specialist-combo .gallery {
     margin-bottom: 1rem; }
   @media (min-width: 768px) {
@@ -2711,8 +2729,8 @@ body {
         padding-right: 235px; }
       .card-specialist-combo .btn {
         position: absolute;
-        top: 35px;
-        right: 20px; }
+        top: 16px;
+        right: 16px; }
       .card-specialist-combo .gallery {
         margin-bottom: 0; } }
 
@@ -2927,9 +2945,9 @@ body {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; } }
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; } }
 @media (min-width: 992px) {
   .list-columns-1 li, .list-columns-2 li, .list-columns-3 li {
     margin-bottom: 8px; } }

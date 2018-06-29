@@ -89,7 +89,8 @@ small {font-size: 100%;display: inline-block;}
   $btn-main-bg: $action;
   background: $btn-main-bg;
   font-weight: 500;
-  color: $heading-text !important;
+  //color: $heading-text !important;
+  color: #585858 !important;
   font-weight: 600;
   box-shadow: 
     0 0 5px 0 rgba($btn-main-bg, .75),
