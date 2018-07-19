@@ -19,7 +19,7 @@ body {
 	//svg {width: 24px;}
 }
 .t-icon {
-	display: flex;
+	display: flex;	
 	align-items: center;
 }
 .userpic {
@@ -103,7 +103,7 @@ body {
 	.search-field {
 		height: 64px;
 		background: $green;
-		font-weight: 500;
+		font-weight: 400;
 		padding: 0 40px 0 12px;
 		margin: 0;
 		color: #fff !important;
@@ -498,6 +498,9 @@ body {
 	.row-mod {display: flex;} 
 	.col-sidebar {width: 355px; flex-shrink: 0;}
 	.col-content {overflow: hidden; flex-grow: 1}	
+	.col-sidebar+.col-content {padding-left: 24px;}
+}
+@media (min-width: $screen-lg-min) {
 	.col-sidebar+.col-content {padding-left: 40px;}
 }
 
@@ -1095,7 +1098,9 @@ body {
 	@media (max-width: $screen-sm-max) {margin: 20px 0;}
 	@media (min-width: $screen-md-min) {
 		order: 1;
-		width: 335px;
+		width: 240px;
+		margin-left: 24px;
+		//flex-shrink: 0;
 	}	
 	.step {
 		text-align: center;
@@ -1135,19 +1140,16 @@ body {
 }
 .section-form-major {
 	flex-grow: 1;
-	.form-info {
-		background: $blue-dark;
-		color: #fff;
-		padding: 10px 40px 10px 20px;
-		font-weight: 700;
-	}
-	@media (min-width: $screen-md-min) {
-		padding-right: 20px;
-	}
+}
+.form-info {
+	background: $blue-dark;
+	color: #fff;
+	padding: 24px 32px;
+	font-weight: 700;
 }
 .form-offer {
 	background: #E5E5E5;
-	padding: 20px 40px 40px 20px;
+	padding: 24px 32px 40px;
 	margin-bottom: 20px;
 	.lbl-top {margin-bottom: 12px;}
 
