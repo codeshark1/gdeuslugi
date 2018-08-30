@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Заявка - GdeUslugi</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body class="home">
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+<header class="header-site" id="header">
+    <div class="header-site__1 container">        
+        <div class="b-logo-region">
+            <a href="#" class="b-logo">
+                <span class="logotype"><b>Gde</b>Uslugi</span>
+            </a><!-- /.b-logo -->
+
+            <div class="b-region">
+                <p class="title-1"><span class="title-0">Мастера и заказы в</span> <span class="link-local" href="#">Санкт-Петербург</span></p>
+                <p class="title-2"><a href="#">12 000 заказов</a> и <a href="#">83 000 мастеров</a></p>
+            </div><!-- /.b-region -->
+        </div><!-- /.b-logo-region -->
+        
+        <div class="b-help">
+            <p class="btn btn-edu">Помочь вам?</p>            
+        </div><!-- /.b-help -->
+
+        <div class="b-quickactios">
+            <a href="#" class="link link-bookmarks" title="избранное">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 17"><path class="shape_stroke" fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2" d="M1 2.002v13.75c0 .335-.039.312.257.145l4.38-2.468c.782-.44 1.941-.442 2.726 0l4.38 2.468c.303.171.257.198.257-.145V2.002A1.01 1.01 0 0 0 11.994 1H2.006C1.449 1 1 1.449 1 2.002z"></path></svg>
+            </a>
+            <a href="#" class="link link-comparing" title="сравнение">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path class="shape" fill-rule="nonzero" d="M14 14h1.994A2.005 2.005 0 0 0 18 11.994V2.006A2.005 2.005 0 0 0 15.994 0H6.006A2.005 2.005 0 0 0 4 2.006V4h2.003c0-1.175.002-2 .003-2 0 0 9.994.002 9.994.006 0 0-.002 9.994-.006 9.994H14v2zM0 6.006C0 4.898.897 4 2.006 4h9.988C13.102 4 14 4.897 14 6.006v9.988A2.005 2.005 0 0 1 11.994 18H2.006A2.005 2.005 0 0 1 0 15.994V6.006zm2 9.988c0 .004 9.994.006 9.994.006.004 0 .006-9.994.006-9.994C12 6.002 2.006 6 2.006 6 2.002 6 2 15.994 2 15.994z"></path></svg>
+            </a>
+            <a href="#" class="link link-subsciptions" title="подписки">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><g fill="none" fill-rule="evenodd"><path class="shape_stroke" stroke="#000" stroke-width="2" d="M1 2.006v9.988A1 1 0 0 0 1.995 13h14.01A1 1 0 0 0 17 11.994V2.006A1 1 0 0 0 16.005 1H1.995A1 1 0 0 0 1 2.006z"></path><path class="shape" fill="#000" d="M2.377 4.057c-.532-.171-1.12.073-1.314.545-.195.475.08.994.611 1.165l6.76 2.18c.189.061.384.07.566.035.182.035.377.026.566-.035l6.76-2.18c.531-.171.806-.69.611-1.165-.194-.472-.782-.716-1.314-.55L9 6.193 2.377 4.057z"></path><path d="M2 2h14v2L9 6.21 2 4z"></path></g></svg>
+            </a>
+        </div><!-- /.b-quickactios -->
+
+        <div class="b-login">
+            <div href="#" class="b-login_i">
+                <p class="b-login-links">
+                    <a href="#modal-login" rel="modal:open" class="open-modal link-desk">Вход</a>
+                    <a href="#modal-reg" rel="modal:open" class="open-modal link-desk">Регистрация</a>
+
+                    <a href="#modal-login" rel="modal:open" class="open-modal link-mob">Войти</a>
+                </p>
+            </div><!-- /.b-login_i -->
+        </div><!-- /.b-login -->
+    </div><!-- /.header-site__1 -->
+
+    <div class="header-site__2">
+        <div class="header-site__2_i container">
+            <div class="b-action-uslugi">
+                <p class="link-uslugi"><a href="#">Услуги и мастера</a></p>
+            </div><!-- /.b-action-1 -->
+
+            <div class="b-search-header" id="searchform">
+                <form role="search" method="get" class="form-search form-search-header" action="/">
+                    <input type="text" class="search-field" autocomplete="off" placeholder="Найти исполнителя или услугу" title="Поиск" role="combobox">
+                    <button type="submit" class="search-submit" id="searchsubmit" title="Поиск">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
+                    </button>
+                </form>
+            </div><!-- /.b-search-header -->
+            
+            <div class="b-action-order">
+                <a href="#" class="btn btn-main">Заказать услугу</a>
+            </div><!-- /.b-action-2 -->            
+        </div><!-- /.header-site__2_i container -->
+    </div><!-- /.header-site__2 -->
+</header>
+
+<main class="main-content">
+    <div class="container">
+        <div class="site-content">
+            <nav class="breadcrumbs">
+                <a href="#">Главная</a>
+                <a href="#">Составление заказа</a>
+            </nav>
+
+            <div class="row-mod-form">
+                <div class="section-form-major-steps card">
+                    <p class="step">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Создайте заказ</span>
+                        <span class="step-description">Опишите, что нужно сделать.</span>
+                    </p>
+                    <p class="step">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Получите предложения</span>
+                        <span class="step-description">Получите до 20 вариантов с расчетом цен и сроков.</span>
+                    </p>
+                    <p class="step">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Выберите самое выгодное!</span>
+                        <span class="step-description">Выбирайте специалиста по отзывам и цене</span>
+                    </p>
+                </div><!-- /.section-form-major-steps -->
+                <div class="section-form-major">
+                    <p class="form-info">Простой способ найти любую услугу. <br>
+                        Заполните заявку и получите самые выгодные предложения услуг!
+                    </p>
+
+                    <form action="/" class="form-offer">
+                        <label for="inp-offer-categ" class="lbl lbl-top">Выберите категорию:</label>
+                        <select id="inp-offer-categ">
+                            <option>Выберите вариант</option>
+                            <option>Строительные услуги</option>
+                        </select>
+
+                        <label for="inp-offer-descr-1" class="lbl lbl-top">Что нужно сделать в 2-х словах:</label>
+                        <input type="text" id="inp-offer-descr-1">
+
+                        <label for="inp-offer-descr-2" class="lbl lbl-top">Подробнее опишите задачу:</label>
+                        <textarea type="text" id="inp-offer-descr-2"></textarea>
+
+                        <label for="inp-offer-attach" class="lbl-icon lbl-photo">прикрепить фото</label>
+                        <input type="file" name="pic" accept="image/*" id="inp-offer-attach" class="inp-offer-file">
+
+                        <hr>
+
+                        <label for="inp-offer-town" class="lbl lbl-top">Город</label>
+                        <input type="text" id="inp-offer-town">
+
+                        <div class="row-form">
+                            <div class="col-form">
+                                <label for="inp-offer-area" class="lbl lbl-top">Район</label>
+                                <input type="text" id="inp-offer-area">
+                            </div><!-- /.col-form -->
+                            <div class="col-form">
+                                <label for="inp-offer-metro" class="lbl lbl-top">Метро</label>
+                                <input type="text" id="inp-offer-metro">
+                            </div><!-- /.col-form -->
+                        </div><!-- /.row-form -->
+
+                        <a href="#" class="lbl-icon lbl-map">отметить на карте</a>
+
+                        <div class="row-form">
+                            <div class="col-form">
+                                <label id="inp-offer-budget" class="lbl lbl-top">Бюджет</label>
+                                <input type="text" placeholder="от" aria-labelledby="inp-offer-budget">
+                            </div><!-- /.col-form -->
+                            <div class="col-form">
+                                <input type="text" placeholder="до" aria-labelledby="inp-offer-budget">
+                            </div><!-- /.col-form -->
+                        </div><!-- /.row-form -->
+
+                        <hr>
+
+                        <label for="inp-offer-name" class="lbl lbl-top">Имя</label>
+                        <input type="text" id="inp-offer-name">
+
+                        <div class="row-form">
+                            <div class="col-form">
+                                <label for="inp-offer-email" class="lbl lbl-top">Email для ответов</label>
+                                <input type="email" id="inp-offer-email">
+                            </div><!-- /.col-form -->
+                            <div class="col-form">
+                                <label for="inp-offer-tel" class="lbl lbl-top">Телефон</label>
+                                <input type="tel" id="inp-offer-tel">
+                            </div><!-- /.col-form -->
+                        </div><!-- /.row-form -->
+
+                        <hr>
+
+                        <label for="inp-offer-close" class="lbl lbl-top">Закрыть заказ через</label>
+                        <select id="inp-offer-close" class="inp-offer-close">
+                            <option>Выберите вариант</option>
+                            <option>2 месяца</option>
+                        </select>
+
+                        <label class="checkbox lbl lbl-top"><input type="checkbox" class="checkbox">Скрыть контакты (принимать заявки только через сайт)</label>
+                        <label class="checkbox lbl lbl-top"><input type="checkbox" class="checkbox">Получать SMS - уведомления о новых заявках</label>
+
+                        <button type="submit" class="btn btn-main">ДОБАВИТЬ ЗАКАЗ</button>
+                    </form>
+                    <p class="t-small">
+                        Внимание! Публикуя объявление, вы соглашаетесь с <a href="#">правилами сайта</a>. <br>
+                        В случае нарушения, объявление будет заблокировано.
+                    </p>
+                </div><!-- /.section-form-major -->
+            </div><!-- /.row-mod -->
+
+            <div class="b-about visible-sm visible-xs">
+                <svg class="icn" viewBox="0 0 65 64" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M32.5 0C14.5519 0 0 14.328 0 32C0 49.672 14.5519 64 32.5 64C50.4481 64 65 49.672 65 32C65 14.328 50.4481 0 32.5 0ZM29.1077 31.4199C28.8558 35.524 26.9749 41.668 19.4471 47.648C19.0855 47.928 18.663 48.068 18.2406 48.068C17.6516 48.068 17.0706 47.8039 16.6846 47.2919C16.0184 46.412 16.1727 45.148 17.0339 44.468C21.4937 40.9266 23.597 37.438 24.5263 34.5399C24.9208 33.3098 23.5218 32.356 22.2299 32.356V32.356C18.923 32.356 16.2458 29.6161 16.2458 26.2361C16.2458 22.8561 18.927 20.1161 22.2299 20.1161C22.9686 20.1161 23.6477 20.3037 24.2948 20.5589C24.3034 20.5623 24.3119 20.5536 24.3083 20.5451V20.5451C24.3045 20.5363 24.3136 20.5276 24.3223 20.5316L24.9883 20.8441L25.0117 20.8533C25.0366 20.8631 25.0602 20.8762 25.0817 20.8921V20.8921L25.8815 21.4498C25.9792 21.5179 26.0705 21.5945 26.1545 21.6788L26.4426 21.9681C27.9175 23.412 29.5384 26.168 29.1077 31.4199ZM48.8069 31.416C48.5549 35.5201 46.674 41.6641 39.1421 47.6441C38.7805 47.9281 38.3581 48.0681 37.9356 48.0681C37.3466 48.0681 36.7657 47.8001 36.3797 47.288C35.7134 46.404 35.8677 45.1441 36.729 44.4641C41.1874 40.9209 43.2907 37.4348 44.2205 34.5382C44.6133 33.3144 43.2102 32.356 41.9249 32.356V32.356C38.6222 32.356 35.9408 29.6161 35.9408 26.2361C35.9408 22.8561 38.614 20.1161 41.9249 20.1161C42.6674 20.1161 43.3464 20.3035 43.9933 20.5586C44.0016 20.5619 44.0096 20.5532 44.0055 20.5452V20.5452C44.0013 20.537 44.0099 20.5282 44.0182 20.5321L44.6833 20.8441L44.7067 20.8533C44.7317 20.8631 44.7552 20.8762 44.7768 20.8921V20.8921L45.5807 21.4526C45.6756 21.5188 45.7646 21.5931 45.8466 21.6747L46.1418 21.9681C47.6165 23.412 49.2293 26.168 48.8069 31.416Z">
+                </svg>
+                <p>Gdeuslugi.ru поможет найти любого специалиста в сфере строительствы ремонта и других услуг. Сотни частных специалистов ждут вашего заказа. Наш сервис экономит вам время и деньги.</p>
+            </div><!-- /.b-about -->
+        </div><!-- /.site-content -->        
+    </div><!-- /.container -->
+</main><!-- /.main-content -->
+
+<footer class="footer-site" id="footer">
+    <div class="container">
+        <div class="row-mod">
+            <div class="col-sidebar">
+                <a href="/" class="appsore"><img src="images/appstore@2x.png" alt="Скачать на Appstore"></a>
+            </div><!-- col-sidebar -->
+            <div class="col-content">
+                <div class="row-mod">
+                    <div class="col-footer">
+                        <h4 class="heading">О проэкте</h4>
+                        <ul role="menu" class="nav-menu">
+                            <li role="menuitem" class="menu-item"><a href="/">Правила ресурса</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Как стать специалистом</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Контакты</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Партнерская программа</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                    <div class="col-footer">
+                        <h4 class="heading">Рекламодателям</h4>
+                        <ul role="menu" class="nav-menu">
+                            <li role="menuitem" class="menu-item"><a href="/">Master - аккаунт</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Реклама на сайте</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                    <div class="col-footer">
+                        <h4 class="heading">Помощь</h4>
+                        <ul role="menu" class="nav-menu">
+                            <li role="menuitem" class="menu-item"><a href="/">Частые вопросы</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Техническая поддержка</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                    <div class="col-footer">
+                        <h4 class="heading">Разделы</h4>
+                        <ul role="menu" class="nav-menu">
+                            <li role="menuitem" class="menu-item"><a href="/">Каталог специалистов</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Стать специалистом</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Полезные статьи</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Цены на услуги</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                </div><!-- /.row-mod -->
+                <div class="row-mod">
+                    <div class="col-footer col-footer-wide">
+                        <ul role="menu" class="nav-menu nav-menu-inline">
+                            <li role="menuitem" class="menu-item"><a href="/">Публичная оферта</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Конфиндециальность</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Правила</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                    <div class="col-footer">
+                        <ul role="menu" class="nav-menu nav-menu-social nav-menu-social-footer">
+                            <li role="menuitem" class="menu-item"><a href="/"><i class="fab fa-vk"></i></a></li>
+                            <li role="menuitem" class="menu-item"><a href="/"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li role="menuitem" class="menu-item"><a href="/"><i class="fab fa-twitter"></i></a></li>
+                        </ul>                        
+                    </div><!-- /.col-footer -->
+                </div><!-- /.row-mod -->
+            </div><!-- col-content -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</footer>
+</body>
+</html>

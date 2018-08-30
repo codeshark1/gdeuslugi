@@ -68,7 +68,7 @@ jQuery(document).ready(function($){
     $(window).resize(function(){
         if( $(window).width() < 992) {
             unsquare();
-        }        
+        }
     });
     /* --LISTING VIEW*/
 
@@ -97,6 +97,22 @@ jQuery(document).ready(function($){
     filter_toggle();
     /*FILTER--*/
 
+    /* HEADER SEARCH */
+    $('#searchform .search-field').focus(function(){
+        if ( $(window).width() <= 750) {
+            //$('#searchform').css('width', 'auto');
+            $('#searchform').addClass('absolute');
+            console.log( 'click.registered' );
+        }
+    });
+
+    $('#searchform .search-field').focusout(function(){        
+        //$('#searchform').css('width', '33%');
+        $('#searchform').removeClass('absolute');
+    });
+
+    /* --HEADER SEARCH */
+
 
     /*CAROUSEL/SLIDER*/
     $('#slider').slick({
@@ -120,43 +136,7 @@ jQuery(document).ready(function($){
         nextArrow: "<button type='button' type='button' class='slick-next'><i class='fas fa-chevron-right'></i></button>"        
     });
 
-    /*BANNER*/
-    /*Padding*/
-    function setPadding() {
-        if ( ($(window).width() > 992) && ($('#bnr').length) ) {
-            $('#bnr').show();
-            var spaceWidth = $('.container').offset();
-            var bannerWidth = $('#bnr').width();
-            $('.main-content .container').css('padding-left', (bannerWidth - spaceWidth.left + 15));
-        } else {
-            $('.main-content .container').css('padding-left', 15);
-        }
-    }    
-    setPadding();
 
-    $(window).resize(function(){
-        setPadding();
-    });
-
-    /*Bottom positioning*/
-    $(document).on('scroll resize', function() {
-        var distanceFromBottom = Math.floor($(document).height() - $(document).scrollTop() - $(window).height());
-        
-        if ( $(window).width() > 992) {
-            if(distanceFromBottom < $('#footer').outerHeight()) {
-                $('#bnr').css('bottom', $('#footer').outerHeight() + 40)
-            } else {
-                $('#bnr').css('bottom', 0 )
-            }
-        }
-
-    });   
-
-    /*Close button*/
-    $('#bnr-close').click(function(){
-        $('#bnr').fadeOut();
-    });
-    /*--BANNER*/
 
 
     /* TABS */
@@ -174,7 +154,7 @@ jQuery(document).ready(function($){
             }
         });
     }
-    tabs();
+    //tabs();
 
     $('.slick-arrow').click(function(e){
         e.stopPropagation();
@@ -200,5 +180,42 @@ jQuery(document).ready(function($){
             }
             setTimeout(delayHide, 2000);
         }
-    });    
+    });  
+    
+    
+    $('.card-dash-master-orders-note').hide();
+    $('.card-dash-master-orders').hide();
+
+
+        
+    $('.card-dash-check-tablink').click(function(){
+        var tab_id = $(this).attr('data-tab');
+
+        if(tab_id == 'card-dash-master-orders') {
+            if( $(this).parents('.card-dash-check-text').find('.card-dash-master-orders').is(':visible') ) {
+                $(this).parents('.card-dash-check-text').find('.card-dash-master-orders').slideUp('fast');
+                $(this).removeClass('active');
+                $(this).siblings().removeClass('active');
+            } else {
+                $(this).parents('.card-dash-check-text').find('.card-dash-master-orders').slideDown('fast');
+                $(this).addClass('active').siblings().removeClass('active');
+            }            
+        } else if (tab_id == 'card-dash-master-orders-note') {
+            if( $(this).parents('.card-dash-check-text').find('.card-dash-master-orders-note').is(':visible') ) {
+                $(this).parents('.card-dash-check-text').find('.card-dash-master-orders-note').slideUp('fast');
+                $(this).removeClass('active');
+                $(this).siblings().addClass('active');
+            } else {
+                $(this).parents('.card-dash-check-text').find('.card-dash-master-orders').show().find('.card-dash-master-orders-note').slideDown('fast');                
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+            } 
+        }  
+    });
+
+    $('#link-showphone').click(function(e){
+        e.preventDefault();
+        $(this).hide();
+        $('#master-phone').show();
+    });
 });

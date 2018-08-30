@@ -38,10 +38,15 @@ $action: #FAC917;
 $gray-text: #ACACAC;
 //$link-text: #0066CC;
 $link-text: $blue-dark;
+$gray-dark: #666666;
+$red: #E5243B;
+$gray-border: #E5E5E5;
+$gray-bg: #F7F7F7;
+
 
 $gray-light: #e3e3e3;
-$gray: #A6A6A6;
-$blue-bright: #0099ff;
+$gray: #666;
+$blue-bright: #1B57CD;
 
 
 @mixin shadow() {
@@ -61,6 +66,8 @@ $blue-bright: #0099ff;
 
 @mixin link-local($color) {
     color: $color; 
-    border-bottom: 1px dashed $color;
-    &:hover {border-bottom: 1px solid $color; text-decoration: none;}
+    border-bottom: 1px dashed rgba($color,.5);
+    padding-bottom: 2px;
+    cursor: pointer;
+    &:hover {border-bottom: 1px solid rgba($color,.5); text-decoration: none;}
 }
