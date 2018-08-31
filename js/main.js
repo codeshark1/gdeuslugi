@@ -154,7 +154,7 @@ jQuery(document).ready(function($){
             }
         });
     }
-    //tabs();
+    tabs();
 
     $('.slick-arrow').click(function(e){
         e.stopPropagation();

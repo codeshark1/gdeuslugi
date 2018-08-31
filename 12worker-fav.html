@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>исполнитель/Избраное</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+<header class="header-site" id="header">
+    <div class="header-site__1 container">        
+        <div class="b-logo-region">
+            <a href="#" class="b-logo">
+                <span class="logotype"><b>Gde</b>Uslugi</span>
+            </a><!-- /.b-logo -->
+
+            <div class="b-region">
+                <p class="title-1"><span class="title-0">Мастера и заказы в</span> <span class="link-local" href="#">Санкт-Петербург</span></p>
+                <p class="title-2"><a href="#">12 000 заказов</a> и <a href="#">83 000 мастеров</a></p>
+            </div><!-- /.b-region -->
+        </div><!-- /.b-logo-region -->
+        
+        <div class="b-help">
+            <p class="btn btn-edu">Помочь вам?</p>            
+        </div><!-- /.b-help -->
+
+        <div class="b-quickactios">
+            <a href="#" class="link link-bookmarks" title="избранное">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 17"><path class="shape_stroke" fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2" d="M1 2.002v13.75c0 .335-.039.312.257.145l4.38-2.468c.782-.44 1.941-.442 2.726 0l4.38 2.468c.303.171.257.198.257-.145V2.002A1.01 1.01 0 0 0 11.994 1H2.006C1.449 1 1 1.449 1 2.002z"></path></svg>
+            </a>
+            <a href="#" class="link link-comparing" title="сравнение">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 18"><path class="shape" fill-rule="nonzero" d="M14 14h1.994A2.005 2.005 0 0 0 18 11.994V2.006A2.005 2.005 0 0 0 15.994 0H6.006A2.005 2.005 0 0 0 4 2.006V4h2.003c0-1.175.002-2 .003-2 0 0 9.994.002 9.994.006 0 0-.002 9.994-.006 9.994H14v2zM0 6.006C0 4.898.897 4 2.006 4h9.988C13.102 4 14 4.897 14 6.006v9.988A2.005 2.005 0 0 1 11.994 18H2.006A2.005 2.005 0 0 1 0 15.994V6.006zm2 9.988c0 .004 9.994.006 9.994.006.004 0 .006-9.994.006-9.994C12 6.002 2.006 6 2.006 6 2.002 6 2 15.994 2 15.994z"></path></svg>
+            </a>
+            <a href="#" class="link link-subsciptions" title="подписки">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18 14"><g fill="none" fill-rule="evenodd"><path class="shape_stroke" stroke="#000" stroke-width="2" d="M1 2.006v9.988A1 1 0 0 0 1.995 13h14.01A1 1 0 0 0 17 11.994V2.006A1 1 0 0 0 16.005 1H1.995A1 1 0 0 0 1 2.006z"></path><path class="shape" fill="#000" d="M2.377 4.057c-.532-.171-1.12.073-1.314.545-.195.475.08.994.611 1.165l6.76 2.18c.189.061.384.07.566.035.182.035.377.026.566-.035l6.76-2.18c.531-.171.806-.69.611-1.165-.194-.472-.782-.716-1.314-.55L9 6.193 2.377 4.057z"></path><path d="M2 2h14v2L9 6.21 2 4z"></path></g></svg>
+            </a>
+        </div><!-- /.b-quickactios -->
+
+        <div class="b-login">
+            <div href="#" class="b-login_i">
+                <p class="b-login-links">
+                    <a href="#modal-login" rel="modal:open" class="open-modal link-desk">Вход</a>
+                    <a href="#modal-reg" rel="modal:open" class="open-modal link-desk">Регистрация</a>
+
+                    <a href="#modal-login" rel="modal:open" class="open-modal link-mob">Войти</a>
+                </p>
+            </div><!-- /.b-login_i -->
+        </div><!-- /.b-login -->
+    </div><!-- /.header-site__1 -->
+
+    <div class="header-site__2">
+        <div class="header-site__2_i container">
+            <div class="b-action-uslugi">
+                <p class="link-uslugi"><a href="#">Услуги и мастера</a></p>
+            </div><!-- /.b-action-1 -->
+
+            <div class="b-search-header" id="searchform">
+                <form role="search" method="get" class="form-search form-search-header" action="/">
+                    <input type="text" class="search-field" autocomplete="off" placeholder="Найти исполнителя или услугу" title="Поиск" role="combobox">
+                    <button type="submit" class="search-submit" id="searchsubmit" title="Поиск">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
+                    </button>
+                </form>
+            </div><!-- /.b-search-header -->
+            
+            <div class="b-action-order">
+                <a href="#" class="btn btn-main">Заказать услугу</a>
+            </div><!-- /.b-action-2 -->            
+        </div><!-- /.header-site__2_i container -->
+    </div><!-- /.header-site__2 -->
+</header>
+
+<main class="main-content">
+    <div class="container">        
+        <div class="col-content site-content">                
+            <nav class="breadcrumbs">
+                <ul class="breadcrumbs-memu">
+                    <li class="breadcrumbs-memuitem"><a href="#">Услуги</a></li>
+                    <li class="breadcrumbs-memuitem"><a href="#">Мастера</a></li>
+                    <li class="breadcrumbs-memuitem"><a href="#">мастер - Избраное</a></li>
+                </ul>
+            </nav>
+
+            <article class="worker">
+                <header class="row-mod">
+                    <div class="worker-top-col-main worker-header">
+                        <div class="b-userpic"><img src="images/userpic5.jpg" alt="аватар" class="userpic"></div>                        
+                        <p class="name heading-edit">Виктор Викторович</p>                    
+                        <div class="wrapper">
+                            <div class="rating rating-mid rating-master-dash">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>5</span>
+                            </div><!-- rating -->
+                            <p class="card-dash-check-addr">Москва</p>
+                        </div><!-- /.wrapper -->
+                        <div class="master-actions">
+                            <div class="master-action-showphone">
+                                <a href="#" id="link-showphone" class="link-showphone">Показать телефон</a>
+                                <p id="master-phone" class="master-action-phone">+7 999 237 29 39</p>
+                            </div><!-- /.master-action-showphone -->
+                            <a href="#" class="link-msgmaster">Написать мастеру</a>
+                        </div><!-- /.master-actions -->
+                    </div><!-- /.card-dash-check-user -->
+                    <div class="worker-top-col-fav">
+                        <div class="b--addtofav">
+                            <a href="#" class="link-addtofav">Добавить в избраное</a>
+                            <button type="button" class="btn-fav">
+                                <svg viewBox="0 0 18 16" fill="" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M17.4725 4.81835L17.4742 4.83601L17.4771 4.85352C17.4875 4.91558 17.5724 5.48893 17.3315 6.46372L17.3315 6.46388C16.9849 7.86811 16.1826 9.15439 14.9988 10.1806L8.94892 15.3405L3.00283 10.1818L3.00254 10.1815C1.81805 9.15545 1.01517 7.86839 0.668475 6.46385L0.668452 6.46376C0.427462 5.48828 0.512624 4.9153 0.522957 4.85455L0.526054 4.83634L0.527799 4.81795C0.769049 2.27601 2.63019 0.5 4.90107 0.5C6.40259 0.5 7.74129 1.26641 8.52368 2.54635L8.94562 3.23661L9.37432 2.55052C10.1621 1.28975 11.5644 0.500331 13.0989 0.500331C15.3701 0.500331 17.2309 2.27633 17.4725 4.81835Z"/>
+                                </svg>
+                            </button>
+                        </div><!-- /.b--addtofav -->
+                        <div class="b--masterchecked">
+                            <p class="title">
+                                <svg class="icon" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.9266 8.14625C16.7307 7.95125 16.4123 7.95125 16.2165 8.14625L9.54174 14.7922L5.87893 11.1463C5.68309 10.9513 5.3647 10.9513 5.16886 11.1463C4.97301 11.3413 4.97301 11.6583 5.16886 11.8533L9.18616 15.8533C9.2846 15.9502 9.41312 15.9993 9.54169 15.9993C9.67026 15.9993 9.79878 15.9503 9.89623 15.8533L16.9265 8.85327C17.1224 8.65822 17.1224 8.34125 16.9266 8.14625Z" fill="#1B998B"/>
+                                    <path d="M20.7324 3.02099L10.6891 0.0209883C10.5947 -0.0069961 10.4953 -0.0069961 10.4008 0.0209883L0.357557 3.02099C0.145612 3.08399 0 3.27899 0 3.50001V14.5C0 18.922 6.77117 22.855 10.3968 23.978C10.445 23.993 10.4953 24 10.5455 24C10.5956 24 10.6459 23.993 10.6941 23.978C14.3197 22.854 21.0909 18.922 21.0909 14.5V3.50001C21.0909 3.27899 20.9453 3.08497 20.7324 3.02099ZM20.0866 14.5C20.0866 18.011 14.4995 21.703 10.5455 22.976C6.59143 21.703 1.00431 18.011 1.00431 14.5V3.87201L10.5455 1.022L20.0866 3.87201V14.5Z" fill="#1B998B"/>
+                                </svg>                                        
+                                Проверенный исполнитель
+                            </p>
+                            <p class="time">На сайте с 13 июня 2016</p>
+                        </div><!-- /.b--masterchecked -->
+                    </div><!-- /.worker-top-col-fav -->
+                    <div class="worker-top-col-order">
+                        <p class="worker-price">Цена за час работы <b>от 300 руб.</b></p>
+                        <a href="#" class="btn btn-order">Заказать услугу</a>
+                    </div><!-- /.worker-top-col-order -->
+                </header><!-- /.row-mod -->
+                <div class="worker-tags">
+                    <ul>                        
+                        <li class="worker-tag">Доставка продуктов и готовой еды</li>
+                        <li class="worker-tag">Доставка документов</li>
+                        <li class="worker-tag">Отправить поездом или маршруткой</li>
+                        <li class="worker-tag">Курьер на авто</li>
+                        <li class="worker-tag">Доставка лекарств</li>
+                        <li class="worker-tag">Доставка лекарств</li>
+                    </ul>
+                </div><!-- /.worker-tags -->
+
+                <ul class="tabs-buttons">
+                    <li class="tab-button"><a href="#" class="btn">Общая информация</a></li>
+                    <li class="tab-button"><a href="#" class="btn">Услуги и цены</a></li>
+                    <li class="tab-button"><a href="#" class="btn">Заказы</a></li>
+                    <li class="tab-button"><a href="#" class="btn">Портфолио</a></li>
+                    <li class="tab-button"><a href="#" class="btn">Отзывы</a></li>
+                    <li class="tab-button tab-button-active"><a href="#" class="btn">Избраное</a></li>
+                </ul>
+
+                <form role="search" method="get" class="form-search form-search-dash" action="/">
+                    <input type="text" class="search-field" autocomplete="off" placeholder="Введите имя или № заказа" title="Поиск" role="combobox">
+                    <button type="submit" class="search-submit" id="searchsubmit" title="Поиск">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
+                    </button>
+                </form>
+                
+                <div class="dash-msg-tools">
+                    <div class="dash-msg-tools--left">
+                        <div class="dash-msg-checkbox">
+                            <input type="checkbox">
+                        </div>            
+                        <button class="btn btn-default">
+                            <svg class="icon-svg" width="9" height="13" viewBox="0 0 8 11" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.06114 10.4695C7.04903 10.766 6.81096 11 6.52144 11H1.47863C1.18912 11 0.951047 10.766 0.938934 10.4695L0.578811 2.67856H7.42126L7.06114 10.4695ZM2.8593 4.6137C2.8593 4.48955 2.76107 4.38887 2.63988 4.38887H2.28896C2.16785 4.38887 2.06955 4.48953 2.06955 4.6137V9.06486C2.06955 9.18902 2.16777 9.28968 2.28896 9.28968H2.63988C2.76102 9.28968 2.8593 9.18908 2.8593 9.06486V4.6137ZM4.39489 4.6137C4.39489 4.48955 4.29666 4.38887 4.1755 4.38887H3.82457C3.70346 4.38887 3.60519 4.48953 3.60519 4.6137V9.06486C3.60519 9.18902 3.70339 9.28968 3.82457 9.28968H4.1755C4.29664 9.28968 4.39489 9.18908 4.39489 9.06486V4.6137ZM5.93053 4.6137C5.93053 4.48955 5.83231 4.38887 5.71114 4.38887H5.36019C5.23905 4.38887 5.14081 4.48953 5.14081 4.6137V9.06486C5.14081 9.18902 5.23903 9.28968 5.36019 9.28968H5.71114C5.83228 9.28968 5.93053 9.18908 5.93053 9.06486V4.6137Z" />
+                                <path d="M0.338972 0.566665H2.66539V0.115929C2.66539 0.0519189 2.71602 0 2.77851 0H5.22149C5.28395 0 5.33459 0.0519189 5.33459 0.115929V0.566638H7.66103C7.84825 0.566638 8 0.722179 8 0.914048V2.0054H0V0.914075C0 0.722206 0.151749 0.566665 0.338972 0.566665Z" />
+                            </svg>                        
+                            Удалить
+                        </button>
+                        <button class="btn btn-default">
+                            <svg class="icon-svg" width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7.5 0C3.35813 0 0 3.35813 0 7.5C0 11.6419 3.35813 15 7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35813 11.6419 0 7.5 0ZM7.5 12.2875C6.91375 12.2875 6.5125 11.8356 6.5125 11.25C6.5125 10.6475 6.93062 10.2125 7.5 10.2125C8.10188 10.2125 8.4875 10.6475 8.4875 11.25C8.4875 11.8363 8.10188 12.2875 7.5 12.2875ZM7.88875 8.32563C7.73937 8.835 7.26875 8.84375 7.11187 8.32563C6.93125 7.72813 6.28937 5.46 6.28937 3.98688C6.28937 2.04313 8.72125 2.03375 8.72125 3.98688C8.72062 5.46875 8.04437 7.79563 7.88875 8.32563Z" />
+                            </svg>                            
+                            Заблокировать
+                        </button>
+                    </div><!-- left -->
+                    <div class="dash-msg-tools--right">
+                        <select>
+                            <option>Сначала новые</option>
+                            <option>По времени</option>
+                        </select>
+                    </div><!-- /.dash-msg-tools--right --> 
+                </div><!-- tools -->        
+
+                <div class="card card-dash card-dash-check">
+                    <div class="card-dash-check-checkbox">
+                        <input type="checkbox" class="checkbox">
+                    </div><!-- card-dash-check-checkbox -->
+
+                    <div class="card-dash-check-text">
+                        <div class="card-dash-check-cont--row">
+                            <div class="card-dash-check-user_small card-dash-check-user_small-master">
+                                <div class="b-userpic"><img src="images/userpic5.jpg" alt="аватар" class="userpic"></div>                        
+                                <p class="name">Виктор Викторович</p>
+                                <p class="card-dash-check-status">Был на сайте 4 ч. назад</p>                        
+                                <div class="wrapper">
+                                    <div class="rating rating-mid rating-master-dash">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>5</span>
+                                    </div>
+                                    <p class="orders-count">Выполнил 338 заданий</p>
+                                    <p class="msg-link"><a href="#">23 отзыва</a></p>
+                                    <p class="card-dash-check-addr">Москва</p>
+                                </div><!-- /.wrapper -->
+                            </div><!-- /.card-dash-check-user_small -->
+                            
+                            <div class="card-dash-check-thumbs card-dash-check-aside-thumbs">
+                                <div class="card-dash-check-thumbs-wrp">
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></span>                        
+                                </div><!-- /.card-dash-check-thumbs-wrp -->
+                                <a href="#" class="dash-gal-thumb-linkmore">+25 фото</a>
+                            </div><!-- /.card-dash-check-aside-thumbs -->
+                        </div><!-- /.card-dash-check-cont--row -->
+
+                        <p class="msg-text"><b>Виды выполняемых работ</b>: Ремонт и замена комплектующих, установка и настройка операц. систем, программ</p>
+                        <p class="msg-text">Здравствуйте! Я, Владимир. Опыт ремонта с 2007 года. Своя мастерская. Адрес пишу в предложениях к заказам. Бесплатная диагностика, даже при отказе от ремонта. Гарантия на все работы. Я работаю с командой коллег.Команде посильны  абсолютно</p>
+
+                        <div class="card-dash-check-cont--row">
+                            <ul class="card-dash-check-tablinks">
+                                <li class="card-dash-check-tablink" data-tab="card-dash-master-orders"><span>Ваших заказов (2)</span></li>
+                                <li class="card-dash-check-tablink" data-tab="card-dash-master-orders-note"><span>Заметки (2)</span></li>
+                            </ul><!-- /.card-dash-check-tablinks -->
+                            <div class="card-dash-check-button hidden-xs">
+                                <div class="btn btn-main-dash">Предложить заказ</div>
+                            </div><!-- /.card-dash-check-button -->
+                        </div><!-- /.card-dash-check-cont--row -->
+                        
+                        <div class="card-dash-master-orders">
+                            <div class="order">
+                                <div class="td number">1</div>
+                                <div class="td id"><a href="#">№ 567487</a></div>
+                                <div class="td date">Cегодня в 14:45</div>
+                                <div class="td title">Ремонт макбук</div>
+                                <div class="td price">2 500 руб.</div>
+                            </div><!-- order -->
+                            <div class="card-dash-master-orders-note">
+                                <p class="card-dash-master-orders-notetext">Антон оказался профессионалом своего дела. приехал домой в тот же день и решил вопрос за 2 часа. до этого был плохой опыт с другими мастерами. и наконец приехал знающий мастер и недорого решил вопрос.</p>
+                                <div class="card-dash-check-cont--row-alltime card-dash-check-cont--row-mg">
+                                    <div class="card-dash-check-cont--left">
+                                        <p class="card-dash-master-orders-notes-ratingtitle">Ваша оценка</p>
+                                        <div class="rating rating-mid rating-master-dash">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div><!-- /.card-dash-check-cont--left -->    
+                                    <div class="card-dash-check-cont--right">
+                                        <a href="#" class="card-dash-master-orders-notes-del">Удалить</a>
+                                    </div><!-- /.card-dash-check-cont--right -->
+                                </div><!-- /.card-dash-check-cont--row -->
+                            </div><!-- /.card-dash-master-orders-note -->
+
+                            <div class="order">
+                                <div class="td number">228</div>
+                                <div class="td id"><a href="#">№ 566248</a></div>
+                                <div class="td date">25 Февраля 2018</div>
+                                <div class="td title">Увеличение оперативной памяти macbook white</div>
+                                <div class="td price">128 500 руб.</div>
+                            </div><!-- order -->
+                            <div class="card-dash-master-orders-note">
+                                <p class="card-dash-master-orders-notetext">Антон оказался профессионалом своего дела. приехал домой в тот же день и решил вопрос за 2 часа. до этого был плохой опыт с другими мастерами. и наконец приехал знающий мастер и недорого решил вопрос.</p>
+                                <div class="card-dash-check-cont--row card-dash-check-cont--row-mg">
+                                    <div class="card-dash-check-cont--left">
+                                        <p class="card-dash-master-orders-notes-ratingtitle">Ваша оценка</p>
+                                        <div class="rating rating-mid rating-master-dash">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div><!-- /.card-dash-check-cont--left -->    
+                                    <div class="card-dash-check-cont--right">
+                                        <a href="#" class="card-dash-master-orders-notes-del">Удалить</a>
+                                    </div><!-- /.card-dash-check-cont--right -->
+                                </div><!-- /.card-dash-check-cont--row -->
+                            </div><!-- /.card-dash-master-orders-note -->                            
+                        </div>
+                        
+                        <div class="card-dash-check-button visible-xs">
+                            <div class="btn btn-main-dash">Предложить заказ</div>
+                        </div><!-- /.card-dash-check-button -->
+                    </div><!-- /.card-dash-check-text -->
+                </div><!-- /.card -->
+
+                <div class="card card-dash card-dash-check">
+                    <div class="card-dash-check-checkbox">
+                        <input type="checkbox" class="checkbox">
+                    </div><!-- card-dash-check-checkbox -->
+
+                    <div class="card-dash-check-text">
+                        <div class="card-dash-check-cont--row">
+                            <div class="card-dash-check-user_small card-dash-check-user_small-master">
+                                <div class="b-userpic"><img src="images/userpic5.jpg" alt="аватар" class="userpic"></div>                        
+                                <p class="name">Виктор Викторович</p>
+                                <p class="card-dash-check-status">Был на сайте 4 ч. назад</p>                        
+                                <div class="wrapper">
+                                    <div class="rating rating-mid rating-master-dash">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>5</span>
+                                    </div>
+                                    <p class="orders-count">Выполнил 338 заданий</p>
+                                    <p class="msg-link"><a href="#">23 отзыва</a></p>
+                                    <p class="card-dash-check-addr">Москва</p>
+                                </div><!-- /.wrapper -->
+                            </div><!-- /.card-dash-check-user_small -->
+                            
+                            <div class="card-dash-check-thumbs card-dash-check-aside-thumbs">
+                                <div class="card-dash-check-thumbs-wrp">
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></span>                        
+                                </div><!-- /.card-dash-check-thumbs-wrp -->
+                                <a href="#" class="dash-gal-thumb-linkmore">+25 фото</a>
+                            </div><!-- /.card-dash-check-aside-thumbs -->
+                        </div><!-- /.card-dash-check-cont--row -->
+
+                        <p class="msg-text"><b>Виды выполняемых работ</b>: Ремонт и замена комплектующих, установка и настройка операц. систем, программ</p>
+                        <p class="msg-text">Здравствуйте! Я, Владимир. Опыт ремонта с 2007 года. Своя мастерская. Адрес пишу в предложениях к заказам. Бесплатная диагностика, даже при отказе от ремонта. Гарантия на все работы. Я работаю с командой коллег.Команде посильны  абсолютно</p>
+
+                        <div class="card-dash-check-cont--row">
+                            <ul class="card-dash-check-tablinks">
+                                <li class="card-dash-check-tablink" data-tab="card-dash-master-orders"><span>Ваших заказов (2)</span></li>
+                                <li class="card-dash-check-tablink" data-tab="card-dash-master-orders-note"><span>Заметки (2)</span></li>
+                            </ul><!-- /.card-dash-check-tablinks -->
+                            <div class="card-dash-check-button hidden-xs">
+                                <div class="btn btn-main-dash">Предложить заказ</div>
+                            </div><!-- /.card-dash-check-button -->
+                        </div><!-- /.card-dash-check-cont--row -->
+                        
+                        <div class="card-dash-master-orders">
+                            <div class="order">
+                                <div class="td number">1</div>
+                                <div class="td id"><a href="#">№ 567487</a></div>
+                                <div class="td date">Cегодня в 14:45</div>
+                                <div class="td title">Ремонт макбук</div>
+                                <div class="td price">2 500 руб.</div>
+                            </div><!-- order -->
+                            <div class="card-dash-master-orders-note">
+                                <p class="card-dash-master-orders-notetext">Антон оказался профессионалом своего дела. приехал домой в тот же день и решил вопрос за 2 часа. до этого был плохой опыт с другими мастерами. и наконец приехал знающий мастер и недорого решил вопрос.</p>
+                                <div class="card-dash-check-cont--row-alltime card-dash-check-cont--row-mg">
+                                    <div class="card-dash-check-cont--left">
+                                        <p class="card-dash-master-orders-notes-ratingtitle">Ваша оценка</p>
+                                        <div class="rating rating-mid rating-master-dash">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div><!-- /.card-dash-check-cont--left -->    
+                                    <div class="card-dash-check-cont--right">
+                                        <a href="#" class="card-dash-master-orders-notes-del">Удалить</a>
+                                    </div><!-- /.card-dash-check-cont--right -->
+                                </div><!-- /.card-dash-check-cont--row -->
+                            </div><!-- /.card-dash-master-orders-note -->
+
+                            <div class="order">
+                                <div class="td number">228</div>
+                                <div class="td id"><a href="#">№ 566248</a></div>
+                                <div class="td date">25 Февраля 2018</div>
+                                <div class="td title">Увеличение оперативной памяти macbook white</div>
+                                <div class="td price">128 500 руб.</div>
+                            </div><!-- order -->
+                            <div class="card-dash-master-orders-note">
+                                <p class="card-dash-master-orders-notetext">Антон оказался профессионалом своего дела. приехал домой в тот же день и решил вопрос за 2 часа. до этого был плохой опыт с другими мастерами. и наконец приехал знающий мастер и недорого решил вопрос.</p>
+                                <div class="card-dash-check-cont--row card-dash-check-cont--row-mg">
+                                    <div class="card-dash-check-cont--left">
+                                        <p class="card-dash-master-orders-notes-ratingtitle">Ваша оценка</p>
+                                        <div class="rating rating-mid rating-master-dash">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div><!-- /.card-dash-check-cont--left -->    
+                                    <div class="card-dash-check-cont--right">
+                                        <a href="#" class="card-dash-master-orders-notes-del">Удалить</a>
+                                    </div><!-- /.card-dash-check-cont--right -->
+                                </div><!-- /.card-dash-check-cont--row -->
+                            </div><!-- /.card-dash-master-orders-note -->                            
+                        </div>
+                        
+                        <div class="card-dash-check-button visible-xs">
+                            <div class="btn btn-main-dash">Предложить заказ</div>
+                        </div><!-- /.card-dash-check-button -->
+                    </div><!-- /.card-dash-check-text -->
+                </div><!-- /.card -->                
+
+                <div class="card card-dash card-dash-check">
+                    <div class="card-dash-check-checkbox">
+                        <input type="checkbox" class="checkbox">
+                    </div><!-- card-dash-check-checkbox -->
+
+                    <div class="card-dash-check-text">
+                        <div class="card-dash-check-cont--row">
+                            <div class="card-dash-check-user_small card-dash-check-user_small-master">
+                                <div class="b-userpic"><img src="images/userpic5.jpg" alt="аватар" class="userpic"></div>                        
+                                <p class="name">Виктор Викторович</p>
+                                <p class="card-dash-check-status">Был на сайте 4 ч. назад</p>                        
+                                <div class="wrapper">
+                                    <div class="rating rating-mid rating-master-dash">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>5</span>
+                                    </div>
+                                    <p class="orders-count">Выполнил 338 заданий</p>
+                                    <p class="msg-link"><a href="#">23 отзыва</a></p>
+                                    <p class="card-dash-check-addr">Москва</p>
+                                </div><!-- /.wrapper -->
+                            </div><!-- /.card-dash-check-user_small -->
+                            
+                            <div class="card-dash-check-thumbs card-dash-check-aside-thumbs">
+                                <div class="card-dash-check-thumbs-wrp">
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></span>
+                                    <span href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></span>                        
+                                </div><!-- /.card-dash-check-thumbs-wrp -->
+                                <a href="#" class="dash-gal-thumb-linkmore">+25 фото</a>
+                            </div><!-- /.card-dash-check-aside-thumbs -->
+                        </div><!-- /.card-dash-check-cont--row -->
+
+                        <p class="msg-text"><b>Виды выполняемых работ</b>: Ремонт и замена комплектующих, установка и настройка операц. систем, программ</p>
+                        <p class="msg-text">Здравствуйте! Я, Владимир. Опыт ремонта с 2007 года. Своя мастерская. Адрес пишу в предложениях к заказам. Бесплатная диагностика, даже при отказе от ремонта. Гарантия на все работы. Я работаю с командой коллег.Команде посильны  абсолютно</p>
+
+                        <div class="card-dash-check-cont--row">
+                            <ul class="card-dash-check-tablinks">
+                                <li class="card-dash-check-tablink" data-tab="card-dash-master-orders"><span>Ваших заказов (2)</span></li>
+                                <li class="card-dash-check-tablink" data-tab="card-dash-master-orders-note"><span>Заметки (2)</span></li>
+                            </ul><!-- /.card-dash-check-tablinks -->
+                            <div class="card-dash-check-button hidden-xs">
+                                <div class="btn btn-main-dash">Предложить заказ</div>
+                            </div><!-- /.card-dash-check-button -->
+                        </div><!-- /.card-dash-check-cont--row -->
+                        
+                        <div class="card-dash-master-orders">
+                            <div class="order">
+                                <div class="td number">1</div>
+                                <div class="td id"><a href="#">№ 567487</a></div>
+                                <div class="td date">Cегодня в 14:45</div>
+                                <div class="td title">Ремонт макбук</div>
+                                <div class="td price">2 500 руб.</div>
+                            </div><!-- order -->
+                            <div class="card-dash-master-orders-note">
+                                <p class="card-dash-master-orders-notetext">Антон оказался профессионалом своего дела. приехал домой в тот же день и решил вопрос за 2 часа. до этого был плохой опыт с другими мастерами. и наконец приехал знающий мастер и недорого решил вопрос.</p>
+                                <div class="card-dash-check-cont--row-alltime card-dash-check-cont--row-mg">
+                                    <div class="card-dash-check-cont--left">
+                                        <p class="card-dash-master-orders-notes-ratingtitle">Ваша оценка</p>
+                                        <div class="rating rating-mid rating-master-dash">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div><!-- /.card-dash-check-cont--left -->    
+                                    <div class="card-dash-check-cont--right">
+                                        <a href="#" class="card-dash-master-orders-notes-del">Удалить</a>
+                                    </div><!-- /.card-dash-check-cont--right -->
+                                </div><!-- /.card-dash-check-cont--row -->
+                            </div><!-- /.card-dash-master-orders-note -->
+
+                            <div class="order">
+                                <div class="td number">228</div>
+                                <div class="td id"><a href="#">№ 566248</a></div>
+                                <div class="td date">25 Февраля 2018</div>
+                                <div class="td title">Увеличение оперативной памяти macbook white</div>
+                                <div class="td price">128 500 руб.</div>
+                            </div><!-- order -->
+                            <div class="card-dash-master-orders-note">
+                                <p class="card-dash-master-orders-notetext">Антон оказался профессионалом своего дела. приехал домой в тот же день и решил вопрос за 2 часа. до этого был плохой опыт с другими мастерами. и наконец приехал знающий мастер и недорого решил вопрос.</p>
+                                <div class="card-dash-check-cont--row card-dash-check-cont--row-mg">
+                                    <div class="card-dash-check-cont--left">
+                                        <p class="card-dash-master-orders-notes-ratingtitle">Ваша оценка</p>
+                                        <div class="rating rating-mid rating-master-dash">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <i class="far fa-star"></i>
+                                            <span>5</span>
+                                        </div>
+                                    </div><!-- /.card-dash-check-cont--left -->    
+                                    <div class="card-dash-check-cont--right">
+                                        <a href="#" class="card-dash-master-orders-notes-del">Удалить</a>
+                                    </div><!-- /.card-dash-check-cont--right -->
+                                </div><!-- /.card-dash-check-cont--row -->
+                            </div><!-- /.card-dash-master-orders-note -->                            
+                        </div>
+                        
+                        <div class="card-dash-check-button visible-xs">
+                            <div class="btn btn-main-dash">Предложить заказ</div>
+                        </div><!-- /.card-dash-check-button -->
+                    </div><!-- /.card-dash-check-text -->
+                </div><!-- /.card -->                                
+            </article><!-- /. -->
+
+            <button class="btn btn-load" type="button">Показать еще</button>            
+        </div><!-- /.col-content -->      
+
+        <hr>
+
+        <section class="section-major">
+            <h2 class="heading">Лучшие специлисты этой категории</h2>
+            <div class="row-cards">
+                <div class="card card-specialist">
+                    <div class="card-specialist-header">
+                        <img class="userpic card-specialist-userpic" src="images/userpic2.jpg" alt="Алексей Петров">
+                        <h3 class="card-specialist-name">Алексей Петров</h3>
+                        <div class="rating rating-high card-specialist-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-dash-check-addr">Москва</p>
+                    </div><!-- /.card-specialist-header -->
+                    <div class="card-specialist-prof">
+                        <p class="card-specialist-speciality">Установка и ремонт дверей, замков</p>
+                        <p class="card-specialist-price">300 Р/час</p>
+                    </div><!-- /.card-specialist-prof -->
+
+                    <p class="card-specialist-description">Добрый день! Владею фотошопом, свободно работаю в Excel. Порядочная, пунктуальная. Хорошо знаю Москву и МО.</p>
+                    <a href="#" class="btn btn-second">Предложить заказ</a>
+                </div><!-- /.card -->
+                <div class="card card-specialist">
+                    <div class="card-specialist-header">
+                        <img class="userpic card-specialist-userpic" src="images/userpic2.jpg" alt="Алексей Петров">
+                        <h3 class="card-specialist-name">Алексей Петров</h3>
+                        <div class="rating rating-high card-specialist-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-dash-check-addr">Москва</p>
+                    </div><!-- /.card-specialist-header -->
+                    <div class="card-specialist-prof">
+                        <p class="card-specialist-speciality">Установка и ремонт дверей, замков</p>
+                        <p class="card-specialist-price">300 Р/час</p>
+                    </div><!-- /.card-specialist-prof -->
+
+                    <p class="card-specialist-description">Добрый день! Владею фотошопом, свободно работаю в Excel. Порядочная, пунктуальная. Хорошо знаю Москву и МО.</p>
+                    <a href="#" class="btn btn-second">Предложить заказ</a>
+                </div><!-- /.card -->  
+                <div class="card card-specialist">
+                    <div class="card-specialist-header">
+                        <img class="userpic card-specialist-userpic" src="images/userpic2.jpg" alt="Алексей Петров">
+                        <h3 class="card-specialist-name">Алексей Петров</h3>
+                        <div class="rating rating-high card-specialist-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="card-dash-check-addr">Москва</p>
+                    </div><!-- /.card-specialist-header -->
+                    <div class="card-specialist-prof">
+                        <p class="card-specialist-speciality">Установка и ремонт дверей, замков</p>
+                        <p class="card-specialist-price">300 Р/час</p>
+                    </div><!-- /.card-specialist-prof -->
+
+                    <p class="card-specialist-description">Добрый день! Владею фотошопом, свободно работаю в Excel. Порядочная, пунктуальная. Хорошо знаю Москву и МО.</p>
+                    <a href="#" class="btn btn-second">Предложить заказ</a>
+                </div><!-- /.card -->                  
+            </div><!-- /.row-cards -->
+        </section><!-- section-major -->
+    </div><!-- /.container -->
+</main><!-- /.main-content -->
+
+<footer class="footer-site" id="footer">
+    <div class="container">
+        <div class="row-mod">
+            <div class="col-sidebar">
+                <a href="/" class="appsore"><img src="images/appstore@2x.png" alt="Скачать на Appstore"></a>
+            </div><!-- col-sidebar -->
+            <div class="col-content">
+                <div class="row-mod">
+                    <div class="col-footer">
+                        <h4 class="heading">О проэкте</h4>
+                        <ul role="menu" class="nav-menu">
+                            <li role="menuitem" class="menu-item"><a href="/">Правила ресурса</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Как стать специалистом</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Контакты</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Партнерская программа</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                    <div class="col-footer">
+                        <h4 class="heading">Рекламодателям</h4>
+                        <ul role="menu" class="nav-menu">
+                            <li role="menuitem" class="menu-item"><a href="/">Master - аккаунт</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Реклама на сайте</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                    <div class="col-footer">
+                        <h4 class="heading">Помощь</h4>
+                        <ul role="menu" class="nav-menu">
+                            <li role="menuitem" class="menu-item"><a href="/">Частые вопросы</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Техническая поддержка</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                    <div class="col-footer">
+                        <h4 class="heading">Разделы</h4>
+                        <ul role="menu" class="nav-menu">
+                            <li role="menuitem" class="menu-item"><a href="/">Каталог специалистов</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Стать специалистом</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Полезные статьи</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Цены на услуги</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                </div><!-- /.row-mod -->
+                <div class="row-mod">
+                    <div class="col-footer col-footer-wide">
+                        <ul role="menu" class="nav-menu nav-menu-inline">
+                            <li role="menuitem" class="menu-item"><a href="/">Публичная оферта</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Конфиндециальность</a></li>
+                            <li role="menuitem" class="menu-item"><a href="/">Правила</a></li>
+                        </ul>
+                    </div><!-- /.col-footer -->
+                    <div class="col-footer">
+                        <ul role="menu" class="nav-menu nav-menu-social nav-menu-social-footer">
+                            <li role="menuitem" class="menu-item"><a href="/"><i class="fab fa-vk"></i></a></li>
+                            <li role="menuitem" class="menu-item"><a href="/"><i class="fab fa-google-plus-g"></i></a></li>
+                            <li role="menuitem" class="menu-item"><a href="/"><i class="fab fa-twitter"></i></a></li>
+                        </ul>                        
+                    </div><!-- /.col-footer -->
+                </div><!-- /.row-mod -->
+            </div><!-- col-content -->
+        </div><!-- /.row -->
+    </div><!-- /.container -->
+</footer>
+
+<div id="blueimp-gallery" class="blueimp-gallery">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+</div>
+<script>
+    document.getElementById('gallery-1').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+    document.getElementById('gallery-2').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+            link = target.src ? target.parentNode : target,
+            options = {index: link, event: event},
+            links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    }; 
+</script>
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

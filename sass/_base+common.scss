@@ -25,7 +25,7 @@ a {
   &:hover {
     text-decoration: none;
   }
-  @include link($link-text);
+  @include link($blue-bright);
 }
 
 table {width: 100%;}
@@ -161,6 +161,15 @@ small {font-size: 100%;display: inline-block;}
     .icon-svg {fill:#fff}
   }
 }
+
+.btn-default-color {
+  @include btn-stroked($green);
+  &:hover {
+    background: $green;
+    color: #fff !important;
+  }  
+}
+
 .btn-icon {
   background:none;
   border: none;
@@ -171,7 +180,8 @@ small {font-size: 100%;display: inline-block;}
 .btn-load {
 	width: 100%;
 	background: #ffffff;
-	border: 1px solid #ccc;
+  border: 1px solid $green;
+  padding: .6rem 1rem;
 	&:hover {border: 1px solid #ccc;}
 }
 
@@ -595,8 +605,8 @@ fieldset {
    CONTENT
    ========================================================================== */
 .heading {
-  font-size: 24px;
-  margin: 8px 0 24px 0;
+  font-size: 1.5rem;
+  margin: .5rem 0 1.5rem 0;
   color: $heading-text;  
   font-weight: 500;
 }
@@ -627,6 +637,13 @@ fieldset {
     top: -8px;;
   }
 }
+.heading-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.link-aside {color: $blue-bright; font-size: 0.9rem;}
 
 
 .heading-all {
@@ -637,6 +654,8 @@ fieldset {
 .heading-content {
   margin-bottom: 0.5rem;
 }
+.heading-withcomment {display: inline-block; margin-right: 1rem;}
+.review-count {font-size: 0.9rem;}
 
 .h-page {margin: 0 0 20px 0;font-size: 1.7rem;}
 .h-card-list {font-size: 1.5rem;}
@@ -694,8 +713,8 @@ fieldset {
   .article-date {color: rgba($base-text, .75)}
 }
 
+hr {background: $gray-border; height: 1px; border: none; margin: 1.5rem 0;}
 .article-main {
-  hr {background: $gray-light; height: 2px; border: none; margin-bottom: 24px;}
 }
 .article-main--body {
   p, blockquote, ul, ol, figure, img, table {
