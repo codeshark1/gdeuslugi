@@ -640,7 +640,7 @@ fieldset {
 .heading-wrapper {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
 }
 .link-aside {color: $blue-bright; font-size: 0.9rem;}

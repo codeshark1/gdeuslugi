@@ -1407,8 +1407,11 @@ body {
 
 }
 .worker-top-col-fav {	
-	@media (min-width: $screen-md-min) {text-align: right;}
-	padding: 1rem 2rem 0 2rem;	
+	padding: 1rem 0 0 0;
+	@media (min-width: $screen-md-min) {
+		text-align: right;
+		padding: 1rem 2rem 0 2rem;	
+	}
 }
 .worker-top-col-order {
 	padding: .5rem 2.5rem 1.5rem 2.5rem;	
@@ -1689,6 +1692,8 @@ body {
 	&-header {
 		padding: 8px 0;
 		margin-bottom: 8px;
+		display: flex;
+		justify-content: space-between;
 		.b-userpic {
 			width: 40px;
 			position: absolute;
