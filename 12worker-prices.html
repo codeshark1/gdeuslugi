@@ -182,6 +182,7 @@
                         </div><!-- /.section-major -->
 
                         <section class="row-prices">
+                            <h2 class="heading visible-xs">Виды выполняемых работ</h2>
                             <aside class="col-prices--toc">
                                 <h6 class="heading">Разделы</h6>
                                 <ul class="list-toc">
@@ -194,7 +195,7 @@
                                 </ul>
                             </aside><!-- /.col-toc-toc -->                                
                             <div class="col-prices--prices">
-                                <h2 class="heading">Виды выполняемых работ</h2>
+                                <h2 class="heading hidden-xs">Виды выполняемых работ</h2>
                                 <table class="table-prices">
                                     <caption><p class="heading-edit">Курьерские услуги</p></caption>
                                     <tr>
@@ -236,7 +237,9 @@
                                     </tr>
                                 </table>                                    
 
-                                <button type="button" class="btn-addservice">Добавить услугу</button>
+                                <hr>
+
+                                <button type="button" class="btn-addservice heading">Добавить услугу</button>
 
                                 <form action="/">
                                     <label class="lbl lbl-top">Поиск категории</label>
@@ -251,26 +254,34 @@
                                     <label class="lbl lbl-top">Название услуги</label>
                                     <input type="text" placeholder="Введите название услуги">                                    
 
-                                    <p class="lbl lbl-top">Тип цены</p>
-                                    <label class="lbl-inline lbl-radio">
-                                        <input type="radio" class="radio" name="worker-price-type" checked>
-                                        Фиксированная
-                                    </label>
-                                    <label class="lbl-inline lbl-radio">
-                                        <input type="radio" class="radio" name="worker-price-type">
-                                        За месяц
-                                    </label>
-                                    <label class="lbl-inline lbl-radio">
-                                        <input type="radio" class="radio" name="worker-price-type">
-                                        За час
-                                    </label>     
-                                    <label class="lbl-inline lbl-radio">
-                                        <input type="radio" class="radio" name="worker-price-type">
-                                        От / До
-                                    </label>                                                                                                       
+                                    <div class="lbl-wrapper">
+                                        <p class="lbl lbl-top">Тип цены</p>
+                                        <label class="lbl-inline">
+                                            <input type="radio" class="radio" name="worker-price-type" checked>
+                                            Фиксированная
+                                        </label>
+                                        <label class="lbl-inline">
+                                            <input type="radio" class="radio" name="worker-price-type">
+                                            За месяц
+                                        </label>
+                                        <label class="lbl-inline">
+                                            <input type="radio" class="radio" name="worker-price-type">
+                                            За час
+                                        </label>
+                                        <label class="lbl-inline">
+                                            <input type="radio" class="radio" name="worker-price-type">
+                                            От / До
+                                        </label>
+                                    </div><!-- /.lbl-wrapper -->
 
                                     <label class="lbl lbl-top">Цена</label>
-                                    <input type="text" class="input-price">
+                                    <input type="text" class="input-short">
+                                    <span class="lbl-aside">руб.</span>
+
+                                    <div class="form-bottom-buttons">
+                                        <button type="button" class="btn btn-stroked">Добавить еще</button>
+                                        <button type="submit" class="btn btn-second">Сохранить</button>
+                                    </div>
                                 </form>
                             </div><!-- /.col-prices-prices -->
                         </section><!-- /.row-prices -->

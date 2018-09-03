@@ -1449,7 +1449,7 @@ body {
 	border-bottom: 1px solid $gray-border;
 }
 .col-master-content {
-	@media (min-width: $screen-sm-min) {
+	@media (min-width: $screen-md-min) {
 		flex-grow: 1;
 		border-right: 1px solid $gray-border;
 		padding-right: 2rem;
@@ -1466,22 +1466,31 @@ body {
 }
 
 .row-prices {
-	display: flex;
-	width: 100%;
-	border-top: 1px solid $gray-border;
+	@media (min-width: $screen-sm-min) {
+		display: flex;	
+		border-top: 1px solid $gray-border;
+
+	}
 }
 .col-prices--toc {
-	padding: 1rem 1.5rem 0 0;	
-	width: 215px;
+	@media (min-width: $screen-sm-min) {
+		padding: 1rem 1rem 0 0;	
+
+	}
 	.heading {
-		font-size: 1rem;
+		font-size: 16px;
 		margin: 0 0 .5rem 0;
+	}
+	@media (min-width: $screen-md-min) {
+		padding: 1rem 1.5rem 0 0;	
+		width: 215px;
 	}
 }
 .list-toc {
 	.menu-item {margin-bottom: .7rem;}
 	.menu-item--active {
 		position: relative;
+		text-indent: 14px;
 		&:before {
 			content: "";
 			display: inline-block;
@@ -1489,17 +1498,26 @@ body {
 			border-top: 6px solid transparent;
 			border-bottom: 6px solid transparent;
 			margin-right: .5rem;
+			position: absolute;
+			left: 0;top: 4px;
 		}
 	}
 	a {
-		@include link-local($blue-bright)
+		@include link-local($blue-bright);
+		@media (max-width: $screen-xs-max) {		
+			font-size: 1.2rem;
+		}
 	}
 }
 
 .col-prices--prices {
-	flex-grow: 1;
-	border-left: 1px solid $gray-border;
-	padding: 1rem 0 0 1.5rem;
+	padding-bottom: 1.5rem;
+	@media (min-width: $screen-sm-min) {
+		flex-grow: 1;
+		border-left: 1px solid $gray-border;
+		padding: 1rem 0 1.5rem 1.5rem;
+
+	}
 }
 
 .table-prices {
@@ -1523,6 +1541,15 @@ body {
 	margin-top: -1rem;
 	position: relative;
 	top: -.5rem;
+}
+
+.btn-addservice {
+	border: none;
+	font-size: 24px;
+	padding: 0 0 0 40px;
+	background: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.3191 4.68742C26.0926 3.46126 24.7205 2.46502 23.2411 1.72639C22.919 1.56551 22.5279 1.69632 22.3672 2.01809C22.2065 2.33996 22.3371 2.7311 22.659 2.89176C24.0127 3.56764 25.2706 4.4817 26.3977 5.60853C32.131 11.3405 32.131 20.667 26.3977 26.399C20.6644 32.1309 11.3357 32.1309 5.60238 26.399C-0.130924 20.667 -0.130924 11.3405 5.60238 5.60853C8.37962 2.83184 12.0723 1.30269 15.9999 1.30269C16.3596 1.30269 16.6514 1.011 16.6514 0.651347C16.6514 0.291695 16.3596 0 15.9999 0C11.7242 0 7.70445 1.66462 4.68095 4.68742C-1.56032 10.9272 -1.56032 21.0803 4.68095 27.3201C7.80163 30.44 11.9008 32 16 32C20.0992 32 24.1984 30.44 27.3191 27.3201C33.5603 21.0803 33.5603 10.9272 27.3191 4.68742Z' fill='%231B998B'/%3E%3Cpath d='M16 5.64453C15.6402 5.64453 15.3485 5.93623 15.3485 6.29588V25.7124C15.3485 26.0722 15.6402 26.3638 16 26.3638C16.3597 26.3638 16.6515 26.0722 16.6515 25.7124V6.29588C16.6515 5.93612 16.3597 5.64453 16 5.64453Z' fill='%231B998B'/%3E%3Cpath d='M18.606 16.6543H25.7106C26.0703 16.6543 26.3621 16.3626 26.3621 16.0029C26.3621 15.6433 26.0703 15.3516 25.7106 15.3516H18.606C18.2463 15.3516 17.9545 15.6433 17.9545 16.0029C17.9545 16.3626 18.2462 16.6543 18.606 16.6543Z' fill='%231B998B'/%3E%3Cpath d='M6.28938 15.3516C5.92964 15.3516 5.63788 15.6433 5.63788 16.0029C5.63788 16.3626 5.92964 16.6543 6.28938 16.6543H13.1768C13.5366 16.6543 13.8283 16.3626 13.8283 16.0029C13.8283 15.6433 13.5366 15.3516 13.1768 15.3516H6.28938Z' fill='%231B998B'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+	cursor: pointer;
+	height: 32px;
 }
 
 .order-success {
@@ -1606,10 +1633,13 @@ body {
 /* WORKER SIDEBAR */
 .col-master-sbar-widget {
 	border-top: 1px solid $gray-border;
-	padding: 1rem 0 2rem 2rem;
+	padding: 1rem 0 2rem 0;
 
 	.text-light {margin-bottom: 1rem;}
 	.heading {font-size: 1.3rem;}
+	@media (min-width: $screen-md-min) {
+		padding: 1rem 0 2rem 2rem;
+	}
 }
 .worker-sertifs {
 	a {border: none}
@@ -2045,6 +2075,9 @@ body {
 .card-photoalbum {
 	background: $gray-bg;
 	max-width: 460px;
+	@media (max-width: $screen-xs-max) {
+		margin-bottom: 1rem;
+	}
 }
 .photo-bg-preview {
 	display: block;
