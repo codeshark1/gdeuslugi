@@ -1681,14 +1681,28 @@ body {
 	}
 }
 .worker-sertifs {
+	display: flex;
+	align-items: stretch;
 	a {border: none}
 	.sertif {
 		display: inline-block;
 		margin: 0 1rem .5rem 0;
-		max-width: 28%;
+		width: 100px;
 		&:last-child {margin-right: 0;}
 	}
+	.btn-addsertif {
+		background: none;
+		border:1px solid $green;
+		border-radius: 3px;
+		color: $green;
+		font-size: 14px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;	
+		cursor: pointer;	
+	}
 }
+
 .worker-list-advantages, .worker-list-tasks {
 	padding-left: 2.5rem;
 	@media (min-width: $screen-md-min) {

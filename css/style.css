@@ -76,6 +76,9 @@ small {
 /* ==========================================================================
    BUTTONS
    ========================================================================== */
+button {
+  cursor: pointer; }
+
 .btn {
   font-family: Roboto,sans-serif;
   -moz-osx-font-smoothing: grayscale;
@@ -3458,14 +3461,27 @@ body {
     .col-master-sbar-widget {
       padding: 1rem 0 2rem 2rem; } }
 
-.worker-sertifs a {
-  border: none; }
-.worker-sertifs .sertif {
-  display: inline-block;
-  margin: 0 1rem .5rem 0;
-  max-width: 28%; }
-  .worker-sertifs .sertif:last-child {
-    margin-right: 0; }
+.worker-sertifs {
+  display: flex;
+  align-items: stretch; }
+  .worker-sertifs a {
+    border: none; }
+  .worker-sertifs .sertif {
+    display: inline-block;
+    margin: 0 1rem .5rem 0;
+    width: 100px; }
+    .worker-sertifs .sertif:last-child {
+      margin-right: 0; }
+  .worker-sertifs .btn-addsertif {
+    background: none;
+    border: 1px solid #1B998B;
+    border-radius: 3px;
+    color: #1B998B;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer; }
 
 .worker-list-advantages, .worker-list-tasks {
   padding-left: 2.5rem; }
