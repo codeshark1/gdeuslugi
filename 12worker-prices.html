@@ -242,46 +242,106 @@
                                 <button type="button" class="btn-addservice heading">Добавить услугу</button>
 
                                 <form action="/">
-                                    <label class="lbl lbl-top">Поиск категории</label>
-                                    <input type="text" placeholder="Введите название категории">
+                                    <div class="addservice-wrapper">
+                                        <button type="button" class="btn-addservice-cancel"></button>
 
-                                    <label class="lbl lbl-top">Категория услуги</label>
-                                    <select>
-                                        <option>Выберите вариант...</option>
-                                        <option>Ремонт и строительство</option>
-                                    </select>
+                                        <label class="lbl lbl-top">Поиск категории</label>
+                                        <input type="text" placeholder="Введите название категории">
 
-                                    <label class="lbl lbl-top">Название услуги</label>
-                                    <input type="text" placeholder="Введите название услуги">                                    
+                                        <label class="lbl lbl-top">Категория услуги</label>
+                                        <select>
+                                            <option>Выберите вариант...</option>
+                                            <option>Ремонт и строительство</option>
+                                        </select>
 
-                                    <div class="lbl-wrapper">
-                                        <p class="lbl lbl-top">Тип цены</p>
-                                        <label class="lbl-inline">
-                                            <input type="radio" class="radio" name="worker-price-type" checked>
-                                            Фиксированная
-                                        </label>
-                                        <label class="lbl-inline">
-                                            <input type="radio" class="radio" name="worker-price-type">
-                                            За месяц
-                                        </label>
-                                        <label class="lbl-inline">
-                                            <input type="radio" class="radio" name="worker-price-type">
-                                            За час
-                                        </label>
-                                        <label class="lbl-inline">
-                                            <input type="radio" class="radio" name="worker-price-type">
-                                            От / До
-                                        </label>
-                                    </div><!-- /.lbl-wrapper -->
+                                        <label class="lbl lbl-top">Название услуги</label>
+                                        <input type="text" placeholder="Введите название услуги">
 
-                                    <label class="lbl lbl-top">Цена</label>
-                                    <input type="text" class="input-short">
-                                    <span class="lbl-aside">руб.</span>
+                                        <div class="lbl-wrapper">
+                                            <p class="lbl lbl-top">Тип цены</p>
+                                            <label class="lbl-inline">
+                                                <input type="radio" class="radio" name="worker-price-type-1" checked>
+                                                Фиксированная
+                                            </label>
+                                            <label class="lbl-inline">
+                                                <input type="radio" class="radio" name="worker-price-type-1">
+                                                За месяц
+                                            </label>
+                                            <label class="lbl-inline">
+                                                <input type="radio" class="radio" name="worker-price-type-1">
+                                                За час
+                                            </label>
+                                            <label class="lbl-inline">
+                                                <input type="radio" class="radio" name="worker-price-type-1">
+                                                От / До
+                                            </label>
+                                        </div><!-- /.lbl-wrapper -->
 
-                                    <div class="form-bottom-buttons">
-                                        <button type="button" class="btn btn-stroked">Добавить еще</button>
-                                        <button type="submit" class="btn btn-second">Сохранить</button>
-                                    </div>
+                                        <label class="lbl lbl-top">Цена</label>
+                                                                    
+                                        <div>
+                                            <input type="text" class="input-short" value="111 000">
+                                            <span class="lbl-after">руб.</span>
+                                        </div>
+
+                                        <div class="form-bottom-buttons">
+                                            <button type="button" class="btn btn-stroked">Добавить еще</button>
+                                            <button type="submit" class="btn btn-second">Сохранить</button>
+                                        </div>
+                                    </div><!-- /.addservice-wrapper -->
+
+                                    <button type="button" class="btn-addservice heading">Добавить услугу</button>
+
+                                    <div class="addservice-wrapper">
+                                        <button type="button" class="btn-addservice-cancel"></button>
+                                        <label class="lbl lbl-top">Поиск категории</label>
+                                        <input type="text" placeholder="Введите название категории">
+
+                                        <label class="lbl lbl-top">Категория услуги</label>
+                                        <select>
+                                            <option>Выберите вариант...</option>
+                                            <option>Ремонт и строительство</option>
+                                        </select>
+
+                                        <label class="lbl lbl-top">Название услуги</label>
+                                        <input type="text" placeholder="Введите название услуги">                                    
+
+                                        <div class="lbl-wrapper">
+                                            <p class="lbl lbl-top">Тип цены</p>
+                                            <label class="lbl-inline">
+                                                <input type="radio" class="radio" name="worker-price-type-2" checked>
+                                                Фиксированная
+                                            </label>
+                                            <label class="lbl-inline">
+                                                <input type="radio" class="radio" name="worker-price-type-2">
+                                                За месяц
+                                            </label>
+                                            <label class="lbl-inline">
+                                                <input type="radio" class="radio" name="worker-price-type-2">
+                                                За час
+                                            </label>
+                                            <label class="lbl-inline">
+                                                <input type="radio" class="radio" name="worker-price-type-2">
+                                                От / До
+                                            </label>
+                                        </div><!-- /.lbl-wrapper -->
+
+                                        <label class="lbl lbl-top">Цена</label>                                                                    
+
+                                        <div>
+                                            <span class="lbl-before">От</span>
+                                            <input type="text" class="input-short" value="99 000">
+        
+                                            <span class="lbl-before">до</span>
+                                            <input type="text" class="input-short" value="111 000">
+                                            <span class="lbl-after">руб.</span>                                          
+                                        </div>
+
+                                        <div class="form-bottom-buttons">
+                                            <button type="button" class="btn btn-stroked">Добавить еще</button>
+                                            <button type="submit" class="btn btn-second">Сохранить</button>
+                                        </div>
+                                    </div><!-- /.addservice-wrapper -->                                    
                                 </form>
                             </div><!-- /.col-prices-prices -->
                         </section><!-- /.row-prices -->

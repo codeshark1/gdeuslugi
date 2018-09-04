@@ -291,7 +291,7 @@ textarea,
   margin: 0 0 16px 0;
   @media (min-width: $screen-sm-min) {margin-bottom: 24px;}
 }
-.input-short {width: 130px !important;}
+.input-short {width: 96px !important;}
 
 .row-form textarea {margin-bottom: 0;}
 input[type=text]:focus,
@@ -325,10 +325,13 @@ input[type=checkbox] {cursor: pointer;}
   margin-bottom: 8px;
   line-height: 1;  
 }
-.lbl-aside {
-  display: inline-block;
-  margin-left: 4px;  
+.lbl-before {
+  margin-right: 4px;
+  margin-left: 1.5rem;
+  &:first-child {margin-left: 0;}
 }
+.lbl-after {margin-left: 4px;}
+
 .lbl-inline {
   display: inline-block !important;
   margin: .5rem 1rem 0 0;  
@@ -636,7 +639,6 @@ fieldset {
 }
 
 .heading-edit {
-  cursor: pointer;
   position: relative;
   display: inline-block;
   &::after {
@@ -650,6 +652,7 @@ fieldset {
     position: absolute;
     right: -32px;
     top: -8px;;
+    cursor: pointer;
   }
 }
 .heading-wrapper {
