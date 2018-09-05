@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Виджет - листинг фотографий</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+<div class="container">
+    <div class="section-major section-photoalbums">
+        <div class="heading-wrapper">
+            <h2 class="heading heading-icon">
+                <svg class="icon-svg" width="33" height="32" viewBox="0 0 33 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.2196 8.03516C22.4078 8.03516 20.9338 9.5092 20.9338 11.321C20.9338 13.1327 22.4078 14.6067 24.2196 14.6067C26.0314 14.6067 27.5054 13.1328 27.5054 11.321C27.5054 9.50907 26.0315 8.03516 24.2196 8.03516ZM24.2196 13.3316C23.1109 13.3316 22.209 12.4297 22.209 11.321C22.209 10.2122 23.1109 9.31028 24.2196 9.31028C25.3283 9.31028 26.2303 10.2122 26.2303 11.321C26.2303 12.4295 25.3284 13.3316 24.2196 13.3316Z" fill="#1B998B"/>
+                    <path d="M24.2419 28.4445C24.226 28.4056 24.2062 28.3686 24.1832 28.3342C24.1603 28.2991 24.1335 28.2666 24.1042 28.2373C24.0749 28.2079 24.0423 28.1812 24.0073 28.1582C23.9728 28.1353 23.9359 28.1155 23.897 28.0996C23.8587 28.0836 23.8186 28.0709 23.7778 28.0632C23.6955 28.0466 23.6113 28.0466 23.5291 28.0632C23.4883 28.0709 23.4481 28.0836 23.4099 28.0996C23.371 28.1155 23.334 28.1353 23.2996 28.1582C23.2645 28.1812 23.232 28.2079 23.2027 28.2373C23.1733 28.2666 23.1466 28.2991 23.1236 28.3342C23.1007 28.3686 23.0809 28.4056 23.065 28.4445C23.049 28.4827 23.0363 28.5229 23.0286 28.5637C23.0203 28.6045 23.0159 28.6466 23.0159 28.688C23.0159 28.7295 23.0203 28.7715 23.0286 28.8123C23.0363 28.8532 23.049 28.8933 23.065 28.9316C23.0809 28.9705 23.1007 29.0074 23.1236 29.0419C23.1466 29.0769 23.1733 29.1095 23.2027 29.1388C23.2173 29.1534 23.2327 29.1673 23.2488 29.1805C23.265 29.1938 23.282 29.2064 23.2996 29.2178C23.334 29.2408 23.371 29.2606 23.4099 29.2765C23.4481 29.2924 23.4883 29.3052 23.5291 29.3128C23.5699 29.3211 23.612 29.3256 23.6534 29.3256C23.6949 29.3256 23.737 29.3211 23.7778 29.3128C23.8186 29.3052 23.8587 29.2924 23.897 29.2765C23.9359 29.2606 23.9728 29.2408 24.0073 29.2178C24.0249 29.2063 24.0418 29.1938 24.0581 29.1805C24.0742 29.1673 24.0896 29.1534 24.1042 29.1388C24.1335 29.1095 24.1603 29.0769 24.1832 29.0419C24.2062 29.0074 24.226 28.9705 24.2419 28.9316C24.2578 28.8933 24.2706 28.8532 24.2789 28.8123C24.2872 28.7715 24.291 28.7295 24.291 28.688C24.291 28.6466 24.2872 28.6045 24.2789 28.5637C24.2706 28.5228 24.2578 28.4827 24.2419 28.4445Z" fill="#1B998B"/>
+                    <path d="M14.208 3.21401C14.192 3.17575 14.1723 3.13877 14.1493 3.10371C14.1264 3.06928 14.0996 3.03613 14.0703 3.0068C14.0409 2.97747 14.0084 2.95069 13.9733 2.92774C13.9389 2.90479 13.9019 2.88502 13.863 2.86909C13.8248 2.85315 13.7846 2.84103 13.7438 2.83274C13.6616 2.81617 13.5774 2.81617 13.4952 2.83274C13.4544 2.84103 13.4142 2.85315 13.3753 2.86909C13.3371 2.88502 13.3001 2.90479 13.2656 2.92774C13.2306 2.95069 13.1981 2.97747 13.1687 3.0068C13.1394 3.03613 13.1126 3.06928 13.089 3.10371C13.0661 3.13877 13.047 3.17575 13.031 3.21401C13.0151 3.25226 13.0023 3.29243 12.9947 3.33323C12.9864 3.37467 12.9819 3.41611 12.9819 3.45819C12.9819 3.49963 12.9864 3.54107 12.9947 3.58252C13.0023 3.62332 13.0151 3.66349 13.031 3.70174C13.047 3.73999 13.0661 3.77697 13.089 3.81204C13.1126 3.84647 13.1394 3.87962 13.1687 3.90895C13.1981 3.93827 13.2306 3.96505 13.2656 3.98801C13.3001 4.01096 13.3371 4.03072 13.3753 4.04666C13.4142 4.0626 13.4544 4.07471 13.4952 4.083C13.536 4.09129 13.5781 4.09575 13.6195 4.09575C13.6609 4.09575 13.703 4.09129 13.7438 4.083C13.7846 4.07471 13.8248 4.0626 13.863 4.04666C13.9019 4.03072 13.9389 4.01096 13.9733 3.98801C14.0084 3.96505 14.0409 3.93827 14.0703 3.90895C14.0996 3.87962 14.1264 3.84647 14.1493 3.81204C14.1723 3.77697 14.192 3.73999 14.208 3.70174C14.2239 3.66349 14.2367 3.62332 14.2443 3.58252C14.2526 3.54107 14.2571 3.49963 14.2571 3.45819C14.2571 3.41611 14.2526 3.37467 14.2443 3.33323C14.2367 3.29243 14.2239 3.25226 14.208 3.21401Z" fill="#1B998B"/>
+                    <path d="M29.0809 2.82274C28.6986 1.20658 27.2448 1.23691e-09 25.5134 1.23691e-09H5.50961C2.47163 -6.37548e-05 0 2.47157 0 5.50954V25.5133C0 27.5 1.58861 29.1216 3.56218 29.1773C3.94446 30.7934 5.39835 32 7.12971 32H28.9765C30.9983 32 32.6431 30.3552 32.6431 28.3334V6.48661C32.6431 4.49997 31.0545 2.8784 29.0809 2.82274ZM31.368 28.3335C31.368 29.6522 30.2952 30.725 28.9765 30.725H7.12971C6.10898 30.725 5.23603 30.082 4.89347 29.18C4.79344 28.9167 4.73822 28.6315 4.73822 28.3335V24.9511L12.0526 12.549C12.2753 12.1715 12.6725 11.951 13.1082 11.958C13.5465 11.9655 13.9333 12.1998 14.1429 12.5848L21.87 26.7734C21.9856 26.9858 22.2045 27.1061 22.4305 27.1061C22.5335 27.1061 22.638 27.0811 22.7348 27.0284C23.0441 26.8599 23.1582 26.4727 22.9899 26.1635L21.5043 23.4357C22.1566 23.4658 22.7981 23.2546 23.309 22.8308L26.1761 20.4523C26.6359 20.0709 27.3149 20.0876 27.7553 20.4914L31.368 23.803V28.3335ZM31.368 22.0732L29.1801 20.0675L27.9049 19.0966C27.0741 18.7491 26.0863 18.87 25.362 19.4708L22.4948 21.8493C22.1795 22.111 21.7677 22.2167 21.3653 22.1394C20.9629 22.0621 20.6197 21.8113 20.4237 21.4514L15.2628 11.9749C14.8307 11.1814 14.0333 10.6985 13.13 10.683C12.2269 10.6689 11.4133 11.123 10.9543 11.9012L4.73816 22.4411V6.48661C4.73816 5.16794 5.81098 4.09512 7.12965 4.09512H11.0693C11.4214 4.09512 11.7068 3.80968 11.7068 3.45756C11.7068 3.10543 11.4214 2.81999 11.0693 2.81999H7.12965C5.10788 2.81999 3.46304 4.46484 3.46304 6.48661V27.8955C2.23937 27.7918 1.27512 26.7634 1.27512 25.5133V5.50954C1.27512 3.17461 3.17473 1.27506 5.50961 1.27506H25.5134C26.5341 1.27506 27.4071 1.91804 27.7496 2.82006H16.1698C15.8176 2.82006 15.5322 3.10549 15.5322 3.45762C15.5322 3.80974 15.8176 4.09518 16.1698 4.09518H27.9049L29.18 4.10449C30.4037 4.20816 31.368 5.23654 31.368 6.48661V22.0732Z" fill="#1B998B"/>
+                </svg>                                            
+                Альбомы
+            </h2>
+
+            <p><a href="#" class="link-aside">Посмотреть все</a></p>
+        </div><!-- /.heading-wrapper -->                             
+
+        <div class="row-cards">
+            <div class="card card-photoalbum">
+                <a href="#" class="photo-bg-preview" style="background-image: url(images/gallery-new.jpg)">
+                    <h2 class="card-dash-check-heading">Ремонт фотоаппаратов sony в спб</h2>
+                </a>
+
+                <div class="card-dash-check-gallery-hero">
+                    <div class="rating rating-mid rating-master-dash">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>                                
+                        <span>3</span>
+                    </div>
+                    <p class="card-dash-check-status">Cегодня в 14:45</p>
+                    <p class="msg-link"><a href="#">Заказ № 567487</a></p>                        
+                    <p class="msg-text">Наша фирма занимается ремонтом гаджетов уже более 2 лет.</p>
+                </div><!-- /.card-dash-check-gallery-hero -->                    
+                
+                <div class="card-dash-check-thumbs">
+                    <div class="wrapper">
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb10.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></a>
+                    </div><!-- /.wrapper -->
+                    <a href="#" class="dash-gal-thumb-linkmore">+25 фото</a>
+                </div><!-- /.card-dash-check-thumbs-->
+            </div><!-- /.card -->
+            <div class="card card-photoalbum">
+                <a href="#" class="photo-bg-preview" style="background-image: url(images/gallery-new.jpg)">
+                    <h2 class="card-dash-check-heading">Ремонт фотоаппаратов sony в спб</h2>
+                </a>
+
+                <div class="card-dash-check-gallery-hero">
+                    <div class="rating rating-mid rating-master-dash">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <i class="far fa-star"></i>                                
+                        <span>3</span>
+                    </div>
+                    <p class="card-dash-check-status">Cегодня в 14:45</p>
+                    <p class="msg-link"><a href="#">Заказ № 567487</a></p>                        
+                    <p class="msg-text">Наша фирма занимается ремонтом гаджетов уже более 2 лет.</p>
+                </div><!-- /.card-dash-check-gallery-hero -->                    
+                
+                <div class="card-dash-check-thumbs">
+                    <div class="wrapper">
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb10.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb7.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb8.jpg" alt="pic"></a>
+                        <a href="#" class="dash-gal-thumb"><img src="images/gal-thumb9.jpg" alt="pic"></a>
+                    </div><!-- /.wrapper -->
+                    <a href="#" class="dash-gal-thumb-linkmore">+25 фото</a>
+                </div><!-- /.card-dash-check-thumbs-->
+            </div><!-- /.card -->                                
+        </div><!-- /.row-cards -->
+    </div><!-- /.section-major -->                        
+</div><!-- /.container -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

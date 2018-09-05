@@ -2300,7 +2300,8 @@ body {
   margin-bottom: 24px; }
   .breadcrumbs a {
     color: #ACACAC;
-    border: none; }
+    border: none;
+    text-transform: lowercase; }
   .breadcrumbs .breadcrumbs-memuitem {
     display: inline-block; }
     .breadcrumbs .breadcrumbs-memuitem:after {
@@ -3931,6 +3932,9 @@ body {
   margin-left: 16px; }
 
 /* GALLERIES */
+.section-photoalbums {
+  max-width: 940px; }
+
 .card-photoalbum {
   background: #F7F7F7;
   max-width: 460px; }

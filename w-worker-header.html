@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Виджет - шапка ЛК</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+
+<div class="container">        
+    <header class="row-mod">
+        <div class="worker-top-col-main worker-header">
+            <div class="b-userpic"><img src="images/userpic5.jpg" alt="аватар" class="userpic"></div>                        
+            <p class="name heading-edit">Виктор Викторович</p>                    
+            <div class="wrapper">
+                <div class="rating rating-mid rating-master-dash">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>5</span>
+                </div><!-- rating -->
+                <p class="card-dash-check-addr">Москва</p>
+            </div><!-- /.wrapper -->
+            <div class="master-actions">
+                <div class="master-action-showphone">
+                    <a href="#" id="link-showphone" class="link-showphone">Показать телефон</a>
+                    <p id="master-phone" class="master-action-phone">+7 999 237 29 39</p>
+                </div><!-- /.master-action-showphone -->
+                <a href="#" class="link-msgmaster">Написать мастеру</a>
+            </div><!-- /.master-actions -->
+        </div><!-- /.card-dash-check-user -->
+        <div class="worker-top-col-fav">
+            <div class="b--addtofav">
+                <a href="#" class="link-addtofav">Добавить в избраное</a>
+                <button type="button" class="btn-fav">
+                    <svg viewBox="0 0 18 16" fill="" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.4725 4.81835L17.4742 4.83601L17.4771 4.85352C17.4875 4.91558 17.5724 5.48893 17.3315 6.46372L17.3315 6.46388C16.9849 7.86811 16.1826 9.15439 14.9988 10.1806L8.94892 15.3405L3.00283 10.1818L3.00254 10.1815C1.81805 9.15545 1.01517 7.86839 0.668475 6.46385L0.668452 6.46376C0.427462 5.48828 0.512624 4.9153 0.522957 4.85455L0.526054 4.83634L0.527799 4.81795C0.769049 2.27601 2.63019 0.5 4.90107 0.5C6.40259 0.5 7.74129 1.26641 8.52368 2.54635L8.94562 3.23661L9.37432 2.55052C10.1621 1.28975 11.5644 0.500331 13.0989 0.500331C15.3701 0.500331 17.2309 2.27633 17.4725 4.81835Z"/>
+                    </svg>
+                </button>
+            </div><!-- /.b--addtofav -->
+            <div class="b--masterchecked">
+                <p class="title">
+                    <svg class="icon" width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.9266 8.14625C16.7307 7.95125 16.4123 7.95125 16.2165 8.14625L9.54174 14.7922L5.87893 11.1463C5.68309 10.9513 5.3647 10.9513 5.16886 11.1463C4.97301 11.3413 4.97301 11.6583 5.16886 11.8533L9.18616 15.8533C9.2846 15.9502 9.41312 15.9993 9.54169 15.9993C9.67026 15.9993 9.79878 15.9503 9.89623 15.8533L16.9265 8.85327C17.1224 8.65822 17.1224 8.34125 16.9266 8.14625Z" fill="#1B998B"/>
+                        <path d="M20.7324 3.02099L10.6891 0.0209883C10.5947 -0.0069961 10.4953 -0.0069961 10.4008 0.0209883L0.357557 3.02099C0.145612 3.08399 0 3.27899 0 3.50001V14.5C0 18.922 6.77117 22.855 10.3968 23.978C10.445 23.993 10.4953 24 10.5455 24C10.5956 24 10.6459 23.993 10.6941 23.978C14.3197 22.854 21.0909 18.922 21.0909 14.5V3.50001C21.0909 3.27899 20.9453 3.08497 20.7324 3.02099ZM20.0866 14.5C20.0866 18.011 14.4995 21.703 10.5455 22.976C6.59143 21.703 1.00431 18.011 1.00431 14.5V3.87201L10.5455 1.022L20.0866 3.87201V14.5Z" fill="#1B998B"/>
+                    </svg>                                        
+                    Проверенный исполнитель
+                </p>
+                <p class="time">На сайте с 13 июня 2016</p>
+            </div><!-- /.b--masterchecked -->
+        </div><!-- /.worker-top-col-fav -->
+        <div class="worker-top-col-order">
+            <p class="worker-price">Цена за час работы <b>от 300 руб.</b></p>
+            <a href="#" class="btn btn-order">Заказать услугу</a>
+        </div><!-- /.worker-top-col-order -->
+    </header><!-- /.row-mod -->
+    <div class="worker-tags">
+        <ul>                        
+            <li class="worker-tag">Доставка продуктов и готовой еды</li>
+            <li class="worker-tag">Доставка документов</li>
+            <li class="worker-tag">Отправить поездом или маршруткой</li>
+            <li class="worker-tag">Курьер на авто</li>
+            <li class="worker-tag">Доставка лекарств</li>
+            <li class="worker-tag">Доставка лекарств</li>
+        </ul>
+    </div><!-- /.worker-tags -->
+    <ul class="tabs-buttons">
+        <li class="tab-button tab-button-active"><a href="#" class="btn">Общая информация</a></li>
+        <li class="tab-button"><a href="#" class="btn">Услуги и цены</a></li>
+        <li class="tab-button"><a href="#" class="btn">Заказы</a></li>
+        <li class="tab-button"><a href="#" class="btn">Портфолио</a></li>
+        <li class="tab-button"><a href="#" class="btn">Отзывы</a></li>
+        <li class="tab-button"><a href="#" class="btn">Избраное</a></li>
+    </ul>
+</div><!-- /.container -->
+
+
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

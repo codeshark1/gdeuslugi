@@ -548,7 +548,11 @@ body {
 	background-size: 11px auto;
 	padding-left: 16px;
 	margin-bottom: 24px;
-	a {color: $gray-text;border: none}
+	a {
+		color: $gray-text;
+		border: none;
+		text-transform: lowercase;
+	}
 	.breadcrumbs-memuitem {display: inline-block;
 		&:after {
 			content: "/";
@@ -2125,6 +2129,10 @@ body {
 
 
 /* GALLERIES */
+.section-photoalbums {
+	max-width: 940px;
+}
+
 .card-photoalbum {
 	background: $gray-bg;
 	max-width: 460px;

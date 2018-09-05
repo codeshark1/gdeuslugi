@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Виджет - ЛК СБ мастер в избранных</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+
+
+<div class="container">
+    <div class="col-master-sbar">
+        <div class="col-master-sbar-widget">
+            <h6 class="heading heading-content">
+                <svg class="icon-svg" width="29" height="26" viewBox="0 0 29 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <mask id="path-1-inside-1" fill="white">
+                        <path d="M28.9521 7.75294C28.5288 3.26015 25.2309 0.000537826 21.1037 0.000537826C18.3541 0.000537826 15.8365 1.42732 14.4199 3.71406C13.0161 1.39775 10.6017 0 7.89618 0C3.76955 0 0.471148 3.25961 0.0483903 7.7524C0.0149266 7.95085 -0.122274 8.99526 0.294906 10.6985C0.896136 13.1552 2.28488 15.3897 4.30999 17.1591L14.4132 26L24.6899 17.1596C26.715 15.3897 28.1038 13.1557 28.705 10.6985C29.1222 8.9958 28.985 7.95139 28.9521 7.75294Z"/>
+                    </mask>
+                    <path d="M28.9521 7.75294C28.5288 3.26015 25.2309 0.000537826 21.1037 0.000537826C18.3541 0.000537826 15.8365 1.42732 14.4199 3.71406C13.0161 1.39775 10.6017 0 7.89618 0C3.76955 0 0.471148 3.25961 0.0483903 7.7524C0.0149266 7.95085 -0.122274 8.99526 0.294906 10.6985C0.896136 13.1552 2.28488 15.3897 4.30999 17.1591L14.4132 26L24.6899 17.1596C26.715 15.3897 28.1038 13.1557 28.705 10.6985C29.1222 8.9958 28.985 7.95139 28.9521 7.75294Z" fill="white"/>
+                    <path d="M28.9521 7.75294L27.9565 7.84675L27.9598 7.8818L27.9655 7.91652L28.9521 7.75294ZM14.4199 3.71406L13.5647 4.23235L14.4106 5.62802L15.27 4.24069L14.4199 3.71406ZM0.0483903 7.7524L1.03447 7.91868L1.04056 7.88256L1.04399 7.84609L0.0483903 7.7524ZM0.294906 10.6985L1.26624 10.4608L1.26619 10.4606L0.294906 10.6985ZM4.30999 17.1591L4.96852 16.4065L4.96794 16.406L4.30999 17.1591ZM14.4132 26L13.7547 26.7526L14.4076 27.3239L15.0654 26.7581L14.4132 26ZM24.6899 17.1596L25.3421 17.9177L25.348 17.9126L24.6899 17.1596ZM28.705 10.6985L27.7337 10.4605L27.7336 10.4608L28.705 10.6985ZM29.9477 7.65914C29.483 2.72775 25.8189 -0.999462 21.1037 -0.999462V1.00054C24.6429 1.00054 27.5745 3.79255 27.9565 7.84675L29.9477 7.65914ZM21.1037 -0.999462C18.0058 -0.999462 15.1677 0.608175 13.5698 3.18742L15.27 4.24069C16.5054 2.24647 18.7024 1.00054 21.1037 1.00054V-0.999462ZM15.2751 3.19576C13.6953 0.589008 10.9613 -1 7.89618 -1V1C10.2421 1 12.3369 2.20648 13.5647 4.23235L15.2751 3.19576ZM7.89618 -1C3.18157 -1 -0.483169 2.72717 -0.947212 7.65872L1.04399 7.84609C1.42546 3.79205 4.35753 1 7.89618 1V-1ZM-0.937688 7.58612C-0.991677 7.90629 -1.12888 9.08897 -0.676383 10.9364L1.26619 10.4606C0.884333 8.90155 1.02153 7.99541 1.03447 7.91868L-0.937688 7.58612ZM-0.676428 10.9362C-0.0230899 13.6058 1.48229 16.0164 3.65203 17.9121L4.96794 16.406C3.08747 14.763 1.81536 12.7045 1.26624 10.4608L-0.676428 10.9362ZM3.65146 17.9116L13.7547 26.7526L15.0718 25.2474L4.96852 16.4065L3.65146 17.9116ZM15.0654 26.7581L25.3421 17.9177L24.0378 16.4015L13.7611 25.2419L15.0654 26.7581ZM25.348 17.9126C27.5176 16.0164 29.023 13.6064 29.6763 10.9361L27.7336 10.4608C27.1845 12.705 25.9125 14.763 24.0318 16.4067L25.348 17.9126ZM29.6763 10.9365C30.1289 9.08887 29.9913 7.90693 29.9386 7.58936L27.9655 7.91652C27.9787 7.99586 28.1154 8.90273 27.7337 10.4605L29.6763 10.9365Z" fill="#1B998B" mask="url(#path-1-inside-1)"/>
+                </svg>
+                В избранном
+            </h6>
+            <p class="text-light">Добавили в избранное 8 человек</p>
+            <ul class="worker-list-wg-fav">
+                <li><img src="images/smalluserpic1.jpg" alt="pic"></li>
+                <li><img src="images/smalluserpic2.jpg" alt="pic"></li>
+                <li><img src="images/smalluserpic3.jpg" alt="pic"></li>
+                <li><img src="images/smalluserpic4.jpg" alt="pic"></li>
+                <li><img src="images/smalluserpic5.jpg" alt="pic"></li>
+                <li><img src="images/smalluserpic6.jpg" alt="pic"></li>
+                <li><img src="images/smalluserpic7.jpg" alt="pic"></li>
+                <li><img src="images/smalluserpic8.jpg" alt="pic"></li>
+            </ul>
+        </div><!-- /.col-master-sbar-widget -->                               
+    </div><!-- /.col-master-sbar -->
+</div><!-- /.container -->
+
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
