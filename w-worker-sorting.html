@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>исполнитель/Заказы</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+
+
+<div class="container">
+    <form role="search" method="get" class="form-search form-search-dash" action="/">
+        <input type="text" class="search-field" autocomplete="off" placeholder="Введите имя или № заказа" title="Поиск" role="combobox">
+        <button type="submit" class="search-submit" id="searchsubmit" title="Поиск">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
+        </button>
+    </form>
+    
+    <div class="dash-msg-tools">
+        <div class="dash-msg-tools--left">
+            <div class="dash-msg-checkbox">
+                <input type="checkbox">
+            </div>            
+            <button class="btn btn-default">
+                <svg class="icon-svg" width="9" height="13" viewBox="0 0 8 11" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.06114 10.4695C7.04903 10.766 6.81096 11 6.52144 11H1.47863C1.18912 11 0.951047 10.766 0.938934 10.4695L0.578811 2.67856H7.42126L7.06114 10.4695ZM2.8593 4.6137C2.8593 4.48955 2.76107 4.38887 2.63988 4.38887H2.28896C2.16785 4.38887 2.06955 4.48953 2.06955 4.6137V9.06486C2.06955 9.18902 2.16777 9.28968 2.28896 9.28968H2.63988C2.76102 9.28968 2.8593 9.18908 2.8593 9.06486V4.6137ZM4.39489 4.6137C4.39489 4.48955 4.29666 4.38887 4.1755 4.38887H3.82457C3.70346 4.38887 3.60519 4.48953 3.60519 4.6137V9.06486C3.60519 9.18902 3.70339 9.28968 3.82457 9.28968H4.1755C4.29664 9.28968 4.39489 9.18908 4.39489 9.06486V4.6137ZM5.93053 4.6137C5.93053 4.48955 5.83231 4.38887 5.71114 4.38887H5.36019C5.23905 4.38887 5.14081 4.48953 5.14081 4.6137V9.06486C5.14081 9.18902 5.23903 9.28968 5.36019 9.28968H5.71114C5.83228 9.28968 5.93053 9.18908 5.93053 9.06486V4.6137Z" />
+                    <path d="M0.338972 0.566665H2.66539V0.115929C2.66539 0.0519189 2.71602 0 2.77851 0H5.22149C5.28395 0 5.33459 0.0519189 5.33459 0.115929V0.566638H7.66103C7.84825 0.566638 8 0.722179 8 0.914048V2.0054H0V0.914075C0 0.722206 0.151749 0.566665 0.338972 0.566665Z" />
+                </svg>                        
+                Удалить
+            </button>
+            <button class="btn btn-default">
+                <svg class="icon-svg" width="15" height="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M7.5 0C3.35813 0 0 3.35813 0 7.5C0 11.6419 3.35813 15 7.5 15C11.6419 15 15 11.6419 15 7.5C15 3.35813 11.6419 0 7.5 0ZM7.5 12.2875C6.91375 12.2875 6.5125 11.8356 6.5125 11.25C6.5125 10.6475 6.93062 10.2125 7.5 10.2125C8.10188 10.2125 8.4875 10.6475 8.4875 11.25C8.4875 11.8363 8.10188 12.2875 7.5 12.2875ZM7.88875 8.32563C7.73937 8.835 7.26875 8.84375 7.11187 8.32563C6.93125 7.72813 6.28937 5.46 6.28937 3.98688C6.28937 2.04313 8.72125 2.03375 8.72125 3.98688C8.72062 5.46875 8.04437 7.79563 7.88875 8.32563Z" />
+                </svg>                            
+                Заблокировать
+            </button>
+            <a class="btn btn-default-color">Мои заказы</a>
+            <a class="btn btn-default-color">Мои отклики</a>
+        </div><!-- left -->
+        <div class="dash-msg-tools--right">
+            <select>
+                <option>Сначала новые</option>
+                <option>По времени</option>
+            </select>
+        </div><!-- /.dash-msg-tools--right --> 
+    </div><!-- tools -->       
+</div><!-- /.container -->
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

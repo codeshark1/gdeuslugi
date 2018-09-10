@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Виджет - добавить заказ</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body class="home">
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+
+<div class="container">
+    <section class="b-order-form section-major">
+        <div class="b-order-form-col-1">
+            <div class="b-inner">
+                <p class="info"><b>20 569</b> Специалистов на сайте</p>
+                <p class="info">+ 185</p>
+                <hr>
+                <p class="info"><b>40 888</b> Воспользывались услугой</p>
+                <p class="info">+ 1 455 сегодня</p>
+            </div><!-- /.b-inner -->
+        </div><!-- /.b-order-form-col-1 -->
+        <div class="b-order-form-col-2">
+            <form action="#" class="form-order">
+                <h2 class="heading">Добавить заказ</h2>
+
+                <label for="order-form-email" class="lbl lbl-top">Email или номер телефона</label>
+                <input type="text" id="order-form-email">
+
+                <label for="order-form-town" class="lbl lbl-top">Город</label>
+                <input type="text" id="order-form-town">
+                
+                <label for="order-form-details" class="lbl lbl-top">Детали заказа</label>
+                <textarea id="order-form-details" placeholder="Опишите детали заказа"></textarea>                            
+                
+                <button type="submit" class="btn btn-main">Добавить</button>
+            </form>
+        </div><!-- /.b-order-form-col-2 -->
+    </section><!-- /.section-major -->
+</div><!-- /.container -->
+
+</body>
+</html>

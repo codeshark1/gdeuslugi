@@ -137,6 +137,9 @@ body {
 	background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17' height='17' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M11 11h-11v-11h11v11zm13 0h-11v-11h11v11zm-13 13h-11v-11h11v11zm13 0h-11v-11h11v11z'/%3E%3C/svg%3E") no-repeat 0 50%;
 	padding-left: 26px;
 	a {border: none !important;}
+	@media (min-width: $screen-sm-min) {
+		.hidden-xs {display: inline-block;}
+	}
 }
 
 .b-action-order {
@@ -464,19 +467,21 @@ body {
   .menu-item {
     display: inline-block;
     margin-right: 20px;
-  }  
+  }
 }
 .nav-menu-social {
 	.menu-item {
 		display: inline-block;
 		margin-right: 8px;
 	}
+	a {border:none}
 }
 
 .nav-menu-social-article {
 	a {
 		color: $green-text;
 		font-size: 38px;
+		border:none
 	}
 }
 
@@ -661,6 +666,7 @@ body {
 	*, .heading {color: #fff;}	
 	.heading {margin-top: 0;}	
 	.b-order-form-col-2 {padding: 24px;}	
+	.btn {padding: 16px 40px !important}
 	@media (max-width: $screen-xs-max) {		
 		.b-order-form-col-1 {display: none;}
 		.btn {width: 100%;}
@@ -1704,8 +1710,20 @@ body {
 		align-items: center;
 		justify-content: center;	
 		cursor: pointer;	
+		margin-bottom: 35px;
+	}
+	.sertif-del {
+		cursor: pointer;
+		text-align: center;
+		color: $gray-text;
 	}
 }
+.worker-sertifs-empty {
+	text-align: center;
+	max-width: 340px;
+	.btn {margin-top: 1.5rem;}
+}
+
 
 .worker-list-advantages, .worker-list-tasks {
 	padding-left: 2.5rem;
@@ -1817,6 +1835,7 @@ body {
 .card-dash {
 	padding: 1.5rem;
 	background: #fff;
+	margin-bottom: 1rem;
 	.btn-second {padding: 8px 16px;}
 	a {color: $blue-bright}
 }
@@ -1824,7 +1843,7 @@ body {
 	background: $gray-bg;	
 	@media (min-width: $screen-md-min) {
 		padding: 2rem;
-	}	
+	}
 }
 
 .b-input-pass {
@@ -1909,8 +1928,7 @@ body {
 .card-dash-check {	
 	padding-left: 0;
 	display: table;
-	table-layout: fixed;	
-	margin-bottom: 16px;
+	table-layout: fixed;
 	width: 100%;
 }
 .card-dash-check-checkbox, 

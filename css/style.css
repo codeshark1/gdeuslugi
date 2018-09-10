@@ -1897,6 +1897,9 @@ body {
   padding-left: 26px; }
   .link-uslugi a {
     border: none !important; }
+  @media (min-width: 768px) {
+    .link-uslugi .hidden-xs {
+      display: inline-block; } }
 
 .b-action-order .btn {
   padding: 8px 14px;
@@ -2226,10 +2229,13 @@ body {
 .nav-menu-social .menu-item {
   display: inline-block;
   margin-right: 8px; }
+.nav-menu-social a {
+  border: none; }
 
 .nav-menu-social-article a {
   color: #126E63;
-  font-size: 38px; }
+  font-size: 38px;
+  border: none; }
 
 .nav-menu-content {
   margin-bottom: 20px; }
@@ -2406,6 +2412,8 @@ body {
     margin-top: 0; }
   .b-order-form .b-order-form-col-2 {
     padding: 24px; }
+  .b-order-form .btn {
+    padding: 16px 40px !important; }
   @media (max-width: 767px) {
     .b-order-form .b-order-form-col-1 {
       display: none; }
@@ -3482,7 +3490,18 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    cursor: pointer; }
+    cursor: pointer;
+    margin-bottom: 35px; }
+  .worker-sertifs .sertif-del {
+    cursor: pointer;
+    text-align: center;
+    color: #ACACAC; }
+
+.worker-sertifs-empty {
+  text-align: center;
+  max-width: 340px; }
+  .worker-sertifs-empty .btn {
+    margin-top: 1.5rem; }
 
 .worker-list-advantages, .worker-list-tasks {
   padding-left: 2.5rem; }
@@ -3586,7 +3605,8 @@ body {
 /* DASHBOARD */
 .card-dash {
   padding: 1.5rem;
-  background: #fff; }
+  background: #fff;
+  margin-bottom: 1rem; }
   .card-dash .btn-second {
     padding: 8px 16px; }
   .card-dash a {
@@ -3682,7 +3702,6 @@ body {
   padding-left: 0;
   display: table;
   table-layout: fixed;
-  margin-bottom: 16px;
   width: 100%; }
 
 .card-dash-check-checkbox,

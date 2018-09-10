@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Виджет - пагинация</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body class="home">
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+
+<div class="container">
+    <button class="btn btn-load" type="button">Показать еще</button>
+
+    <hr>
+    
+    <ul class="pagination">
+        <li class="pgn-page pgn-page-prev"><a href="#" rel="prev">Назад</a></li>
+        <li class="pgn-page"><a href="#">1</a></li>
+        <li class="pgn-page"><a href="#">2</a></li>
+        <li class="pgn-page"><a href="#">3</a></li>
+        <li class="pgn-page"><a href="#">4</a></li>
+        <li class="pgn-page pgn-page-active"><a href="#">5</a></li>
+        <li class="pgn-page"><a href="#">6</a></li>
+        <li class="pgn-page"><a href="#">7</a></li>
+        <li class="pgn-page"><a href="#">8</a></li>
+        <li class="pgn-page"><a href="#">9</a></li>
+        <li class="pgn-page pgn-page-dots">...</li>
+        <li class="pgn-page"><a href="#">123</a></li>
+        <li class="pgn-page pgn-page-next"><a href="?page=6" rel="last">Вперед</a></li>
+    </ul>
+    
+    <ul class="pagination-mob">
+        <li class="pgn-page pgn-page-prev"><a href="#" rel="prev">Назад</a></li>
+        <li class="pgn-page"><a href="#">1</a></li>
+        <li class="pgn-page"><a href="#">2</a></li>
+        <li class="pgn-page pgn-page-active"><a href="#">3</a></li>
+        <li class="pgn-page"><a href="#">4</a></li>
+        <li class="pgn-page pgn-page-dots">...</li>
+        <li class="pgn-page"><a href="#">123</a></li>
+        <li class="pgn-page pgn-page-next"><a href="?page=6" rel="last">Вперед</a></li>
+    </ul>    
+</div><!-- /.container -->
+
+</footer>
+</body>
+</html>
