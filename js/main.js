@@ -212,4 +212,9 @@ jQuery(document).ready(function($){
             } 
         }  
     });
+
+    $('#link-showphone').click(function(){
+        $(this).hide();
+        $('#master-phone').show();
+    });
 });
