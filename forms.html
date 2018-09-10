@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>формы / редактирование</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+
+<div class="container">
+    <form class="card section-major">
+        <h2 class="heading">Общая информация</h2>
+
+        <label class="lbl lbl-top" for="company-name">Название компании</label>
+        <input type="text" id="company-name">
+
+        <label class="lbl lbl-top" for="company-tel">Телефон</label>
+        <input type="tel" id="company-tel" placeholder="+7(___)___-__-__">
+
+        <fieldset>
+            <legend class="lbl lbl-top">Показывать телефон</legend>
+            
+            <label class="lbl-inline">
+                <input type="checkbox" name="show-phone" class="checkbox">
+                Всем
+            </label>
+            <label class="lbl-inline">
+                <input type="checkbox" name="show-phone" class="checkbox">
+                Мастер-аккаунтам
+            </label>
+            <label class="lbl-inline">
+                <input type="checkbox" name="show-phone" class="checkbox">
+                С подтверждёнными данными
+            </label>
+        </fieldset>
+
+        <label class="lbl lbl-top" for="company-email">Email</label>
+        <input type="email" id="company-email">
+
+        <fieldset>
+            <legend class="lbl lbl-top">Показывать email</legend>
+            
+            <label class="lbl-inline">
+                <input type="checkbox" name="show-email" class="checkbox">
+                Всем
+            </label>
+            <label class="lbl-inline">
+                <input type="checkbox" name="show-email" class="checkbox">
+                Мастер-аккаунтам
+            </label>
+            <label class="lbl-inline">
+                <input type="checkbox" name="show-email" class="checkbox">
+                С подтверждёнными данными
+            </label>
+        </fieldset>    
+        
+        <button type="submit" class="btn btn-second">Сохранить</button>
+    </form><!-- /.card -->
+
+    <div class="card section-major">
+        <h2 class="heading">Смена пароля</h2>
+        
+        <label class="lbl lbl-top" for="pass-old">Старый пароль</label>
+        <div class="input-pass-wrap">
+            <input type="text" id="pass-old">
+            <button class="show-pass" title="показать пароль">показать пароль</button>            
+            <p class="input-addition"><a href="#">Забыли пароль?</a></p>
+        </div><!-- /.input-pass-wrap -->
+
+        <label class="lbl lbl-top" for="pass-new">Новый пароль</label>
+        <div class="input-pass-wrap">
+            <input type="text" id="pass-new">
+            <button class="show-pass" title="показать пароль">показать пароль</button>            
+            <p class="input-addition">длина пароля не менее 8 символов</p>
+        </div><!-- /.input-pass-wrap -->
+
+        <label class="lbl lbl-top" for="pass-new-repeat">Подтвердить пароль</label>
+        <div class="input-pass-wrap">
+            <input type="text" id="pass-new-repeat">
+            <button class="show-pass" title="показать пароль">показать пароль</button>
+        </div><!-- /.input-pass-wrap -->        
+    </div><!-- /.card -->
+</div><!-- /.container -->
+
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>

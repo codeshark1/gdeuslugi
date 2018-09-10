@@ -280,6 +280,12 @@ textarea {
     padding: 16px;
   }
 }
+fieldset {
+  margin: 0;
+  padding: 0; 
+  border: none;
+}
+
 input[type="text"], 
 input[type="email"], 
 input[type="password"], 
@@ -289,10 +295,13 @@ input[type="number"],
 input[type="date"], 
 select,
 textarea, 
-.input-group {
+.input-group,
+.lbl-wrapper, 
+fieldset {
   margin: 0 0 16px 0;
   @media (min-width: $screen-sm-min) {margin-bottom: 24px;}
 }
+
 .input-short {width: 96px !important;}
 
 .row-form textarea {margin-bottom: 0;}
@@ -355,15 +364,12 @@ input[type=checkbox] {cursor: pointer;}
   }
 }
 .lbl-bigger {font-size: 1.2rem}
-.lbl-wrapper {margin-bottom: 16px;}
+
 
 .form-incontent {
   margin-top: 2rem;
 }
 
-fieldset {
-  border: none; padding: 0; margin: 0;
-}
 .inp-required {
 	border-left: 2px solid $action !important;
 }
