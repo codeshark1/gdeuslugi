@@ -154,7 +154,7 @@ body {
 	flex-grow: 1;
 	margin: 0 16px;	
 }
-.form-search-header {	
+.form-search-header {
 	.search-field {
 		height: 44px;
 		border: 1px solid rgba(#fff,.5);
@@ -653,9 +653,16 @@ body {
 }
 .card {
 	@include borderr();
-	padding: 16px;
+	padding: 1rem;
 	background: #fff;
 }
+.card-full {
+	
+	@media (min-width: $screen-md-min) {
+		padding: 2rem;
+	}
+}
+
 .tabs-wrapper {
 	.card {margin-bottom: 1.5rem;}
 }
@@ -1468,8 +1475,6 @@ body {
 .heading-icon-exp {
 	background-position: 0 -1413px;
 }
-.heading-icon-about {}
-.heading-icon-services {}
 
 .row-master-content {
 	@media (min-width: $screen-md-min) {
@@ -1646,8 +1651,7 @@ body {
 .row-mark {
 	display: flex;
 	margin-top: 1rem;
-	.col-mark-title {flex-grow: 1;}
-	.rating {}
+	.col-mark-title {flex-grow: 1;}	
 }
 
 .worker-review-breakdown {
@@ -1845,31 +1849,10 @@ body {
 		padding: 2rem;
 	}
 }
+.lbl-photopages {
+	margin-bottom: 1rem;
+}
 
-.b-input-pass {
-	position: relative;
-	.hide-show {
-		position: absolute;
-		right: 8px;
-		top: 9px;
-	}
-}
-.hide-show {
-	background: url("data:image/svg+xml,%3Csvg width='27' height='18' viewBox='0 0 27 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.1538 0C7.17483 0 2.03287 3.72 0 9C2.03287 14.28 7.17483 18 13.1538 18C19.1329 18 24.2748 14.28 26.3077 9C24.2748 3.72 19.1329 0 13.1538 0ZM13.1538 15C9.80559 15 7.17483 12.36 7.17483 9C7.17483 5.64 9.80559 3 13.1538 3C16.5021 3 19.1329 5.64 19.1329 9C19.1329 12.36 16.5021 15 13.1538 15ZM13.1538 5.4C11.121 5.4 9.56643 6.96 9.56643 9C9.56643 11.04 11.121 12.6 13.1538 12.6C15.1867 12.6 16.7413 11.04 16.7413 9C16.7413 6.96 15.1867 5.4 13.1538 5.4Z' fill='%23c4c4c4'/%3E%3C/svg%3E%0A") no-repeat;
-	width: 27px;height: 18px;
-	border: none;
-	cursor: pointer;
-	opacity: .7;
-}
-.link-pass-remember {
-	text-align: right;
-	position: relative;
-	top: -16px;
-	font-size: 14px;
-	a {border: none;color: $blue-bright;
-		&:hover {text-decoration: underline;}
-	}
-}
 
 .gal-dash-row {
 	@include clearfix;

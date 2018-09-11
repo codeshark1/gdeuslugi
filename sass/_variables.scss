@@ -54,7 +54,7 @@ $blue-bright: #1B57CD;
 }
 
 @mixin borderr() {
-    border: 1px solid #CCCCCC;
+    border: 1px solid $gray-border;
     border-radius: 3px;
 }
 

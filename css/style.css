@@ -277,6 +277,11 @@ button {
   COMMON
   ========================================================================== */
 /* FORMS */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none; }
+
 input[type="text"],
 input[type="email"],
 input[type="password"],
@@ -287,8 +292,8 @@ input[type="date"],
 select,
 textarea {
   width: 100%;
-  border: 1px solid rgba(0, 0, 0, 0.07);
-  padding: 8px;
+  border: 1px solid #E5E5E5;
+  padding: 12px 8px;
   font-size: 1rem;
   transition: all .3s ease-in-out;
   font-family: Roboto, sans-serif;
@@ -316,11 +321,6 @@ textarea {
   @media (min-width: 768px) {
     textarea {
       padding: 16px; } }
-
-fieldset {
-  margin: 0;
-  padding: 0;
-  border: none; }
 
 input[type="text"],
 input[type="email"],
@@ -433,6 +433,28 @@ input[type=checkbox] {
 .lbl-bigger {
   font-size: 1.2rem; }
 
+.sublabel {
+  margin-bottom: 8px;
+  max-width: 410px; }
+
+.userdata-row {
+  display: flex; }
+
+.userdata-col-1 {
+  width: 100px; }
+
+.userdata-col-2 {
+  width: 270px;
+  padding: 30px 20px 0 20px; }
+
+.note-userdata-important {
+  background: #F7F7F7;
+  display: inline-block;
+  padding: 2rem;
+  font-weight: 500; }
+  .note-userdata-important span {
+    color: #1B998B; }
+
 .form-incontent {
   margin-top: 2rem; }
 
@@ -446,20 +468,57 @@ input[type=checkbox] {
 .form-bottom-buttons .btn:first-child {
   margin-right: 1rem; }
 
-.b-inputs input {
-  margin-bottom: 16px; }
-@media (min-width: 992px) {
-  .b-inputs:before, .b-inputs:after {
-    content: "";
-    display: table; }
-  .b-inputs:after {
-    clear: both; }
-  .b-inputs input {
-    width: 32.3%;
-    float: left;
-    margin-right: 1.5%; }
-  .b-inputs input:last-child {
-    margin-right: 0; } }
+.input-pass-wrap {
+  position: relative; }
+  .input-pass-wrap .show-pass {
+    position: absolute;
+    right: 10px;
+    top: 14px; }
+
+.show-pass {
+  background: url("data:image/svg+xml,%3Csvg width='27' height='18' viewBox='0 0 27 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.1538 0C7.17483 0 2.03287 3.72 0 9C2.03287 14.28 7.17483 18 13.1538 18C19.1329 18 24.2748 14.28 26.3077 9C24.2748 3.72 19.1329 0 13.1538 0ZM13.1538 15C9.80559 15 7.17483 12.36 7.17483 9C7.17483 5.64 9.80559 3 13.1538 3C16.5021 3 19.1329 5.64 19.1329 9C19.1329 12.36 16.5021 15 13.1538 15ZM13.1538 5.4C11.121 5.4 9.56643 6.96 9.56643 9C9.56643 11.04 11.121 12.6 13.1538 12.6C15.1867 12.6 16.7413 11.04 16.7413 9C16.7413 6.96 15.1867 5.4 13.1538 5.4Z' fill='%23666666'/%3E%3C/svg%3E%0A") no-repeat;
+  width: 27px;
+  height: 18px;
+  border: none;
+  cursor: pointer;
+  opacity: .5;
+  font-size: 0;
+  color: transparent;
+  transition: all .10s; }
+  .show-pass:hover, .show-pass-active {
+    opacity: 1; }
+
+.input-addition {
+  text-align: right;
+  position: relative;
+  top: -16px;
+  font-size: .9rem;
+  color: #666; }
+
+@media (min-width: 768px) {
+  .inp-text-stand,
+  .input-pass-wrap {
+    max-width: 435px; } }
+
+.inp-text-tel {
+  max-width: 200px; }
+
+.inp-text-index {
+  max-width: 225px; }
+
+.inp-text-addr {
+  max-width: 100px; }
+
+.input-col {
+  display: inline-block;
+  margin-right: 20px; }
+  .input-col:last-child {
+    margin-right: 0; }
+
+.btn-changenumber {
+  height: 44px;
+  vertical-align: baseline;
+  margin-bottom: 1rem; }
 
 /* SEARCH FORM */
 .form-search {
@@ -768,7 +827,7 @@ input[type=checkbox] {
 .h-card-list {
   font-size: 1.5rem; }
 
-.section-major {
+.section-major, .card-full {
   margin-bottom: 2rem; }
 
 @media (max-width: 1199px) {
@@ -992,12 +1051,6 @@ hr {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
-
-/* card-polar */
-.card-polar {
-  margin-bottom: 18px; }
-  .card-polar .h-card {
-    margin: 8px 0; }
 
 /* card-cols */
 @media (max-width: 991px) {
@@ -2396,10 +2449,14 @@ body {
     padding: 0 140px; } }
 
 .card {
-  border: 1px solid #CCCCCC;
+  border: 1px solid #E5E5E5;
   border-radius: 3px;
-  padding: 16px;
+  padding: 1rem;
   background: #fff; }
+
+@media (min-width: 992px) {
+  .card-full {
+    padding: 2rem; } }
 
 .tabs-wrapper .card {
   margin-bottom: 1.5rem; }
@@ -3619,31 +3676,8 @@ body {
     .card-dash-order {
       padding: 2rem; } }
 
-.b-input-pass {
-  position: relative; }
-  .b-input-pass .hide-show {
-    position: absolute;
-    right: 8px;
-    top: 9px; }
-
-.hide-show {
-  background: url("data:image/svg+xml,%3Csvg width='27' height='18' viewBox='0 0 27 18' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M13.1538 0C7.17483 0 2.03287 3.72 0 9C2.03287 14.28 7.17483 18 13.1538 18C19.1329 18 24.2748 14.28 26.3077 9C24.2748 3.72 19.1329 0 13.1538 0ZM13.1538 15C9.80559 15 7.17483 12.36 7.17483 9C7.17483 5.64 9.80559 3 13.1538 3C16.5021 3 19.1329 5.64 19.1329 9C19.1329 12.36 16.5021 15 13.1538 15ZM13.1538 5.4C11.121 5.4 9.56643 6.96 9.56643 9C9.56643 11.04 11.121 12.6 13.1538 12.6C15.1867 12.6 16.7413 11.04 16.7413 9C16.7413 6.96 15.1867 5.4 13.1538 5.4Z' fill='%23c4c4c4'/%3E%3C/svg%3E%0A") no-repeat;
-  width: 27px;
-  height: 18px;
-  border: none;
-  cursor: pointer;
-  opacity: .7; }
-
-.link-pass-remember {
-  text-align: right;
-  position: relative;
-  top: -16px;
-  font-size: 14px; }
-  .link-pass-remember a {
-    border: none;
-    color: #1B57CD; }
-    .link-pass-remember a:hover {
-      text-decoration: underline; }
+.lbl-photopages {
+  margin-bottom: 1rem; }
 
 .gal-dash-row:before, .gal-dash-row:after {
   content: "";

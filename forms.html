@@ -19,15 +19,17 @@
     <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
 <![endif]-->
 
+
 <div class="container">
-    <form class="card section-major">
+    <!-- Общая информация -->
+    <form class="card card-full">
         <h2 class="heading">Общая информация</h2>
 
         <label class="lbl lbl-top" for="company-name">Название компании</label>
-        <input type="text" id="company-name">
+        <input type="text" id="company-name" class="inp-text-stand">
 
         <label class="lbl lbl-top" for="company-tel">Телефон</label>
-        <input type="tel" id="company-tel" placeholder="+7(___)___-__-__">
+        <input type="tel" id="company-tel" placeholder="+7(___)___-__-__"  class="inp-text-tel">
 
         <fieldset>
             <legend class="lbl lbl-top">Показывать телефон</legend>
@@ -47,7 +49,7 @@
         </fieldset>
 
         <label class="lbl lbl-top" for="company-email">Email</label>
-        <input type="email" id="company-email">
+        <input type="email" id="company-email" class="inp-text-stand">
 
         <fieldset>
             <legend class="lbl lbl-top">Показывать email</legend>
@@ -69,29 +71,157 @@
         <button type="submit" class="btn btn-second">Сохранить</button>
     </form><!-- /.card -->
 
-    <div class="card section-major">
+    <!-- Смена пароля -->
+    <form class="card card-full">
         <h2 class="heading">Смена пароля</h2>
         
         <label class="lbl lbl-top" for="pass-old">Старый пароль</label>
         <div class="input-pass-wrap">
-            <input type="text" id="pass-old">
-            <button class="show-pass" title="показать пароль">показать пароль</button>            
+            <input type="text" id="pass-old" class="inp-text-stand">
+            <button class="show-pass" type="button" title="показать пароль">показать пароль</button>            
             <p class="input-addition"><a href="#">Забыли пароль?</a></p>
         </div><!-- /.input-pass-wrap -->
 
         <label class="lbl lbl-top" for="pass-new">Новый пароль</label>
         <div class="input-pass-wrap">
-            <input type="text" id="pass-new">
-            <button class="show-pass" title="показать пароль">показать пароль</button>            
+            <input type="text" id="pass-new" class="inp-text-stand">
+            <button class="show-pass show-pass-active" type="button" title="показать пароль">показать пароль</button>            
             <p class="input-addition">длина пароля не менее 8 символов</p>
         </div><!-- /.input-pass-wrap -->
 
         <label class="lbl lbl-top" for="pass-new-repeat">Подтвердить пароль</label>
         <div class="input-pass-wrap">
-            <input type="text" id="pass-new-repeat">
-            <button class="show-pass" title="показать пароль">показать пароль</button>
-        </div><!-- /.input-pass-wrap -->        
-    </div><!-- /.card -->
+            <input type="text" id="pass-new-repeat" class="inp-text-stand">
+            <button class="show-pass" type="button" title="показать пароль">показать пароль</button>
+        </div><!-- /.input-pass-wrap -->
+
+        <button type="submit" class="btn btn-second">Сменить пароль </button>
+    </form><!-- /.card -->
+
+    <!-- Юридический адрес -->
+    <form class="card card-full">
+        <h2 class="heading">Юридический адрес</h2>
+        
+        <div class="input-row">
+            <div class="input-col">
+                <label class="lbl lbl-top" for="company-town">Город</label>
+                <input type="text" id="company-town" class="inp-text-stand">
+            </div><!-- /.input-col -->
+
+            <div class="input-col">
+                <label class="lbl lbl-top" for="company-index">Индекс</label>
+                <input type="text" id="company-index" class="inp-text-index">
+            </div><!-- /.input-col -->
+        </div><!-- /.input-row -->
+
+        <div class="input-row">
+            <div class="input-col">
+                <label class="lbl lbl-top" for="company-street">Улица</label>
+                <input type="text" id="company-street" class="inp-text-stand">
+            </div><!-- /.input-col -->            
+
+            <div class="input-col">
+                <label class="lbl lbl-top" for="company-building">Дом</label>
+                <input type="text" id="company-building" class="inp-text-addr">
+            </div><!-- /.input-col -->
+            
+            <div class="input-col">
+                <label class="lbl lbl-top" for="company-korp">Корпус</label>
+                <input type="text" id="company-korp" class="inp-text-addr">  
+            </div><!-- /.input-col -->
+            
+            <div class="input-col">
+                <label class="lbl lbl-top" for="company-flat">Кв.</label>
+                <input type="text" id="company-flat" class="inp-text-addr">
+            </div><!-- /.input-col -->
+        </div><!-- /.input-row -->
+
+        <button type="submit" class="btn btn-second">Добавить фактический адрес</button>
+    </form><!-- /.card -->    
+    
+    <!-- Реквизиты -->
+    <form class="card card-full">
+        <h2 class="heading">Реквизиты</h2>
+        
+        <label class="lbl lbl-top" for="company-inn">ИНН</label>
+        <input type="text" id="company-inn">
+
+        <label class="lbl lbl-top" for="company-ogrnip">ОГРНИП</label>
+        <input type="text" id="company-ogrnip">
+        
+        <label class="lbl lbl-top" for="company-schet">Расчетный счет</label>
+        <input type="text" id="company-schet">
+        
+        <label class="lbl lbl-top" for="company-bank">Банк</label>
+        <input type="text" id="company-bank">
+        
+        <label class="lbl lbl-top" for="company-bik">БИК</label>
+        <input type="text" id="company-bik">            
+
+        <button type="submit" class="btn btn-second">Сохранить</button>
+    </form><!-- /.card -->    
+
+    <!-- Верификация -->
+    <form class="card card-full">
+        <h2 class="heading">Верификация</h2>
+
+        <p>Для подтверждения аккаунта пройдите верификацию</p>
+        
+        <div class="userdata-row">
+            <div class="userdata-col-1">
+                <img src="images/ava-placeholder.png" alt="pic">
+            </div><!-- /.userdata-col-1 -->
+            <div class="userdata-col-2">
+                <p class="lbl lbl-photopages">Фотографии лица и первой странице паспорта</p>
+                <button type="button" class="btn btn-stroked">Загрузить фотографию</button>        
+            </div><!-- /.userdata-col-2 -->
+            <div class="userdata-col-3">
+                <p class="note-userdata-important"><span>Важно!</span> Загрузите фото с окрытым  паспортом первой страницы в руках </p>                
+            </div><!-- /.userdata-col-3 -->
+        </div><!-- /.userdata-row -->      
+
+        <label class="lbl lbl-top" for="company-passp-sernum">Серия и номер паспорта</label>
+        <input type="text" id="company-passp-sernum" class="inp-text-stand">
+
+        <div class="input-row">
+            <div class="input-col">
+                <label class="lbl lbl-top" for="company-passp-ser">Серия паспорта</label>
+                <input type="text" id="company-passp-ser" class="inp-text-passp-ser">
+            </div><!-- /.input-col -->            
+
+            <div class="input-col">
+                <label class="lbl lbl-top" for="company-passp-num">Номер</label>
+                <input type="text" id="company-passp-num" class="inp-text-passp-num">
+            </div><!-- /.input-col -->
+        </div><!-- /.input-row -->        
+    </form><!-- /.card -->
+
+    <!-- Номер телефона -->
+    <form class="card card-full">
+        <h2 class="heading">Номер телефона</h2>
+
+        <label class="lbl lbl-top" for="company-tel-old">Телефон</label>
+        <div class="input-row">
+            <div class="input-col">
+                    <input type="tel" id="company-tel-old" placeholder="+7(___)___-__-__"  class="inp-text-tel">
+            </div><!-- /.input-col -->
+            <div class="input-col">
+                <button type="button" class="btn btn-stroked btn-changenumber">Сменить номер телефона</button>
+            </div><!-- /.input-col -->
+        </div><!-- /.input-row -->
+        
+
+        <label class="lbl lbl-top" for="company-tel-new">Введите новый номер телефона</label>
+        <input type="tel" id="company-tel-new" placeholder="+7(___)___-__-__"  class="inp-text-tel">
+
+        <label class="lbl lbl-top" for="confirm-code">Код подтверждения</label>
+        <p class="sublabel">На номер + 7 999 999-99-99 был выслан код с подтверждением для смены номера телефона</p>
+        <input type="text" id="confirm-code" class="inp-text-tel">
+        
+        <div>
+            <button type="submit" class="btn btn-second">Подтвердить номер</button>
+        </div>
+    </form><!-- /.card -->    
 </div><!-- /.container -->
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
