@@ -217,4 +217,21 @@ jQuery(document).ready(function($){
         $(this).hide();
         $('#master-phone').show();
     });
+
+
+    //Custom checkboxes/radios:
+    function setupLabel() {
+        if ($('label.check-custom input').length) {
+            $('label.check-custom').each(function(){
+                $(this).removeClass('checked');
+            });
+            $('label.check-custom input:checked').each(function(){
+                $(this).parent('label').addClass('checked');
+            });
+        }
+    }
+    setupLabel();
+    $('label.check-custom').click(function(){
+        setupLabel();
+    });    
 });

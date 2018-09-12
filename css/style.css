@@ -438,14 +438,33 @@ input[type=checkbox] {
   max-width: 410px; }
 
 .userdata-row {
-  display: flex; }
+  display: flex;
+  margin-bottom: 2rem; }
+  .userdata-row:last-child {
+    margin-bottom: 0; }
+  @media (max-width: 991px) {
+    .userdata-row {
+      flex-wrap: wrap; } }
 
 .userdata-col-1 {
-  width: 100px; }
+  width: 100px;
+  flex-shrink: 0; }
 
 .userdata-col-2 {
-  width: 270px;
-  padding: 30px 20px 0 20px; }
+  width: 250px;
+  padding-top: 16px;
+  flex-shrink: 0; }
+  @media (min-width: 500px) {
+    .userdata-col-2 {
+      padding-left: 20px; } }
+  @media (min-width: 992px) {
+    .userdata-col-2 {
+      padding: 30px 20px 0 20px;
+      width: 270px; } }
+
+@media (max-width: 991px) {
+  .userdata-col-3 {
+    margin-top: 20px; } }
 
 .note-userdata-important {
   background: #F7F7F7;
@@ -454,6 +473,17 @@ input[type=checkbox] {
   font-weight: 500; }
   .note-userdata-important span {
     color: #1B998B; }
+
+.userdata-comment {
+  color: #666;
+  font-size: 0.85rem;
+  margin-top: 16px; }
+
+.inp-text-passp-ser {
+  max-width: 150px !important; }
+
+.inp-text-passp-num {
+  width: 260px !important; }
 
 .form-incontent {
   margin-top: 2rem; }
@@ -591,6 +621,50 @@ input[type=checkbox] {
     background-position: 173px 12px; }
     .form-search-exp .search-field:focus + .search-submit {
       display: block; }
+
+/* custom checkboxes */
+.check-switch {
+  background: #E5E5E5;
+  width: 50px;
+  height: 27px;
+  border-radius: 100px;
+  position: relative; }
+  .check-switch:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background: #ffffff;
+    top: 3px;
+    left: 3px;
+    position: absolute;
+    transition: all .15s; }
+  .check-switch.checked {
+    background: #1B998B; }
+    .check-switch.checked:before {
+      left: 27px; }
+  @media (min-width: 500px) {
+    .check-switch {
+      width: 77px;
+      height: 41px; }
+      .check-switch:before {
+        width: 34px;
+        height: 34px;
+        top: 3px;
+        left: 3px; }
+      .check-switch.checked {
+        background: #1B998B; }
+        .check-switch.checked:before {
+          left: 40px; } }
+
+.check-custom {
+  display: inline-block; }
+  .check-custom input {
+    position: absolute;
+    left: -9999px; }
+
+.check-custom-title {
+  display: none; }
 
 /* VIEW */
 .b-view-options {
@@ -4156,6 +4230,34 @@ body {
 .card-dash-check-button {
   text-align: center;
   margin-top: 24px; }
+
+.notifications-table {
+  text-align: center;
+  max-width: 750px;
+  margin-bottom: 3rem;
+  table-layout: fixed; }
+  .notifications-table:last-child {
+    margin-bottom: 0; }
+  .notifications-table td {
+    padding: 1.5rem 0; }
+  .notifications-table td:first-child {
+    text-align: left;
+    max-width: 210px; }
+  .notifications-table tr:last-child td {
+    padding-bottom: 0; }
+  .notifications-table-v1 th, .notifications-table-v1 td {
+    border-right: 1px solid #E5E5E5; }
+    .notifications-table-v1 th:first-child, .notifications-table-v1 th:last-child, .notifications-table-v1 td:first-child, .notifications-table-v1 td:last-child {
+      border: none; }
+  .notifications-table-v2 th {
+    font-weight: normal; }
+  .notifications-table-v2 td {
+    font-weight: bold;
+    border-bottom: 1px solid #E5E5E5; }
+    .notifications-table-v2 td:first-child {
+      border: none; }
+  .notifications-table-v2 tr:last-child td {
+    border: none; }
 
 /* CHAT */
 .btn-chat-back {
