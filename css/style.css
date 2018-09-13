@@ -3371,14 +3371,14 @@ body {
   margin: 1rem 0 0 0; }
 
 .worker-top-col-fav {
-  padding: 1rem 0 0 0; }
+  padding: 1rem 0; }
   @media (max-width: 767px) {
     .worker-top-col-fav {
       text-align: center; } }
   @media (min-width: 992px) {
     .worker-top-col-fav {
       text-align: right;
-      padding: 1rem 2rem 0 2rem; } }
+      padding: 1rem 2rem; } }
 
 .worker-top-col-order {
   padding: .5rem 2.5rem 1.5rem 2.5rem;
@@ -3610,6 +3610,19 @@ body {
   .col-rating {
     display: flex;
     justify-content: space-between; } }
+
+.card-banner-specplace {
+  background: #FA6917;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .card-banner-specplace img {
+    width: 200px; }
+  .card-banner-specplace p {
+    margin-top: 1rem; }
 
 /* WORKER SIDEBAR */
 .col-master-sbar-widget {
