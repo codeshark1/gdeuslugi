@@ -782,7 +782,9 @@ input[type=checkbox] {cursor: pointer;}
 /* ==========================================================================
    CONTENT
    ========================================================================== */
-.heading {
+h1, h2, h3, h4, h5, h6 {font-weight: 500;}
+
+   .heading {
   font-size: 1.5rem;
   margin: .5rem 0 1.5rem 0;
   color: $heading-text;  
@@ -815,6 +817,17 @@ input[type=checkbox] {cursor: pointer;}
     cursor: pointer;
   }
 }
+.btn-edit {
+  border: none;
+  background: url("data:image/svg+xml,%3Csvg width='13' height='12' viewBox='0 0 13 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M7.49844 2.00265L9.95147 4.45565L3.74218 10.6649L1.29054 8.21193L7.49844 2.00265ZM11.8128 1.41104L10.7189 0.317082C10.2961 -0.105694 9.60961 -0.105694 9.18539 0.317082L8.13749 1.36498L10.5905 3.81801L11.8128 2.59569C12.1407 2.26776 12.1407 1.73894 11.8128 1.41104ZM0.00682619 11.6598C-0.0378157 11.8607 0.143579 12.0408 0.344513 11.9919L3.078 11.3291L0.626364 8.87613L0.00682619 11.6598Z' fill='%231B998B'/%3E%3C/svg%3E%0A") no-repeat 50% 50%;    
+  width: 24px; 
+  height: 24px;
+  border: 1px solid $green;
+  border-radius: 100%;
+  display: block;
+  cursor: pointer;  
+}
+
 .heading-wrapper {
   display: flex;
   justify-content: space-between;

@@ -1406,6 +1406,8 @@ body {
 	margin-top: 0.5rem;
 	white-space: nowrap;
 }
+
+
 .master-action-showphone {
 	display: inline-block;
 	margin-right: 1rem;
@@ -1444,6 +1446,30 @@ body {
 		padding: 1rem 2rem;	
 	}
 }
+.empoyer-top-col-fav {
+	padding-right: 0;
+}
+
+.task-summary {
+	@media (min-width: $screen-sm-min) {
+		display: flex;
+		width: 100%;		
+	}
+	.item {
+		background: #c4c4c4;
+		flex-grow: 1;
+		text-align: center;
+		display: flex;
+		align-content: flex-end;
+		flex-direction: column;
+	}
+	.title {
+		b {display: block;}
+	}
+}
+
+
+
 .worker-top-col-order {
 	padding: .5rem 2.5rem 1.5rem 2.5rem;	
 	@media (max-width: 940px) {
@@ -1779,8 +1805,33 @@ body {
 	a {border:none}
 }
 
-
-
+/* TASKS */
+.heading-task-wrapper {
+	position: relative;
+	padding-top: 10px;
+	.btn-edit {
+		position: absolute;
+		right: 0;top: 0;
+	}
+	&--title {
+		display: flex;
+		justify-content: space-between;		
+	}
+}
+.date-task {
+	color: $gray-text;
+	font-size: 0.9rem;
+}
+.heading-task {
+	font-weight: normal;
+	margin: 0;
+	font-size: 1.5rem;
+}
+.heading-task-price {
+	color: $green-text;
+	font-size: 1.5rem;
+	font-weight: 500;
+}
 
 
 
