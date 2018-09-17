@@ -42,7 +42,7 @@ small {font-size: 100%;display: inline-block;}
 
 .hidden-xs {
 	display: block;
-	@media (max-width: $screen-xs-max) {display: none}
+	@media (max-width: $screen-xs-max) {display: none !important}
 }
 /* ==========================================================================
    BUTTONS
@@ -184,6 +184,7 @@ button {cursor: pointer;}
 	background: #ffffff;
   border: 1px solid $green;
   padding: .6rem 1rem;
+  margin-bottom: 1.5rem;
 	&:hover {border: 1px solid #ccc;}
 }
 
@@ -626,24 +627,6 @@ input[type=checkbox] {cursor: pointer;}
 }
 
 
-/* VIEW */
-.b-view-options {
-  margin-bottom: 16px;
-  .--side {margin-right: 4px;}
-  .input-view-type {width: auto;}
-  .input-view-pages {width: auto;} //50
-  &--right {text-align: right;}
-}
-.b-view-type {
-  vertical-align: top;  
-  display: inline-block;
-  @media (max-width: $screen-sm-max) {display: none;}
-}
-.btn-view-type {
-  font-size: 1.6rem;
-  margin-left: 8px;
-  &.active {color: red}
-}
 
 
 /* IMAGES */
@@ -660,6 +643,12 @@ input[type=checkbox] {cursor: pointer;}
   margin-bottom: 28px;
 }
 .b-center {text-align: center}
+.button-aside {
+  text-align: center;
+  @media (min-width: $screen-sm-min) {
+    text-align: right;
+  }
+}
 
 /* ==========================================================================
    MENUS

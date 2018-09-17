@@ -1451,21 +1451,58 @@ body {
 }
 
 .task-summary {
-	@media (min-width: $screen-sm-min) {
-		display: flex;
-		width: 100%;		
-	}
+	@include clearfix();
+	border: 1px solid $gray-border;
+	border-width: 1px 0;
+	margin-bottom: 1.5rem;
 	.item {
-		background: #c4c4c4;
-		flex-grow: 1;
+		width: 50%;
+		padding: 1.5rem 0;
+		position: relative;
+		&:after, &:before {
+			content: "";
+			position: absolute;			
+		}
+		@media (max-width: 499px) {
+			&:nth-child(1):after, &:nth-child(2):after {
+				height: 1px;
+				width: 100%;
+				left: 0;bottom: 0;
+				background: $gray-border;
+			}
+			&:nth-child(1):before, &:nth-child(3):before {
+				width: 1px;
+				height: 100%;
+				right: 0;
+				top: 0;
+				background: $gray-border;
+			}
+		}
+		@media (min-width: 500px) {
+			width: 25%;	
+			&:after {
+				height: 100%;
+				width: 1px;
+				right: 0;
+				top: 0;
+				bottom: 0;
+				background: $gray-border;
+			}
+			&:last-child:after {content:none}
+			
+		}
+		float: left;
 		text-align: center;
-		display: flex;
-		align-content: flex-end;
-		flex-direction: column;
+	}
+	.icon {
+		height: 36px;
+		position: relative;
+		margin-bottom: 1rem;
+		img {position: absolute; left: 0;top: 0;right: 0;bottom: 0; margin: auto;}
 	}
 	.title {
 		b {display: block;}
-	}
+	}	
 }
 
 
@@ -1814,13 +1851,18 @@ body {
 		right: 0;top: 0;
 	}
 	&--title {
-		display: flex;
-		justify-content: space-between;		
+		margin-bottom: 1.5rem;
+		@media (min-width: $screen-sm-min) {
+			display: flex;
+			justify-content: space-between;		
+
+		}
 	}
 }
 .date-task {
 	color: $gray-text;
 	font-size: 0.9rem;
+	margin-bottom: .5rem;
 }
 .heading-task {
 	font-weight: normal;
@@ -1828,7 +1870,7 @@ body {
 	font-size: 1.5rem;
 }
 .heading-task-price {
-	color: $green-text;
+	color: $green;
 	font-size: 1.5rem;
 	font-weight: 500;
 }
@@ -1902,7 +1944,7 @@ body {
 .card-dash {
 	padding: 1.5rem;
 	background: #fff;
-	margin-bottom: 1rem;
+	margin-bottom: 1.5rem;
 	.btn-second {padding: 8px 16px;}
 	a {color: $blue-bright}
 }
@@ -2132,6 +2174,11 @@ body {
 		}
 	}
 	.wrapper {margin-top: 8px;}
+}
+.card-dash-check-user_small-fav {
+	margin-right: 0;
+	padding-right: 30px !important;
+	.btn-fav {position: absolute; right: 0;top: 0;}
 }
 
 

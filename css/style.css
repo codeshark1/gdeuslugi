@@ -71,7 +71,7 @@ small {
   display: block; }
   @media (max-width: 767px) {
     .hidden-xs {
-      display: none; } }
+      display: none !important; } }
 
 /* ==========================================================================
    BUTTONS
@@ -210,7 +210,8 @@ button {
   width: 100%;
   background: #ffffff;
   border: 1px solid #1B998B;
-  padding: .6rem 1rem; }
+  padding: .6rem 1rem;
+  margin-bottom: 1.5rem; }
   .btn-load:hover {
     border: 1px solid #ccc; }
 
@@ -687,31 +688,6 @@ input[type=checkbox] {
       stroke: #fff;
       fill: #1B998B; }
 
-/* VIEW */
-.b-view-options {
-  margin-bottom: 16px; }
-  .b-view-options .--side {
-    margin-right: 4px; }
-  .b-view-options .input-view-type {
-    width: auto; }
-  .b-view-options .input-view-pages {
-    width: auto; }
-  .b-view-options--right {
-    text-align: right; }
-
-.b-view-type {
-  vertical-align: top;
-  display: inline-block; }
-  @media (max-width: 991px) {
-    .b-view-type {
-      display: none; } }
-
-.btn-view-type {
-  font-size: 1.6rem;
-  margin-left: 8px; }
-  .btn-view-type.active {
-    color: red; }
-
 /* IMAGES */
 .aligncenter, .alignleft, .alignright {
   display: block;
@@ -736,6 +712,12 @@ input[type=checkbox] {
 
 .b-center {
   text-align: center; }
+
+.button-aside {
+  text-align: center; }
+  @media (min-width: 768px) {
+    .button-aside {
+      text-align: right; } }
 
 /* ==========================================================================
    MENUS
@@ -3396,19 +3378,62 @@ body {
 .empoyer-top-col-fav {
   padding-right: 0; }
 
-@media (min-width: 768px) {
-  .task-summary {
-    display: flex;
-    width: 100%; } }
-.task-summary .item {
-  background: #c4c4c4;
-  flex-grow: 1;
-  text-align: center;
-  display: flex;
-  align-content: flex-end;
-  flex-direction: column; }
-.task-summary .title b {
-  display: block; }
+.task-summary {
+  border: 1px solid #E5E5E5;
+  border-width: 1px 0;
+  margin-bottom: 1.5rem; }
+  .task-summary:before, .task-summary:after {
+    content: "";
+    display: table; }
+  .task-summary:after {
+    clear: both; }
+  .task-summary .item {
+    width: 50%;
+    padding: 1.5rem 0;
+    position: relative;
+    float: left;
+    text-align: center; }
+    .task-summary .item:after, .task-summary .item:before {
+      content: "";
+      position: absolute; }
+    @media (max-width: 499px) {
+      .task-summary .item:nth-child(1):after, .task-summary .item:nth-child(2):after {
+        height: 1px;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        background: #E5E5E5; }
+      .task-summary .item:nth-child(1):before, .task-summary .item:nth-child(3):before {
+        width: 1px;
+        height: 100%;
+        right: 0;
+        top: 0;
+        background: #E5E5E5; } }
+    @media (min-width: 500px) {
+      .task-summary .item {
+        width: 25%; }
+        .task-summary .item:after {
+          height: 100%;
+          width: 1px;
+          right: 0;
+          top: 0;
+          bottom: 0;
+          background: #E5E5E5; }
+        .task-summary .item:last-child:after {
+          content: none; } }
+  .task-summary .icon {
+    height: 36px;
+    position: relative;
+    margin-bottom: 1rem; }
+    .task-summary .icon img {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto; }
+  .task-summary .title b {
+    display: block; }
 
 .worker-top-col-order {
   padding: .5rem 2.5rem 1.5rem 2.5rem;
@@ -3747,12 +3772,16 @@ body {
     right: 0;
     top: 0; }
   .heading-task-wrapper--title {
-    display: flex;
-    justify-content: space-between; }
+    margin-bottom: 1.5rem; }
+    @media (min-width: 768px) {
+      .heading-task-wrapper--title {
+        display: flex;
+        justify-content: space-between; } }
 
 .date-task {
   color: #ACACAC;
-  font-size: 0.9rem; }
+  font-size: 0.9rem;
+  margin-bottom: .5rem; }
 
 .heading-task {
   font-weight: normal;
@@ -3760,7 +3789,7 @@ body {
   font-size: 1.5rem; }
 
 .heading-task-price {
-  color: #126E63;
+  color: #1B998B;
   font-size: 1.5rem;
   font-weight: 500; }
 
@@ -3828,7 +3857,7 @@ body {
 .card-dash {
   padding: 1.5rem;
   background: #fff;
-  margin-bottom: 1rem; }
+  margin-bottom: 1.5rem; }
   .card-dash .btn-second {
     padding: 8px 16px; }
   .card-dash a {
@@ -4080,6 +4109,14 @@ body {
         float: right; } }
   .card-dash-check-user_small .wrapper {
     margin-top: 8px; }
+
+.card-dash-check-user_small-fav {
+  margin-right: 0;
+  padding-right: 30px !important; }
+  .card-dash-check-user_small-fav .btn-fav {
+    position: absolute;
+    right: 0;
+    top: 0; }
 
 .card-dash-check-status {
   font-size: .9rem;
