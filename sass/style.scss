@@ -651,17 +651,7 @@ body {
 		padding: 0 140px;
 	}
 }
-.card {
-	@include borderr();
-	padding: 1rem;
-	background: #fff;
-}
-.card-full {
-	
-	@media (min-width: $screen-md-min) {
-		padding: 2rem;
-	}
-}
+
 
 .tabs-wrapper {
 	.card {margin-bottom: 1.5rem;}
@@ -1667,7 +1657,15 @@ body {
 	&:last-child {border-bottom: none; padding-bottom: 0;}
 }
 
-
+.card-noservices {
+	text-align: center;
+	padding: 5rem 1rem;
+	.heading {
+		font-weight: 400;
+		margin: 1rem 0 .5rem;
+	}
+	p {margin-bottom: 1rem;}
+}
 
 .order-success {
 	color: $green;
@@ -1941,19 +1939,7 @@ body {
 
 
 /* DASHBOARD */
-.card-dash {
-	padding: 1.5rem;
-	background: #fff;
-	margin-bottom: 1.5rem;
-	.btn-second {padding: 8px 16px;}
-	a {color: $blue-bright}
-}
-.card-dash-order {
-	background: $gray-bg;	
-	@media (min-width: $screen-md-min) {
-		padding: 2rem;
-	}
-}
+
 .lbl-photopages {
 	margin-bottom: 1rem;
 }

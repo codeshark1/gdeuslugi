@@ -1003,9 +1003,18 @@ hr {background: $gray-border; height: 1px; border: none; margin: 1.5rem 0;}
 .h-card {font-size: 1.3rem; font-weight: 500; margin: 8px 0}
 
 .card {
+	@include borderr();
+	padding: 1rem;
+	background: #fff;
+}
+.card {
   .category, .comments, .author {font-size: 0.8rem; margin-bottom: 4px;}
 }
-
+.card-full {	
+	@media (min-width: $screen-md-min) {
+		padding: 2rem;
+	}
+}
 .card-img {
   position: relative;
   display: block;
@@ -1031,7 +1040,19 @@ hr {background: $gray-border; height: 1px; border: none; margin: 1.5rem 0;}
     img {opacity: .85;}
   }
 }
-
+.card-dash {
+	padding: 1.5rem;
+	background: #fff;
+	margin-bottom: 1.5rem;
+	.btn-second {padding: 8px 16px;}
+	a {color: $blue-bright}
+}
+.card-dash-order {
+	background: $gray-bg;	
+	@media (min-width: $screen-md-min) {
+		padding: 2rem;
+	}
+}
 .cols-inline {
   display: flex;
   flex-wrap: wrap;

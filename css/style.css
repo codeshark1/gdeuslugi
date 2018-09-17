@@ -1112,9 +1112,19 @@ hr {
   font-weight: 500;
   margin: 8px 0; }
 
+.card {
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  padding: 1rem;
+  background: #fff; }
+
 .card .category, .card .comments, .card .author {
   font-size: 0.8rem;
   margin-bottom: 4px; }
+
+@media (min-width: 992px) {
+  .card-full {
+    padding: 2rem; } }
 
 .card-img {
   position: relative;
@@ -1136,6 +1146,21 @@ hr {
     padding: 8px 0; }
   .card-img:hover img {
     opacity: .85; }
+
+.card-dash {
+  padding: 1.5rem;
+  background: #fff;
+  margin-bottom: 1.5rem; }
+  .card-dash .btn-second {
+    padding: 8px 16px; }
+  .card-dash a {
+    color: #1B57CD; }
+
+.card-dash-order {
+  background: #F7F7F7; }
+  @media (min-width: 992px) {
+    .card-dash-order {
+      padding: 2rem; } }
 
 .cols-inline {
   display: flex;
@@ -2538,16 +2563,6 @@ body {
   .section-padding {
     padding: 0 140px; } }
 
-.card {
-  border: 1px solid #E5E5E5;
-  border-radius: 3px;
-  padding: 1rem;
-  background: #fff; }
-
-@media (min-width: 992px) {
-  .card-full {
-    padding: 2rem; } }
-
 .tabs-wrapper .card {
   margin-bottom: 1.5rem; }
 
@@ -3593,6 +3608,15 @@ body {
     border-bottom: none;
     padding-bottom: 0; }
 
+.card-noservices {
+  text-align: center;
+  padding: 5rem 1rem; }
+  .card-noservices .heading {
+    font-weight: 400;
+    margin: 1rem 0 .5rem; }
+  .card-noservices p {
+    margin-bottom: 1rem; }
+
 .order-success {
   color: #1B998B;
   display: inline-block;
@@ -3854,21 +3878,6 @@ body {
     border-radius: 100%; }
 
 /* DASHBOARD */
-.card-dash {
-  padding: 1.5rem;
-  background: #fff;
-  margin-bottom: 1.5rem; }
-  .card-dash .btn-second {
-    padding: 8px 16px; }
-  .card-dash a {
-    color: #1B57CD; }
-
-.card-dash-order {
-  background: #F7F7F7; }
-  @media (min-width: 992px) {
-    .card-dash-order {
-      padding: 2rem; } }
-
 .lbl-photopages {
   margin-bottom: 1rem; }
 
