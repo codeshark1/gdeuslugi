@@ -2423,18 +2423,25 @@ body {
     color: #1B998B; }
 
 /* TABS */
-.tabs-buttons {
-  display: table;
-  margin-bottom: 24px;
-  width: 100%;
-  border-collapse: collapse;
-  vertical-align: middle; }
+@media (min-width: 750px) {
+  .tabs-buttons {
+    display: table;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-collapse: collapse;
+    vertical-align: middle; } }
 
 .tab-button {
-  display: table-cell;
-  text-align: center;
   border: 1px solid #1B998B;
+  border-width: 0 1px 1px 1px;
+  text-align: center;
   padding: 0; }
+  .tab-button:first-child {
+    border-top-width: 1px; }
+  @media (min-width: 750px) {
+    .tab-button {
+      display: table-cell;
+      border-width: 1px; } }
   .tab-button .btn {
     padding: 8px 4px;
     color: #1B998B;
@@ -2449,6 +2456,12 @@ body {
   background: #1B998B; }
   .tab-button-active .btn {
     color: #fff; }
+
+.tab-orders {
+  background: #FA6917; }
+  .tab-orders a {
+    color: #fff !important;
+    border-radius: 0 !important; }
 
 .card-specialist-detailed .tabs-buttons {
   margin-bottom: 0; }
