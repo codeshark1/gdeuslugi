@@ -642,6 +642,22 @@ input[type=checkbox] {
     .form-search-exp .search-field:focus + .search-submit {
       display: block; }
 
+.form-mini {
+  position: relative; }
+  .form-mini input {
+    margin: 0; }
+  .form-mini .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%; }
+
+.btn-form-send {
+  font-size: 0;
+  width: 45px;
+  background: #1B998B 50% 50% no-repeat url("data:image/svg+xml,%3Csvg width='19' height='16' viewBox='0 0 19 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 16L18.6667 8L0 0V6.22222L13.3333 8L0 9.77778V16Z' fill='white'/%3E%3C/svg%3E%0A");
+  border-radius: 0 4px 4px 0; }
+
 /* custom checkboxes */
 .check-custom {
   display: inline-block;
@@ -1279,10 +1295,16 @@ hr {
     margin-top: 2rem; }
   .card-modal .input-row {
     margin-bottom: 1rem; }
+    .card-modal .input-row b {
+      display: block; }
 
 .row-jur-status-radios {
   display: flex;
   justify-content: space-between; }
+
+.icon-modal-wrapper {
+  text-align: center;
+  padding: 3.5rem 0; }
 
 .cols-inline {
   display: flex;

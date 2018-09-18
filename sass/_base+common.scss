@@ -319,7 +319,6 @@ fieldset {
   @media (min-width: $screen-sm-min) {margin-bottom: 24px;}
 }
 
-
 .input-short {width: 96px !important;}
 
 .row-form textarea {margin-bottom: 0;}
@@ -581,6 +580,24 @@ input[type=checkbox] {cursor: pointer;}
     //@media (min-width: $screen-md-min) {width: 200px;}
   }
 }
+
+.form-mini {
+  position: relative;
+  input {margin: 0;}
+  .btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+  }
+}
+.btn-form-send {
+  font-size: 0;
+  width: 45px;
+  background: $green 50% 50% no-repeat url("data:image/svg+xml,%3Csvg width='19' height='16' viewBox='0 0 19 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 16L18.6667 8L0 0V6.22222L13.3333 8L0 9.77778V16Z' fill='white'/%3E%3C/svg%3E%0A");
+  border-radius: 0 4px 4px 0;
+}
+
 
 /* custom checkboxes */
 .check-custom {
@@ -1168,15 +1185,18 @@ hr {background: $gray-border; height: 1px; border: none; margin: 1.5rem 0;}
   }
   .heading-line {margin-top: 2rem;}
 
-  .input-row {
-    margin-bottom: 1rem;
+  .input-row {margin-bottom: 1rem;
+    b {display: block;}
   }
 }
 .row-jur-status-radios {
   display: flex;
   justify-content: space-between;
 }
-
+.icon-modal-wrapper {
+  text-align: center;
+  padding: 3.5rem 0;
+}
 
 .cols-inline {
   display: flex;
