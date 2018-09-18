@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>модалки</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <!--[if lt IE 9]>
+        <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+</head>
+<body class="home">
+<!--[if lt IE 10]>
+    <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
+<![endif]-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4">
+            <div class="card card-modal">
+                <ul class="tabs-material">
+                    <li class="menu-item menu-item-active"><a href="#">Вход</a></li>
+                    <li class="menu-item"><a href="#">Регистрация</a></li>
+                </ul>
+
+                <form action="/">
+                    <label for="inp-login-login" class="lbl-top">Почта или телефон</label>
+                    <input type="text" id="inp-login-login" placeholder="Введите почту или телефон">
+                    
+                    <label for="inp-login-pass" class="lbl-top">Пароль</label>                        
+                    <div class="input-pass-wrap">
+                        <input id="inp-login-pass" type="password" placeholder="Введите пароль">
+                        <button class="show-pass" type="button" title="показать пароль">показать пароль</button>
+                        <p class="input-addition"><a href="#" class="link-aside">Забыли пароль?</a></p>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-second btn-full">Войти</button>                    
+                </form>
+                <p class="heading-line"><span>Быстрый вход через</span></p>
+                <ul class="list-social-small">
+                    <li class="list-item vk"><a href="#"></a></li>
+                    <li class="list-item fb"><a href="#"></a></li>
+                    <li class="list-item ok"><a href="#"></a></li>
+                    <li class="list-item gp"><a href="#"></a></li>
+                    <li class="list-item tw"><a href="#"></a></li>
+                </ul>
+                <button class="btn-closemodal btn-icon" type="button">закрыть</button>
+            </div><!-- /.b-modal -->            
+        </div><!-- /.col-sm-4 -->
+        <div class="col-sm-4">
+            <div class="card card-modal">
+                <ul class="tabs-material">
+                    <li class="menu-item"><a href="#">Вход</a></li>
+                    <li class="menu-item menu-item-active"><a href="#">Регистрация</a></li>
+                </ul>
+
+                <form action="/">
+                    <label for="inp-login-login" class="lbl-top">Почта или телефон</label>
+                    <input type="text" id="inp-login-login" placeholder="Введите почту или телефон">
+                    
+                    <label for="inp-login-pass" class="lbl-top">Пароль</label>                        
+                    <div class="input-pass-wrap">
+                        <input id="inp-login-pass" type="password" placeholder="Введите пароль">
+                        <button class="show-pass" type="button" title="показать пароль">показать пароль</button>
+                    </div>
+                    
+                    <label for="inp-login-pass" class="lbl-top">Повторить пароль</label>                        
+                    <div class="input-pass-wrap">
+                        <input id="inp-login-pass" type="password" placeholder="Повторите пароль">
+                        <button class="show-pass" type="button" title="показать пароль">показать пароль</button>
+                    </div>                                       
+                    
+                    <h6 class="lbl-top">Кто вы</h6>
+                    
+                    <div class="row-jur-status-radios input-row">
+                        <label class="check-custom check-button">
+                            <input type="radio" name="jur-status" checked>
+                            Частный специалист
+                        </label> 
+
+                        <label class="check-custom check-button">
+                            <input type="radio" name="jur-status">
+                            Компания или ИП
+                        </label>
+                    </div><!-- /.row-jur-status-radios -->
+                    
+                    <div class="input-row">
+                        <label class="lbl-inline">
+                            <input type="radio" name="user-reg-type" checked>
+                            Заказчик
+                        </label>
+                        <label class="lbl-inline">
+                            <input type="radio" name="user-reg-type">
+                            Мастер
+                        </label>                    
+                        <label class="lbl-inline">
+                            <input type="radio" name="user-reg-type">
+                            Заказчик и мастер
+                        </label>   
+                    </div><!-- /.input-row -->
+
+                    <button type="submit" class="btn btn-second btn-full">Зарегистрироваться</button>
+
+                    <div class="b-center">
+                        <label class="checkbox">
+                            <input type="checkbox" class="checkbox">
+                            С <a href="#">правилами</a> сервиса согласен
+                        </label>
+                    </div><!-- /.b-center -->                    
+                    
+                </form>
+                <p class="heading-line"><span>Быстрый вход через</span></p>
+                <ul class="list-social-small">
+                    <li class="list-item vk"><a href="#"></a></li>
+                    <li class="list-item fb"><a href="#"></a></li>
+                    <li class="list-item ok"><a href="#"></a></li>
+                    <li class="list-item gp"><a href="#"></a></li>
+                    <li class="list-item tw"><a href="#"></a></li>
+                </ul>
+                <button class="btn-closemodal btn-icon" type="button">закрыть</button>
+            </div><!-- /.b-modal -->            
+        </div><!-- /.col-sm-4 -->
+    </div><!-- /.row -->
+</div><!-- /.container -->
+<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+</body>
+</html>
