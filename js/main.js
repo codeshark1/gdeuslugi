@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
         });
     }
 
-    navigation_show('#nav-toggle','#menu-categs');
+    navigation_show('#nav-toggle','#menu-categs-wrapper');
 
     function menu_nested(menu_id) {
         $(menu_id).find('ul').not('.current-menu-item ul').hide();
@@ -29,7 +29,6 @@ jQuery(document).ready(function($){
             }
         });
     }
-    //menu_nested('.menu-categs');
 
 
 
