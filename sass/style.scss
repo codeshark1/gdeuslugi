@@ -31,6 +31,8 @@ body {
 .header-site {
 	.link-local {@include link-local($green-text)}
 	background: #fff;
+	position: relative;
+	z-index: 10;
 	&__1 {
 		color: $blue-dark;
 	}
@@ -153,8 +155,9 @@ body {
 .b-search-header {
 	flex-grow: 1;
 	margin: 0 16px;	
+	
 }
-.form-search-header {
+.form-search-header {	
 	.search-field {
 		height: 44px;
 		border: 1px solid rgba(#fff,.5);
@@ -190,6 +193,7 @@ body {
 		width: 415px;
 	}
 }
+
 	/* - search */
 
 .b-login {
@@ -2584,6 +2588,70 @@ body {
 		&:hover svg {fill: $base-text}
 	}
 }
+
+/* ==========================================================================
+   REGISTRATION
+   ========================================================================== */
+.area-bgsplit {
+	@media (min-width: $screen-sm-min) {
+		background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 50%, #f7f7f7 50%, #f7f7f7 100%);
+		background: -webkit-linear-gradient(left, #ffffff 0%,#ffffff 50%,#f7f7f7 50%,#f7f7f7 100%);
+		background: linear-gradient(to right, #ffffff 0%,#ffffff 50%,#f7f7f7 50%,#f7f7f7 100%);
+		
+	}
+}
+.bgsplit-1, .bgsplit-2 {
+	
+}
+.bgsplit-2 {
+	padding: 2rem 0;
+}
+@media (min-width: $screen-sm-min) {
+	.bgsplit-1, .bgsplit-2 {
+		width: 50%;
+		float: left;
+	}
+	.bgsplit-1 {
+		padding: 2rem 3rem 2rem 0;
+		@media (min-width: $screen-md-min) {padding-right: 5rem;}
+	}
+	.bgsplit-2 {
+		display: table-cell;
+		vertical-align: middle;		
+		@media (min-width: $screen-sm-min) {
+			padding: 180px 0 4rem 3rem;
+		}
+		@media (min-width: $screen-md-min) {
+			padding: 180px 7rem 4rem 7rem;
+		}
+	}
+}
+.bgsplit-1 {}
+.bgsplit-2 {}
+
+.reg-benefits {
+	margin-top: 4rem;
+}
+.reg-benefit {
+	padding-left: 80px;
+	position: relative;
+	margin-bottom: 4rem;
+	&:before {
+		content: "";
+		width: 60px;
+		height: 60px;
+		background: url('../images/sprite-reg.png') no-repeat;
+		background-size: 60px auto;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.title {font-weight: 500; font-size: 1rem;}
+}
+.reg-benefit-speciality:before {background-position: 0 0}
+.reg-benefit-time:before {background-position: 0 -83px}
+.reg-benefit-earn:before {background-position: 0 -165px}
+
 /* ==========================================================================
    SIDEBAR
    ========================================================================== */

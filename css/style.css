@@ -51,6 +51,11 @@ small {
 
 .container {
   max-width: 1440px; }
+  .container:before, .container:after {
+    content: "";
+    display: table; }
+  .container:after {
+    clear: both; }
 
 .row-mod {
   justify-content: space-between; }
@@ -112,7 +117,7 @@ button {
   background-color: transparent;
   transition: all .15s;
   border-radius: 3px;
-  padding: 8px 16px;
+  padding: 14px 16px;
   color: #1B998B; }
   .btn svg {
     margin-right: 4px; }
@@ -408,7 +413,7 @@ input[type=checkbox] {
   cursor: pointer; }
 
 .lbl {
-  font-weight: 500;
+  font-weight: semibold;
   display: block;
   font-size: 1rem;
   color: #2E3047; }
@@ -499,12 +504,6 @@ input[type=checkbox] {
   font-size: 0.85rem;
   margin-top: 16px; }
 
-.inp-text-passp-ser {
-  max-width: 150px !important; }
-
-.inp-text-passp-num {
-  width: 260px !important; }
-
 .form-incontent {
   margin-top: 2rem; }
 
@@ -564,6 +563,12 @@ input[type=checkbox] {
   margin-right: 20px; }
   .input-col:last-child {
     margin-right: 0; }
+
+.inp-text-passp-ser {
+  max-width: 150px !important; }
+
+.inp-text-passp-num {
+  width: 260px !important; }
 
 .btn-changenumber {
   height: 44px;
@@ -641,6 +646,41 @@ input[type=checkbox] {
     background-position: 173px 12px; }
     .form-search-exp .search-field:focus + .search-submit {
       display: block; }
+
+.form-search-suggestions {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  background: #fff;
+  z-index: 10000000;
+  width: 100%;
+  border: 1px solid #E5E5E5;
+  padding: 1rem; }
+  .form-search-suggestions .heading {
+    font-size: 1rem;
+    margin: 0 0 .5rem 0; }
+  .form-search-suggestions a {
+    color: #666666 !important;
+    border: none;
+    display: block; }
+  .form-search-suggestions .list {
+    margin-bottom: 1.5rem; }
+    .form-search-suggestions .list:last-child {
+      margin-bottom: 0; }
+  .form-search-suggestions .item {
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: block; }
+    .form-search-suggestions .item:hover a {
+      color: #2E3047 !important; }
+    .form-search-suggestions .item:hover .number {
+      color: #666666; }
+  .form-search-suggestions .number {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color: #ACACAC;
+    transition: all .15s; }
 
 .form-mini {
   position: relative; }
@@ -925,13 +965,21 @@ input[type=checkbox] {
    CONTENT
    ========================================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500; }
+  font-weight: 500;
+  color: #333333; }
 
 .heading {
   font-size: 1.5rem;
   margin: .5rem 0 1.5rem 0;
   color: #333333;
   font-weight: 500; }
+
+.heading2 {
+  font-size: 1rem;
+  margin: 2rem 0 .5rem 0; }
+
+.heading + .heading2 {
+  margin-top: 0; }
 
 .card .heading {
   line-height: 1.1; }
@@ -1966,7 +2014,9 @@ body {
    HEADER
    ========================================================================== */
 .header-site {
-  background: #fff; }
+  background: #fff;
+  position: relative;
+  z-index: 10; }
   .header-site .link-local {
     color: #126E63;
     border-bottom: 1px dashed rgba(18, 110, 99, 0.5);
@@ -4584,6 +4634,69 @@ body {
       fill: #ACACAC; }
     .chat-messagebox .btn-icon:hover svg {
       fill: #666666; }
+
+/* ==========================================================================
+   REGISTRATION
+   ========================================================================== */
+@media (min-width: 768px) {
+  .area-bgsplit {
+    background: -moz-linear-gradient(left, #ffffff 0%, #ffffff 50%, #f7f7f7 50%, #f7f7f7 100%);
+    background: -webkit-linear-gradient(left, #ffffff 0%, #ffffff 50%, #f7f7f7 50%, #f7f7f7 100%);
+    background: linear-gradient(to right, #ffffff 0%, #ffffff 50%, #f7f7f7 50%, #f7f7f7 100%); } }
+
+.bgsplit-2 {
+  padding: 2rem 0; }
+
+@media (min-width: 768px) {
+  .bgsplit-1, .bgsplit-2 {
+    width: 50%;
+    float: left; }
+
+  .bgsplit-1 {
+    padding: 2rem 3rem 2rem 0; } }
+  @media (min-width: 768px) and (min-width: 992px) {
+    .bgsplit-1 {
+      padding-right: 5rem; } }
+
+@media (min-width: 768px) {
+  .bgsplit-2 {
+    display: table-cell;
+    vertical-align: middle; } }
+  @media (min-width: 768px) and (min-width: 768px) {
+    .bgsplit-2 {
+      padding: 180px 0 4rem 3rem; } }
+  @media (min-width: 768px) and (min-width: 992px) {
+    .bgsplit-2 {
+      padding: 180px 7rem 4rem 7rem; } }
+
+.reg-benefits {
+  margin-top: 4rem; }
+
+.reg-benefit {
+  padding-left: 80px;
+  position: relative;
+  margin-bottom: 4rem; }
+  .reg-benefit:before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background: url("../images/sprite-reg.png") no-repeat;
+    background-size: 60px auto;
+    position: absolute;
+    left: 0;
+    top: 0; }
+  .reg-benefit .title {
+    font-weight: 500;
+    font-size: 1rem; }
+
+.reg-benefit-speciality:before {
+  background-position: 0 0; }
+
+.reg-benefit-time:before {
+  background-position: 0 -83px; }
+
+.reg-benefit-earn:before {
+  background-position: 0 -165px; }
 
 /* ==========================================================================
    SIDEBAR
