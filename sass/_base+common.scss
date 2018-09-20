@@ -144,7 +144,6 @@ button {cursor: pointer;}
 @mixin btn-stroked($color) {
   border: 1px solid $color !important;
   font-size: 1rem;
-  padding: 8px 16px;
   color: $color !important;
   border-radius: 3px;
 }
@@ -297,7 +296,11 @@ textarea {
   color: #000 !important;
   border-radius: 3px;  
 }
-select {padding: 8px;}
+select {padding: 12px 8px;
+  @media (min-width: $screen-sm-min) {
+    padding: 12px 16px;  
+  }  
+}
 textarea {
   resize: vertical;
   min-height: 100px;
@@ -346,14 +349,15 @@ input.checkbox, input.radio {margin: 0 4px 0 0; vertical-align: baseline;}
 input:disabled+label {color:$gray;}
 input[type=checkbox] {cursor: pointer;}
 .lbl {
-  font-weight: semibold;
+  font-weight: 500;
   display: block;
   font-size: 1rem;
-  color: $blue-dark;
+  color: $blue-dark;  
 }
+.lbl.checkbox, .lbl.radio {font-weight: 400}
 .lbl-top {
   display: block;
-  margin: 0 0 8px 0;
+  margin: 0 0 10px 0;
   line-height: 1;  
   font-size: 1rem;
   color: $blue-dark;
