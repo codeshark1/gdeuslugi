@@ -325,6 +325,7 @@ fieldset {
   @media (min-width: $screen-sm-min) {margin-bottom: 24px;}
 }
 
+
 .input-short {width: 96px !important;}
 
 .row-form textarea {margin-bottom: 0;}
@@ -348,6 +349,7 @@ label.checkbox {display: block;}
 input.checkbox, input.radio {margin: 0 4px 0 0; vertical-align: baseline;}
 input:disabled+label {color:$gray;}
 input[type=checkbox] {cursor: pointer;}
+
 .lbl {
   font-weight: 500;
   display: block;
@@ -493,6 +495,15 @@ input[type=checkbox] {cursor: pointer;}
   vertical-align: baseline;
   margin-bottom: 1rem;
 }
+
+.inp-date-wrapper {
+  width: 340px;
+  display: flex;
+  justify-content: space-between;
+  .inp-date-col {width: 160px;}
+}
+.inp-date {}
+
 
 /* SEARCH FORM */
 .form-search {
