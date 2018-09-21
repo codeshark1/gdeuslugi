@@ -1000,6 +1000,11 @@ h1, h2, h3, h4, h5, h6 {
 .heading-special {
   color: #126E63;
   margin-bottom: .5rem !important; }
+  .heading-special a {
+    color: #126E63;
+    border-bottom: 1px solid rgba(18, 110, 99, 0.3); }
+    .heading-special a:hover {
+      border-bottom: 1px solid #126E63; }
 
 .heading-edit {
   position: relative;
@@ -2575,7 +2580,8 @@ body {
   .form-filter .col-checkboxes {
     margin-bottom: 1rem; } }
 .form-filter .filter-extended {
-  border-top: 1px solid #E5E5E5; }
+  border: 1px solid #E5E5E5;
+  border-width: 1px 0; }
   .form-filter .filter-extended .form-filter-pad {
     padding-top: 0;
     padding-bottom: 0; }

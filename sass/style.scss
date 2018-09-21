@@ -424,7 +424,8 @@ body {
 		@media (max-width: $screen-xs-max) {margin-bottom: 1rem;}
 	}
 	.filter-extended {
-		border-top: 1px solid $gray-border;
+		border: 1px solid $gray-border;
+		border-width: 1px 0;
 		.form-filter-pad {padding-top: 0; padding-bottom: 0;}
 	}
 	.row-extended {

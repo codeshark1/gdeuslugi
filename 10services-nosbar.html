@@ -14,7 +14,7 @@
         <script type="text/javascript" src="js/selectivizr-min.js"></script>
     <![endif]-->
 </head>
-<body class="home">
+<body>
 <!--[if lt IE 10]>
     <p class="browserupgrade">Вы используете <b>устаревший</b> браузер. Пожалуйста, <a href="http://browsehappy.com/?locale=ru_ru">обновите свой браузер</a> чтобы улучшить опыт работы с сайтом.</p>
 <![endif]-->
@@ -81,41 +81,143 @@
     </div><!-- /.header-site__2 -->
 </header>
 
-<div class="b-hero-form">
-    <div class="container">
-        <form role="search" class="form-hero" action="/">
-            <div class="row-mod">
-                <div class="form-hero-col-1">
-                    <div class="form-hero-col-1_wrap">
-                        <div class="form-hero-col-1_input">
-                            <label for="form-hero-inp-1" class="lbl lbl-top">Специальность или услуга</label>
-                            <input type="text" id="form-hero-inp-1">
-                        </div><!-- /.form-hero-col-1_input -->
-                        <div class="form-hero-col-1_input">
-                            <label for="form-hero-inp-2" class="lbl lbl-top">Метро или район</label>
-                            <input type="text" id="form-hero-inp-2">
-                        </div><!-- /.form-hero-col-1_input -->
-                    </div><!-- /.form-hero-col-1_wrap -->
+<form role="search" class="form-filter container" action="/">
+    <div class="form-filter-pad">
+        <div class="row-main">
+            <div class="col-servicename">
+                <label for="servicename-filter" class="lbl lbl-top">Услуга/мастер</label>
+                <input type="text" id="servicename-filter" placeholder="Название специалиста или услуги">
+            </div><!-- /.col-servicename -->
+            <div class="col-region">
+                <label for="region-filter" class="lbl lbl-top">Район</label>
+                <select name="region-filter" id="region-filter" multiple="multiple">
+                    <option value="nevskiy">Невский</option>
+                    <option value="admiral">Адмиралтейский</option>
+                    <option value="kupchino">Купчино</option>
+                    <option value="zvezdnaya">Звездная</option>
+                    <option value="moskovskaya">Московская</option>
+                    <option value="parkpobedi">Парк победы</option>
+                </select>
+            </div><!-- /.col-region -->
+            <div class="col-metro">
+                <label for="metro-filter" class="lbl lbl-top">Метро</label>
+                <select name="metro-filter" id="metro-filter" multiple="multiple">
+                    <optgroup label="Синяя ветка">
+                        <option value="kupchino">Купчино</option>
+                        <option value="zvezdnaya">Звездная</option>
+                        <option value="moskovskaya">Московская</option>
+                        <option value="parkpobedi">Парк победы</option>
+                    </optgroup>
+                    <optgroup label="Красная ветка">
+                        <option value="devyatkono">Девяткино</option>
+                        <option value="grazhdanskiy">Гражданский пр.</option>
+                        <option value="akademicheskaya">Академическая</option>
+                        <option value="politehnicgeskaya">Политехническая</option>
+                        <option value="plmuzhestva">Пл. Мужества</option>
+                    </optgroup>                    
+                </select>
+            </div><!-- /.col-metro -->
+            <div class="col-submit hidden-xs">
+                <button type="submit" class="btn btn-second">Найти</button>
+            </div><!-- /.col-submit -->
+            <script>
+                $('#region-filter').multiselect({
+                    texts    : {
+                        placeholder: 'Выберите район',
+                    }
+                });                  
+                $('#metro-filter').multiselect({                                          
+                    texts    : {
+                        placeholder: 'Выберите метро',
+                    }
+                });                
+            </script>
+        </div><!-- /.row-main -->
 
-                    <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">С отзывами</label>
-                    <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Документы проверены</label>
-                    <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Есть фото работ</label>
-                    <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">С гарантией</label>                    
-                </div><!-- /.form-hero-col-1 -->
-                <div class="form-hero-col-2">
-                    <button type="submit" class="btn btn-main">Выбрать</button>
-                </div><!-- /.form-hero-col-1 -->                
-            </div><!-- /.row-mod -->
-        </form><!-- /.form-hero -->
-    </div><!-- /.container -->
-</div><!-- /.b-hero-form -->
+        <div class="row-secondary">
+            <div class="col-checkboxes">
+                <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">С отзывами</label>
+                <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Документы проверены</label>
+                <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Фото работ</label>
+                <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Гарантия</label>
+            </div><!-- /.col-checkboxes -->
+            <div class="col-maplink">
+                <button class="btn-showonmap" type="button">Показать на карте</button>
+            </div><!-- /.col-maplink -->
+        </div><!-- /.row-secondary -->    
+
+        <button class="btn btn-stroked btn-full" type="button">Расширенный фильтр</button>
+    </div><!-- /.form-filter-pad -->
+
+    <div class="filter-map">        
+        <iframe width="100%" height="340" id="gmap_canvas" src="https://maps.google.com/maps?q=saint%20petersburg&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+        
+        <div class="filter-map-options form-filter-pad">
+            <p class="lbl lbl-inline">Показать</p>
+            <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Показывать всех</label>
+            <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Частные мастера</label>
+            <label class="checkbox lbl lbl-inline"><input type="checkbox" class="checkbox">Услуги компаний</label>            
+        </div><!-- /.form-filter-pad -->
+    </div><!-- /.filter-map -->
+
+    <div class="filter-extended">
+        <div class="form-filter-pad">
+            <div class="row-extended">
+                <div class="col-price">
+                    <h6 class="lbl lbl-top">Цена</h6>
+
+                    <div class="inp-lbl-sel-inline">
+                        <label class="lbl-before" for="measure-filter">За</label>
+                        <select name="measure-filter" id="measure-filter">
+                            <option value="meter">Погонный метр</option>
+                        </select>
+                    </div><!-- /.inp-lbl-sel-inline -->                    
+
+                    <div>
+                        <label class="lbl-before" for="price-start">От</label>
+                        <input type="text" class="input-short" value="99 000" id="price-start">
+        
+                        <label class="lbl-before" for="price-end">до</label>
+                        <input type="text" class="input-short" value="111 000" id="price-end">
+                        <span class="lbl-after">руб.</span>                                          
+                    </div>                
+                </div><!-- /.col-price -->
+                <div class="col-experience">
+                    <label class="lbl lbl-top" for="measure-filter">Опыт работы</label>
+                    <select name="measure-filter" id="measure-filter">
+                        <option value="nevskiy">Без опыта</option>
+                    </select>
+                </div><!-- /.col-experience -->
+                <div class="col-type">
+                    <label class="lbl lbl-top" for="measure-filter">Тип занятости</label>
+                    <select name="measure-filter" id="measure-filter">
+                        <option value="nevskiy">Полная</option>
+                    </select>                    
+                </div><!-- /.col-type -->
+                <div class="col-schedule">
+                    <label class="lbl lbl-top" for="measure-filter">График работы</label>
+                    <select name="measure-filter" id="measure-filter">
+                        <option value="nevskiy">Полный день</option>
+                    </select>                    
+                </div><!-- /.col-schedule -->
+            </div><!-- /.row-extended -->
+        </div><!-- /.form-filter-pad -->
+    </div><!-- /.filter-extended -->
+</form><!-- /.form-filter -->
 
 <main class="main-content">
     <div class="container">
         <div class="col-content site-content">
+            <nav class="breadcrumbs">
+                <ul class="breadcrumbs-memu">
+                    <li class="breadcrumbs-memuitem"><a href="#">Услуги</a></li>
+                    <li class="breadcrumbs-memuitem"><a href="#">список всех услуг</a></li>
+                </ul>
+            </nav>
+
             <h1 class="heading">Все услуги</h1>
 
-            <h2 class="heading-special">Строительные услуги</h2>
+            <h2 class="heading-special"><a href="#">Строительные услуги</a></h2>
             <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
             <ul class="list-columns-3 list-links">
                 <li><a href="#">Строительство домов и коттеджей</a> <span>(66)</span></li>
@@ -144,7 +246,7 @@
                 <li class="heading-all"><a href="#">Показать все строительные услуги</a></li>
             </ul>
 
-            <h2 class="heading-special">Строительные услуги</h2>
+            <h2 class="heading-special"><a href="#">Строительные услуги</a></h2>
             <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
             <ul class="list-columns-3 list-links">
                 <li><a href="#">Строительство домов и коттеджей</a> <span>(66)</span></li>
@@ -173,7 +275,7 @@
                 <li class="heading-all"><a href="#">Показать все строительные услуги</a></li>
             </ul>
 
-            <h2 class="heading-special">Строительные услуги</h2>
+            <h2 class="heading-special"><a href="#">Строительные услуги</a></h2>
             <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
             <ul class="list-columns-3 list-links">
                 <li><a href="#">Строительство домов и коттеджей</a> <span>(66)</span></li>
@@ -239,7 +341,7 @@
                 </section>
             </div><!-- slider -->                
 
-            <h2 class="heading-special">Строительные услуги</h2>
+            <h2 class="heading-special"><a href="#">Строительные услуги</a></h2>
             <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
             <ul class="list-columns-3 list-links">
                 <li><a href="#">Строительство домов и коттеджей</a> <span>(66)</span></li>
@@ -268,7 +370,7 @@
                 <li><a href="#">Сварочные работы</a> <span>(25)</span></li>                                        
             </ul>
 
-            <h2 class="heading-special">Строительные услуги</h2>
+            <h2 class="heading-special"><a href="#">Строительные услуги</a></h2>
             <p class="p-small-number">Более 3 400 объявлений в 35 рубриках</p>                
             <ul class="list-columns-3 list-links">
                 <li><a href="#">Строительство домов и коттеджей</a> <span>(66)</span></li>
