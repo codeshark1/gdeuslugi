@@ -2530,10 +2530,7 @@ body {
 .form-filter .form-filter-pad {
   position: relative;
   background: #fff;
-  padding: 1.5rem 0; }
-  @media (min-width: 768px) {
-    .form-filter .form-filter-pad {
-      padding: 2rem; } }
+  margin: 1.5rem 0 2rem; }
 .form-filter .row-main .col-servicename, .form-filter .row-main .col-region, .form-filter .row-main .col-metro, .form-filter .row-secondary .col-servicename, .form-filter .row-secondary .col-region, .form-filter .row-secondary .col-metro {
   position: relative; }
 .form-filter .row-main .col-metro .optgroup .label, .form-filter .row-secondary .col-metro .optgroup .label {
@@ -2608,6 +2605,8 @@ body {
 .form-filter .filter-map-options {
   padding-top: 16px;
   padding-bottom: 20px; }
+.form-filter .filter-map, .form-filter .filter-extended {
+  display: none; }
 
 .btn-showonmap {
   background: none;
@@ -2807,6 +2806,9 @@ body {
   @media (min-width: 1200px) {
     .main-content {
       padding-top: 40px; } }
+
+.form-filter + .main-content {
+  padding-top: 0; }
 
 .row-cards-3 .card {
   margin-bottom: 20px; }
@@ -4229,7 +4231,8 @@ body {
     margin-bottom: 16px; }
   .dash-msg-tools select {
     margin-bottom: 0;
-    min-width: 300px; }
+    min-width: 300px;
+    padding: 8px; }
   @media (min-width: 768px) {
     .dash-msg-tools {
       display: flex;

@@ -372,10 +372,10 @@ body {
 	.form-filter-pad {
 		position: relative;
 		background: #fff;
-		//padding: 1.5rem;
-		padding: 1.5rem 0;
+		//padding: 1.5rem 0;
+		margin: 1.5rem 0 2rem;
 		@media (min-width: $screen-sm-min) {
-			padding: 2rem;
+			//padding: 2rem;
 		}
 	}
 	.row-main, .row-secondary {
@@ -452,6 +452,13 @@ body {
 	.col-price {width: 340px}
 
 	.filter-map-options {padding-top: 16px;padding-bottom: 20px;}
+
+	.button-bottom {
+		
+	}
+	.filter-map, .filter-extended {
+		display: none;
+	}
 }
 .btn-showonmap {
 	background: none;
@@ -671,7 +678,10 @@ body {
 	@media (min-width: $screen-lg-min) {
 		//margin-top: 40px;
 		padding-top: 40px;
-	}
+	}	
+}
+.form-filter+.main-content {
+	padding-top: 0;
 }
 .row-cards-3 {
 	.card {margin-bottom: 20px;}
@@ -2077,7 +2087,11 @@ body {
 	&--right {}	
 	.btn {padding: 8px 16px;}
 	.dash-msg-checkbox, .btn {margin-right: 8px; margin-bottom: 16px;}
-	select {margin-bottom: 0; min-width: 300px}
+	select {
+		margin-bottom: 0; 
+		min-width: 300px;
+		padding: 8px;
+	}
 	@media (min-width: $screen-sm-min) {
 		display: flex;
 		justify-content: space-between;
