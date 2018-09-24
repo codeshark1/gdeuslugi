@@ -3026,6 +3026,9 @@ body {
     top: -2px; }
 
 /* ARTICLE */
+.section-intro {
+  margin: -10px 0 2rem 0; }
+
 .card-article {
   margin-bottom: 16px; }
   .card-article .p-small-number {
