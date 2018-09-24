@@ -480,6 +480,9 @@ body {
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
+
+/* SIDEBAR */
+
 .btn-categs {
 	width: 100%;
 	svg {margin-left: 8px;vertical-align: text-bottom;transition: all .15s}
@@ -539,6 +542,7 @@ body {
 				}
 			}
 			>.sub-menu > .current-menu-item a {color: $green-text; background: #fff}
+			&.current-menu-item>a {background: rgba($green, .9); color: #fff}
 		}
 	}
 	.menu-item .current-menu-item {

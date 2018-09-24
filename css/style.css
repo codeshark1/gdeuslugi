@@ -2627,6 +2627,7 @@ body {
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
+/* SIDEBAR */
 .btn-categs {
   width: 100%;
   font-size: 18px; }
@@ -2682,6 +2683,9 @@ body {
 .menu-categs-wrapper .menu-categs > .menu-item > .sub-menu > .menu-item > .sub-menu > .current-menu-item a {
   color: #126E63;
   background: #fff; }
+.menu-categs-wrapper .menu-categs > .menu-item > .sub-menu > .menu-item.current-menu-item > a {
+  background: rgba(27, 153, 139, 0.9);
+  color: #fff; }
 .menu-categs-wrapper .menu-item .current-menu-item a {
   background: #fff;
   color: #333333; }
