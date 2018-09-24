@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>2.4 УЛ3 -  страница листинга услуг от четвёртой до предпоследней категории</title>
+    <title>2.5 УЛ4 -  страница листинга услуг последней категории</title>
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
@@ -211,7 +211,6 @@
     </div><!-- /.visible-xs-->    
 </form><!-- /.form-filter -->
 
-
 <main class="main-content">
     <div class="container">
         <nav class="breadcrumbs">
@@ -227,12 +226,6 @@
                 <button id="nav-toggle" class="btn btn-second btn-categs">Меню/категории <i class="fas fa-chevron-down"></i></button>
 
                 <div class="menu-categs-wrapper" id="menu-categs-wrapper">
-                    <form role="search" method="get" class="form-search form-search-sidebar" action="/">
-                        <input type="text" class="search-field" autocomplete="off" placeholder="Найти услугу..." title="Поиск" role="combobox">
-                        <button type="submit" class="search-submit" title="Поиск">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
-                        </button>
-                    </form>    
                     <ul role="menu" id="menu-categs" class="menu-categs">
                         <li role="menuitem" class="menu-item menu-item--has-children current-menu-item">
                             <a href="#">Строительные услуги</a><span>66</span>
@@ -288,17 +281,7 @@
                 </div><!-- /.b-about -->
             </aside><!-- /.col-sidebar -->
             <div class="col-content site-content">                
-                <h1 class="heading heading-special">Строительство домов</h1>              
-                <ul class="list-columns-3 list-links">
-                    <li><a href="#">Строительство домов и коттеджей</a> <span>(66)</span></li>
-                    <li><a href="#">Кровельные работы</a> <span>(96)</span></li>
-                    <li><a href="#">Бетонные работы</a> <span>(54)</span></li>
-                    <li><a href="#">Установка межкомнатных дверей</a> <span>(81)</span></li>
-                    <li><a href="#">Устройство перегородок</a> <span>(25)</span></li>
-                    <li><a href="#">Строительство заборов</a> <span>(74)</span></li>
-                    <li><a href="#">Установка окон и откосов</a> <span>(24)</span></li>
-                    <li><a href="#">Сварочные работы</a> <span>(25)</span></li>                                     
-                </ul>                
+                <h1 class="heading heading-special">Строительство домов</h1>                             
 
                 <ul class="tabs-buttons">
                     <li class="tab-button tab-button-active"><a href="#tabcontent-services" class="btn">Услуги</a></li>
@@ -307,6 +290,27 @@
                     <li class="tab-button"><a href="#tabcontent-reviews" class="btn">Отзывы</a></li>
                     <li class="tab-button"><a href="#tabcontent-articles" class="btn">Статьи</a></li>
                 </ul>
+
+                <div class="b-sorting">
+                    <div class="dash-msg-tools">
+                        <div class="dash-msg-tools--left">
+                            <select>
+                                <option>все</option>
+                                <option>компания</option>
+                                <option>частные мастера</option>
+                            </select>
+
+                        </div><!-- left -->
+                        <div class="dash-msg-tools--right">
+                            <select>
+                                <option>Сначала новые</option>
+                                <option>По активности</option>
+                                <option>По рейтингу</option>
+                                <option>По стомости работ</option>
+                            </select>
+                        </div><!-- /.dash-msg-tools--right --> 
+                    </div><!-- tools -->   
+                </div><!-- /.b-sorting --> 
 
                 <div class="tabs-wrapper">
                     <div class="tabs-tabcontent" id="tabcontent-services">
@@ -787,66 +791,6 @@
         </div><!-- /.row -->
     </div><!-- /.container -->
 </footer>
-
-<div id="blueimp-gallery" class="blueimp-gallery">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-</div>
-<script>
-    document.getElementById('gallery-1').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-    document.getElementById('gallery-2').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-    document.getElementById('gallery-3').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-    document.getElementById('gallery-4').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-    document.getElementById('gallery-5').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };
-    document.getElementById('gallery-6').onclick = function (event) {
-        event = event || window.event;
-        var target = event.target || event.srcElement,
-            link = target.src ? target.parentNode : target,
-            options = {index: link, event: event},
-            links = this.getElementsByTagName('a');
-        blueimp.Gallery(links, options);
-    };    
-</script>
 
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
 </body>
