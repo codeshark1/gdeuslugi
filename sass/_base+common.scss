@@ -36,6 +36,7 @@ small {font-size: 100%;display: inline-block;}
   max-width: 1440px;
   @include clearfix();
 }
+.row-const {display: flex; align-items: flex-end}
 .row-mod {justify-content: space-between}
 
 .link-local {

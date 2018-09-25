@@ -138,8 +138,8 @@ jQuery(document).ready(function($){
 
 
 
-    /* TABS */
-    function tabs() {
+    /* TABS /-DEL */ 
+/*     function tabs() {
         $('.tabs-tabcontent').hide();
         $('.tabs-tabcontent:first-child').show();
         $('.tab-button a').click(function(e) {
@@ -153,7 +153,7 @@ jQuery(document).ready(function($){
             }
         });
     }
-    tabs();
+    tabs(); */
 
     $('.slick-arrow').click(function(e){
         e.stopPropagation();
