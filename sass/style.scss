@@ -2563,65 +2563,120 @@ body {
 
 
 
-
-/* CHAT */
+/* ==========================================================================
+   CHAT
+   ========================================================================== */
+/* Header */
 .btn-chat-back{
 	color: $blue-bright;
-	padding: 32px;
+	padding: 24px;
 	.icon-svg {fill: $blue-bright;}
+	@media (max-width: $screen-xs-max) {
+		span {
+			visibility: hidden;
+			width: 0;height: 0;
+		}
+	}
+	@media (min-width: $screen-sm-min) {
+		padding: 32px;
+	}
 }
 .btn-chat-notes {
 	padding: 0;
+	font-size: 1rem;
 	.icon-svg {fill: $green}
 }
 .btn-chatmenu {
-	padding: 32px 40px;
-}
-.icon-menu {
-	position: relative;
-	&:before, &:after {
-		content:"";
-		position: absolute;
-		top: -1px;
+	padding: 25px 24px;
+	.icon-menu {
+		position: relative;
+		&:before, &:after {
+			content:"";
+			position: absolute;
+			top: -1px;
+		}
+		&:before {left: -12px}
+		&:after {right: -12px}
 	}
-	&:before {left: -12px}
-	&:after {right: -12px}
-}
-.icon-menu, .icon-menu:before, .icon-menu:after {
-	display: inline-block;
-	width: 8px;
-	height: 8px;
-	border: 1px solid $green;
-	border-radius: 100%;
+	.icon-menu, .icon-menu:before, .icon-menu:after {
+		display: inline-block;
+		width: 8px;
+		height: 8px;
+		border: 1px solid $green;
+		border-radius: 100%;
+		transition: all .15s;
+	}
+	&.active {
+		.icon-menu, .icon-menu:before, .icon-menu:after {background: $green}		
+	}
+	@media (min-width: $screen-sm-min) {
+		padding: 32px 40px;	
+	}
 }
 
 .chat-header {
 	display: flex;
 	width: 100%;
 	align-items:center;	
+	position: relative;
+	.card-dash-check-user_small {
+		margin: 0;
+		.name {margin: 0;}
+	}
 }
 .chat-header, .chat-top-actions {
 	border-bottom: 1px solid #e5e5e5;
 }
 .chat-header-center {
-	padding: 0 40px;
+	padding: 17px 20px;
 	flex-grow: 2;
 	border: 1px solid #e5e5e5;
 	border-width: 0 1px;
 	display: flex;
 	justify-content: space-between;
-	height: 88px;
 	align-items:center;
+	@media (min-width: $screen-sm-min) {
+		padding: 22px 40px;
+	}
 }
 .chat-top-actions {
-	padding: 16px 0;
+	padding: 16px 0 0 0;
 	.btn {
 		color: $gray-text;
 		padding: 0;
-		margin-right: 24px;
+		margin: 0 24px 1.2rem 0;
 		.icon-svg {fill: $gray-text;}
+		&:last-child {margin-right: 0;}
 	}
 }
+
+.chat-header-menu {
+	background: #fff;
+	width: 280px;
+	border: 1px solid #E5E5E5;	
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+	padding: 8px 0 8px 24px;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	.btn {
+		padding: 10px 0;
+		font-size: 14px;
+		color: $gray-text;
+		svg {fill: $gray-text}
+		&:hover, &:active {
+			color: $base-text;
+			svg {fill: $base-text}
+		}
+	}
+}
+
+.input-search-chat {
+	background: url("data:image/svg+xml,%3Csvg width='23' height='24' viewBox='0 0 23 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15.9608 15.6669C17.4749 14.0059 18.4195 11.7818 18.4195 9.33256C18.4195 4.19471 14.2939 0 9.20975 0C4.12563 0 0 4.19471 0 9.33256C0 14.4704 4.12563 18.6651 9.20975 18.6651C11.2795 18.6651 13.1826 17.9754 14.7245 16.807L21.5727 23.7466C21.7394 23.9155 21.9478 24 22.1562 24C22.3645 24 22.5868 23.9155 22.7396 23.7466C23.0591 23.4229 23.0591 22.888 22.7396 22.5502L15.9608 15.6669ZM1.66692 9.33256C1.66692 5.12374 5.04244 1.68915 9.20975 1.68915C13.3632 1.68915 16.7526 5.10968 16.7526 9.33256C16.7526 13.5554 13.3771 16.976 9.20975 16.976C5.04244 16.976 1.66692 13.5414 1.66692 9.33256Z' fill='%23CCCCCC'/%3E%3C/svg%3E%0A") 0 50% no-repeat;
+}
+
+/* - Header */
+
 
 .chat-message-area {
 	//padding-top: 32px;

@@ -4,16 +4,17 @@ jQuery(document).ready(function($){
         $(menu).hide();
         $(button).click(function(){
             if ( $(menu).is(':visible')){
-                $(menu).slideUp();
+                $(menu).slideUp(250);
                 $(this).removeClass('active');
             } else {
                 $(this).addClass('active');
-                $(menu).slideDown();
+                $(menu).slideDown(250);
             }
         });
     }
 
     navigation_show('#nav-toggle','#menu-categs-wrapper');
+    navigation_show('#chatmenu-toggle','#chatmenu');
 
     function menu_nested(menu_id) {
         $(menu_id).find('ul').not('.current-menu-item ul').hide();
