@@ -781,7 +781,8 @@ input[type=checkbox] {
   font-size: 1rem;
   color: #E5E5E5 !important;
   border-radius: 3px;
-  color: #666666 !important; }
+  color: #666666 !important;
+  padding: 8px; }
   .check-button.checked {
     border-color: #1B998B !important;
     color: #1B998B !important; }

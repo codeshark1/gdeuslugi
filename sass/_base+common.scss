@@ -712,6 +712,7 @@ input[type=checkbox] {cursor: pointer;}
 .check-button {
   @include btn-stroked($gray-border);
   color: $base-text !important;  
+  padding: 8px;
   &.checked {
     border-color: $green !important;
     color: $green !important;
