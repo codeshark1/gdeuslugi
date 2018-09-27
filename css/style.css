@@ -168,7 +168,8 @@ button {
   border: 1px solid #1B998B !important;
   font-size: 1rem;
   color: #1B998B !important;
-  border-radius: 3px; }
+  border-radius: 3px;
+  padding: 8px 16px; }
   .btn-stroked:hover {
     background: #126E63;
     color: #fff  !important; }
@@ -178,6 +179,7 @@ button {
   font-size: 1rem;
   color: #E5243B !important;
   border-radius: 3px;
+  padding: 8px 16px;
   color: #E5243B; }
   .btn-deny:hover {
     background: #E5243B;
@@ -187,7 +189,8 @@ button {
   border: 1px solid #666 !important;
   font-size: 1rem;
   color: #666 !important;
-  border-radius: 3px; }
+  border-radius: 3px;
+  padding: 8px 16px; }
   .btn-default .icon-svg {
     fill: #666; }
   .btn-default:hover {
@@ -200,7 +203,8 @@ button {
   border: 1px solid #1B998B !important;
   font-size: 1rem;
   color: #1B998B !important;
-  border-radius: 3px; }
+  border-radius: 3px;
+  padding: 8px 16px; }
   .btn-default-color:hover {
     background: #1B998B;
     color: #fff !important; }
@@ -783,6 +787,7 @@ input[type=checkbox] {
   font-size: 1rem;
   color: #E5E5E5 !important;
   border-radius: 3px;
+  padding: 8px 16px;
   color: #666666 !important;
   padding: 8px; }
   .check-button.checked {
@@ -921,6 +926,7 @@ input[type=checkbox] {
     font-size: 1rem;
     color: #1B998B !important;
     border-radius: 3px;
+    padding: 8px 16px;
     border-radius: 0;
     background: #fff;
     display: inline-block;
@@ -932,7 +938,7 @@ input[type=checkbox] {
     border-radius: 3px; }
   .pagination .pgn-page-active a, .pagination-mob .pgn-page-active a {
     background: #126E63;
-    color: #fff; }
+    color: #fff !important; }
 
 @media (max-width: 767px) {
   .pagination {
@@ -2740,6 +2746,7 @@ body {
     font-size: 1rem;
     color: #1B998B !important;
     border-radius: 3px;
+    padding: 8px 16px;
     padding: 8px 36px; }
   .nav-menu-content .btn {
     font-weight: 500;
@@ -2797,6 +2804,7 @@ body {
   font-size: 1rem;
   color: #1B998B !important;
   border-radius: 3px;
+  padding: 8px 16px;
   font-size: 14px;
   padding: 8px 14px;
   background: none;
@@ -4076,6 +4084,9 @@ body {
   @media (min-width: 992px) {
     .col-master-sbar-widget {
       padding: 1rem 0 2rem 2rem; } }
+  .col-master-sbar-widget-space {
+    padding-top: 2rem;
+    padding-bottom: 2rem; }
 
 .worker-sertifs {
   display: flex;
@@ -4177,7 +4188,8 @@ body {
 .heading-task-price {
   color: #1B998B;
   font-size: 1.5rem;
-  font-weight: 500; }
+  font-weight: 500;
+  flex-shrink: 0; }
 
 .gallery-worker {
   margin: 20px 0 30px; }
@@ -4543,6 +4555,7 @@ body {
   font-size: 1rem;
   color: #1B998B !important;
   border-radius: 3px;
+  padding: 8px 16px;
   font-size: 12px;
   padding: 4px 8px;
   letter-spacing: 1px;

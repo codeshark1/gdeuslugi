@@ -1895,6 +1895,7 @@ body {
 	@media (min-width: $screen-md-min) {
 		padding: 1rem 0 2rem 2rem;
 	}
+	&-space {padding-top: 2rem;padding-bottom: 2rem;}
 }
 .worker-sertifs {
 	display: flex;
@@ -2000,6 +2001,7 @@ body {
 	color: $green;
 	font-size: 1.5rem;
 	font-weight: 500;
+	flex-shrink: 0;
 }
 
 
