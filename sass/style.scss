@@ -1166,7 +1166,6 @@ body {
 	.btn {
 		position: absolute;
 		left: 16px;bottom: 16px;right: 16px;
-		padding: 16px;
 	}
 	padding-bottom: 100px;
 }
@@ -1856,18 +1855,35 @@ body {
 	}
 }
 
-.card-banner-specplace {
+.card-banner-specplace, .card-banner-becomemaster{
 	background: $orange;
 	color: #fff;
-	//text-align: center;
 	font-size: 1.5rem;
+	display: block;
 	display: flex;
-	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	border: none;
+	&:hover {border:none}
+}
+.card-banner-specplace {
+	font-size: 1.5rem;	
+	flex-direction: column;
 	img {width: 200px;}
 	p {margin-top: 1rem;}
 }
+.card-banner-becomemaster {	
+	padding: 2rem;
+	margin-bottom: 1.5rem;
+	p {text-transform: uppercase;}
+	.graphic {
+		width: 64px;height: 90px;
+		background: url('../images/worker-place.png') -139px 0 no-repeat;
+		background-size: auto 90px;
+		margin-right: 2rem;
+	}
+}
+
 
 /* WORKER SIDEBAR */
 .col-master-sbar-widget {

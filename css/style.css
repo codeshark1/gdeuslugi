@@ -3334,8 +3334,7 @@ body {
     position: absolute;
     left: 16px;
     bottom: 16px;
-    right: 16px;
-    padding: 16px; }
+    right: 16px; }
 
 .card-specialist-detailed {
   position: relative;
@@ -4034,18 +4033,37 @@ body {
     display: flex;
     justify-content: space-between; } }
 
-.card-banner-specplace {
+.card-banner-specplace, .card-banner-becomemaster {
   background: #FA6917;
   color: #fff;
   font-size: 1.5rem;
+  display: block;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  border: none; }
+  .card-banner-specplace:hover, .card-banner-becomemaster:hover {
+    border: none; }
+
+.card-banner-specplace {
+  font-size: 1.5rem;
+  flex-direction: column; }
   .card-banner-specplace img {
     width: 200px; }
   .card-banner-specplace p {
     margin-top: 1rem; }
+
+.card-banner-becomemaster {
+  padding: 2rem;
+  margin-bottom: 1.5rem; }
+  .card-banner-becomemaster p {
+    text-transform: uppercase; }
+  .card-banner-becomemaster .graphic {
+    width: 64px;
+    height: 90px;
+    background: url("../images/worker-place.png") -139px 0 no-repeat;
+    background-size: auto 90px;
+    margin-right: 2rem; }
 
 /* WORKER SIDEBAR */
 .col-master-sbar-widget {
