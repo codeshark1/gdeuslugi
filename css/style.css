@@ -1537,6 +1537,12 @@ hr {
       .card-list-item-square .comments span {
         display: none; } }
 
+.w-placeholder {
+  border: 1px solid;
+  text-align: center;
+  padding: 3rem 0;
+  margin-bottom: 1.5rem; }
+
 /* ==========================================================================
    SIDEBAR
    ========================================================================== */
@@ -3277,7 +3283,7 @@ body {
 
 .card-specialist {
   position: relative;
-  max-width: 460px;
+  max-width: 491px;
   padding-bottom: 100px; }
   .card-specialist .btn-fav {
     position: absolute;
