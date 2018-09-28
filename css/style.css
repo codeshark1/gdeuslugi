@@ -2761,7 +2761,8 @@ body {
       display: table;
       width: 100%;
       border-collapse: collapse;
-      vertical-align: middle; } }
+      vertical-align: middle;
+      table-layout: fixed; } }
 
 .tab-button {
   border: 1px solid #1B998B;
