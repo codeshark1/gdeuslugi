@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>5.1 УЛФ -  страница листинга услуг по фотографиям (общие данные)</title>
+    <title>6.5 СКО - страница отзыва последней категории</title>
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>    
@@ -98,18 +98,18 @@
                 <button id="nav-toggle" class="btn btn-second btn-categs">Меню/категории <i class="fas fa-chevron-down"></i></button>
 
                 <div class="menu-categs-wrapper" id="menu-categs-wrapper">
-                    <form role="search" method="get" class="form-search form-search-sidebar" action="/">
-                        <input type="text" class="search-field" autocomplete="off" placeholder="Найти услугу..." title="Поиск" role="combobox">
-                        <button type="submit" class="search-submit" title="Поиск">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"><path d="M21.172 24l-7.387-7.387c-1.388.874-3.024 1.387-4.785 1.387-4.971 0-9-4.029-9-9s4.029-9 9-9 9 4.029 9 9c0 1.761-.514 3.398-1.387 4.785l7.387 7.387-2.828 2.828zm-12.172-8c3.859 0 7-3.14 7-7s-3.141-7-7-7-7 3.14-7 7 3.141 7 7 7z"/></svg>
-                        </button>
-                    </form>
                     <ul role="menu" id="menu-categs" class="menu-categs">
                         <li role="menuitem" class="menu-item menu-item--has-children current-menu-item">
                             <a href="#">Строительные услуги</a><span>66</span>
                             <ul class="nav-menu sub-menu">
                                 <li role="menuitem" class="menu-item menu-item--has-children">
                                     <a href="#">Строительство домов и котеджей</a><span>99</span>
+                                    <ul class="sub-menu">
+                                        <li role="menuitem" class="menu-item current-menu-item"><a href="#">строительство домов</a><span>66</span></li>
+                                        <li role="menuitem" class="menu-item"><a href="#">строительство коттеджей</a><span>66</span></li>
+                                        <li role="menuitem" class="menu-item"><a href="#">строительство домов из дерева</a><span>66</span></li>
+                                        <li role="menuitem" class="menu-item"><a href="#">строительство домов из кирпича</a><span>66</span></li>
+                                    </ul>
                                 </li>
                                 <li role="menuitem" class="menu-item"><a href="#">Строительство бань и саун</a><span>66</span></li>
                                 <li role="menuitem" class="menu-item"><a href="#">Устройство перегородок</a><span>66</span></li>
@@ -153,15 +153,15 @@
                 </div><!-- /.b-about -->
             </aside><!-- /.col-sidebar -->
             <div class="col-content site-content">                
-                <h1 class="heading">Строительство домов</h1>
+                <h1 class="heading">Строительство домов</h1>                             
                 <p class="section-intro">Дорогие друзья, консультация с профессионалами из IT напрямую зависит от соответствующих условий активизации. Равным образом выбранный нами инновационный путь напрямую зависит от существующих финансовых и административных условий? С другой стороны сложившаяся структура организации создаёт предпосылки качественно новых шагов для позиций, занимаемых участниками в отношении поставленных задач!</p>              
 
                 <ul class="tabs-buttons">
                     <li class="tab-button"><a href="#tabcontent-services" class="btn">Услуги</a></li>
                     <li class="tab-button"><a href="#tabcontent-orders" class="btn">Заказы</a></li>
                     <li class="tab-button"><a href="#tabcontent-gallery" class="btn">Фото</a></li>
-                    <li class="tab-button"><a href="#tabcontent-reviews" class="btn">Отзывы</a></li>
-                    <li class="tab-button tab-button-active"><a href="#tabcontent-articles" class="btn">Статьи</a></li>
+                    <li class="tab-button tab-button-active"><a href="#tabcontent-reviews" class="btn">Отзывы</a></li>
+                    <li class="tab-button"><a href="#tabcontent-articles" class="btn">Статьи</a></li>
                 </ul>
 
                 <form role="search" class="form-filter" action="/">
@@ -292,23 +292,98 @@
                     </div><!-- /.visible-xs-->    
                 </form><!-- /.form-filter -->
 
-                <div class="b-sorting">
-                    <div class="dash-msg-tools">
-                        <div class="dash-msg-tools--left">
-                            <label class="lbl-inline"><input type="checkbox" class="checkbox" checked>все</label>
-                            <label class="lbl-inline"><input type="checkbox" class="checkbox">компания</label>
-                            <label class="lbl-inline"><input type="checkbox" class="checkbox">частные мастера</label>
-                        </div><!-- left -->
-                        <div class="dash-msg-tools--right">
-                            <select>
-                                <option>Сначала новые</option>
-                                <option>По активности</option>
-                                <option>По рейтингу</option>
-                                <option>По стомости работ</option>
-                            </select>
-                        </div><!-- /.dash-msg-tools--right --> 
-                    </div><!-- tools -->   
-                </div><!-- /.b-sorting -->                
+                <article class="worker-review">
+                    <div class="worker-review-header card-dash-check-cont--row">
+                        <div class="b-userpic">
+                            <img src="images/userpic2.jpg" alt="pic" class="userpic">
+                        </div>
+                        <div>
+                            <p class="reviewer-name">Мария П.</p>
+                            <p class="t-date-color">8 апреля</p>
+                        </div>
+                        <div class="rating-wrapper">
+                            <p class="card-dash-check-status">Заказчик</p>
+                            <div class="rating rating-mid">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>                                    
+                            </div>
+                        </div><!-- /.rating-wrapper -->
+                    </div><!-- /.worker-review-header card-dash-check-cont--row-->
+                    <p>К сожалению, не имел возможности оценить качество выполняемой работы и даже степень вежливости. Потому что исполнитель, отозвавшись на предложенный объем, всего лишь один раз вышел на связь (и то, благодаря моей настойчивости и упорству в попытках связаться с ним), озвучил дату и время встречи, но в назначенное время не явился и в обозначенный час не позвонил.</p>
+                    <p class="worker-review-footer">Отзыв по заданию: <a href="#">Ремонт комнаты</a> в категории <a href="#">Ремонт комнаты под ключ</a></p>
+                </article>
+                <article class="worker-review">
+                    <div class="worker-review-header card-dash-check-cont--row">
+                        <div class="b-userpic">
+                            <img src="images/userpic2.jpg" alt="pic" class="userpic">
+                        </div>
+                        <div>
+                            <p class="reviewer-name">Мария П.</p>
+                            <p class="t-date-color">8 апреля</p>
+                        </div>
+                        <div class="rating-wrapper">
+                            <p class="card-dash-check-status">Заказчик</p>
+                            <div class="rating rating-mid">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>                                    
+                            </div>
+                        </div><!-- /.rating-wrapper -->
+                    </div><!-- /.worker-review-header card-dash-check-cont--row-->
+                    <p>К сожалению, не имел возможности оценить качество выполняемой работы и даже степень вежливости. Потому что исполнитель, отозвавшись на предложенный объем, всего лишь один раз вышел на связь (и то, благодаря моей настойчивости и упорству в попытках связаться с ним), озвучил дату и время встречи, но в назначенное время не явился и в обозначенный час не позвонил.</p>
+                    <p class="worker-review-footer">Отзыв по заданию: <a href="#">Ремонт комнаты</a> в категории <a href="#">Ремонт комнаты под ключ</a></p>
+                </article>
+                <article class="worker-review">
+                    <div class="worker-review-header card-dash-check-cont--row">
+                        <div class="b-userpic">
+                            <img src="images/userpic2.jpg" alt="pic" class="userpic">
+                        </div>
+                        <div>
+                            <p class="reviewer-name">Мария П.</p>
+                            <p class="t-date-color">8 апреля</p>
+                        </div>
+                        <div class="rating-wrapper">
+                            <p class="card-dash-check-status">Заказчик</p>
+                            <div class="rating rating-mid">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>                                    
+                            </div>
+                        </div><!-- /.rating-wrapper -->
+                    </div><!-- /.worker-review-header card-dash-check-cont--row-->
+                    <p>К сожалению, не имел возможности оценить качество выполняемой работы и даже степень вежливости. Потому что исполнитель, отозвавшись на предложенный объем, всего лишь один раз вышел на связь (и то, благодаря моей настойчивости и упорству в попытках связаться с ним), озвучил дату и время встречи, но в назначенное время не явился и в обозначенный час не позвонил.</p>
+                    <p class="worker-review-footer">Отзыв по заданию: <a href="#">Ремонт комнаты</a> в категории <a href="#">Ремонт комнаты под ключ</a></p>
+                </article>
+                <article class="worker-review">
+                    <div class="worker-review-header card-dash-check-cont--row">
+                        <div class="b-userpic">
+                            <img src="images/userpic2.jpg" alt="pic" class="userpic">
+                        </div>
+                        <div>
+                            <p class="reviewer-name">Мария П.</p>
+                            <p class="t-date-color">8 апреля</p>
+                        </div>
+                        <div class="rating-wrapper">
+                            <p class="card-dash-check-status">Заказчик</p>
+                            <div class="rating rating-mid">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>                                    
+                            </div>
+                        </div><!-- /.rating-wrapper -->
+                    </div><!-- /.worker-review-header card-dash-check-cont--row-->
+                    <p>К сожалению, не имел возможности оценить качество выполняемой работы и даже степень вежливости. Потому что исполнитель, отозвавшись на предложенный объем, всего лишь один раз вышел на связь (и то, благодаря моей настойчивости и упорству в попытках связаться с ним), озвучил дату и время встречи, но в назначенное время не явился и в обозначенный час не позвонил.</p>
+                    <p class="worker-review-footer">Отзыв по заданию: <a href="#">Ремонт комнаты</a> в категории <a href="#">Ремонт комнаты под ключ</a></p>
+                </article>                     
 
                 <div class="row-cards-2-rows">
                     <div class="card card-photoalbum">
@@ -439,7 +514,7 @@
                             <a href="#" class="dash-gal-thumb-linkmore">+25 фото</a>
                         </div><!-- /.card-dash-check-thumbs-->
                     </div><!-- /.card -->              
-                </div><!-- /.row-cards -->              
+                </div><!-- /.row-cards -->
 
                 <a href="#" class="card card-banner-becomemaster">        
                     <div class="graphic"></div>
@@ -547,60 +622,38 @@
                     </div><!-- /.card -->
                 </section>
 
-                <!-- отзывы -->
-                <section>
-                    <h2 class="heading">Последние отзывы</h2>
 
+                <!-- статьи -->
+                <section>
+                    <h2 class="heading">Последние статьи</h2>
                     <div class="row-cards">
-                        <article class="worker-review card">
-                            <div class="worker-review-header card-dash-check-cont--row">
-                                <div class="b-userpic">
-                                    <img src="images/userpic2.jpg" alt="pic" class="userpic">
-                                </div>
-                                <div>
-                                    <p class="reviewer-name">Мария П.</p>
-                                    <p class="t-date-color">8 апреля</p>
-                                </div>
-                                <div class="rating-wrapper">
-                                    <p class="card-dash-check-status">Заказчик</p>
-                                    <div class="rating rating-mid">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>                                    
-                                    </div>
-                                </div><!-- /.rating-wrapper -->
-                            </div><!-- /.worker-review-header card-dash-check-cont--row-->
-                            <p>К сожалению, не имел возможности оценить качество выполняемой работы и даже степень вежливости. Потому что исполнитель, отозвавшись на предложенный объем, всего лишь один раз вышел на связь (и то, благодаря моей настойчивости и упорству в попытках связаться с ним), озвучил дату и время встречи, но в назначенное время не явился и в обозначенный час не позвонил.</p>
-                            <p class="worker-review-footer">Отзыв по заданию: <a href="#">Ремонт комнаты</a> в категории <a href="#">Ремонт комнаты под ключ</a></p>
-                        </article><!-- /.worker-review -->
-                        <article class="worker-review card">
-                            <div class="worker-review-header card-dash-check-cont--row">
-                                <div class="b-userpic">
-                                    <img src="images/userpic2.jpg" alt="pic" class="userpic">
-                                </div>
-                                <div>
-                                    <p class="reviewer-name">Мария П.</p>
-                                    <p class="t-date-color">8 апреля</p>
-                                </div>
-                                <div class="rating-wrapper">
-                                    <p class="card-dash-check-status">Заказчик</p>
-                                    <div class="rating rating-mid">
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="fas fa-star"></i>
-                                        <i class="far fa-star"></i>
-                                        <i class="far fa-star"></i>                                    
-                                    </div>
-                                </div><!-- /.rating-wrapper -->
-                            </div><!-- /.worker-review-header card-dash-check-cont--row-->
-                            <p>К сожалению, не имел возможности оценить качество выполняемой работы и даже степень вежливости. Потому что исполнитель, отозвавшись на предложенный объем, всего лишь один раз вышел на связь (и то, благодаря моей настойчивости и упорству в попытках связаться с ним), озвучил дату и время встречи, но в назначенное время не явился и в обозначенный час не позвонил.</p>
-                            <p class="worker-review-footer">Отзыв по заданию: <a href="#">Ремонт комнаты</a> в категории <a href="#">Ремонт комнаты под ключ</a></p>
-                        </article><!-- /.worker-review -->                        
+                        <article class="card card-cols card-article">
+                            <div href="#" class="card-img">
+                                <img src="images/photo-news-1.jpg" alt="pic">                    
+                            </div><!-- /.card-img -->
+                            <div class="info">
+                                <p class="p-small-number">25 мая 2018</p>
+                                <h2 class="heading">Как мы делали теплицу</h2>
+                                <p class="excerpt">
+                                    Теплица очень нужная вещь в органическом земледелии. И мы решили поставить ее по нескольким причинам. Как мы делали теплицу...</p>                            
+                                    <p class="t-right"><a href="#" class="readmore">Читать историю</a></p>
+                            </div><!-- /.info -->
+                        </article><!-- /.card -->
+                        <article class="card card-cols card-article">
+                            <div href="#" class="card-img">
+                                <img src="images/photo-news-1.jpg" alt="pic">                    
+                            </div><!-- /.card-img -->
+                            <div class="info">
+                                <p class="p-small-number">25 мая 2018</p>
+                                <h2 class="heading">Как мы делали теплицу</h2>
+                                <p class="excerpt">
+                                    Теплица очень нужная вещь в органическом земледелии. И мы решили поставить ее по нескольким причинам. Как мы делали теплицу...</p>                            
+                                    <p class="t-right"><a href="#" class="readmore">Читать историю</a></p>
+                            </div><!-- /.info -->
+                        </article><!-- /.card -->
                     </div><!-- /.row-cards -->
                 </section>                
-               
+
                 <p class="section-intro">С другой стороны постоянный количественный рост и сфера нашей активности позволяет выполнить важнейшие задания по разработке ключевых компонентов планируемого обновления. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров позволяет оценить значение модели развития. Повседневная практика показывает, что выбранный нами инновационный путь требует от нас системного анализа соответствующих условий активизации.</p>
             </div><!-- /.col-content -->
         </div><!-- /.row-mod -->
@@ -654,7 +707,7 @@
                     <p>Занять его место</p>
                 </a><!-- /.card -->                  
             </div><!-- /.row-cards -->
-        </section><!-- section-major -->
+        </section><!-- section-major -->        
         <div class="b-about visible-sm visible-xs">
             <svg class="icn" viewBox="0 0 65 64" xmlns="http://www.w3.org/2000/svg">
                 <path d="M32.5 0C14.5519 0 0 14.328 0 32C0 49.672 14.5519 64 32.5 64C50.4481 64 65 49.672 65 32C65 14.328 50.4481 0 32.5 0ZM29.1077 31.4199C28.8558 35.524 26.9749 41.668 19.4471 47.648C19.0855 47.928 18.663 48.068 18.2406 48.068C17.6516 48.068 17.0706 47.8039 16.6846 47.2919C16.0184 46.412 16.1727 45.148 17.0339 44.468C21.4937 40.9266 23.597 37.438 24.5263 34.5399C24.9208 33.3098 23.5218 32.356 22.2299 32.356V32.356C18.923 32.356 16.2458 29.6161 16.2458 26.2361C16.2458 22.8561 18.927 20.1161 22.2299 20.1161C22.9686 20.1161 23.6477 20.3037 24.2948 20.5589C24.3034 20.5623 24.3119 20.5536 24.3083 20.5451V20.5451C24.3045 20.5363 24.3136 20.5276 24.3223 20.5316L24.9883 20.8441L25.0117 20.8533C25.0366 20.8631 25.0602 20.8762 25.0817 20.8921V20.8921L25.8815 21.4498C25.9792 21.5179 26.0705 21.5945 26.1545 21.6788L26.4426 21.9681C27.9175 23.412 29.5384 26.168 29.1077 31.4199ZM48.8069 31.416C48.5549 35.5201 46.674 41.6641 39.1421 47.6441C38.7805 47.9281 38.3581 48.0681 37.9356 48.0681C37.3466 48.0681 36.7657 47.8001 36.3797 47.288C35.7134 46.404 35.8677 45.1441 36.729 44.4641C41.1874 40.9209 43.2907 37.4348 44.2205 34.5382C44.6133 33.3144 43.2102 32.356 41.9249 32.356V32.356C38.6222 32.356 35.9408 29.6161 35.9408 26.2361C35.9408 22.8561 38.614 20.1161 41.9249 20.1161C42.6674 20.1161 43.3464 20.3035 43.9933 20.5586C44.0016 20.5619 44.0096 20.5532 44.0055 20.5452V20.5452C44.0013 20.537 44.0099 20.5282 44.0182 20.5321L44.6833 20.8441L44.7067 20.8533C44.7317 20.8631 44.7552 20.8762 44.7768 20.8921V20.8921L45.5807 21.4526C45.6756 21.5188 45.7646 21.5931 45.8466 21.6747L46.1418 21.9681C47.6165 23.412 49.2293 26.168 48.8069 31.416Z">

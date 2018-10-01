@@ -2850,6 +2850,9 @@ body {
 .row-cards-3 .card {
   margin-bottom: 20px; }
 
+.row-cards-2-rows .card {
+  margin-bottom: 1.5rem; }
+
 @media (max-width: 991px) {
   .main-content .col-sidebar {
     margin: 0 -15px 30px -15px !important; } }
@@ -2905,7 +2908,15 @@ body {
     .row-cards-3 .card:nth-child(3n+3) {
       margin-right: 0; }
     .row-cards-3 .card:nth-child(3n+4) {
-      clear: left; } }
+      clear: left; }
+
+  .row-cards-2-rows {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .row-cards-2-rows .card {
+      width: 49%;
+      flex-shrink: 0; } }
 .p-small-number {
   color: #ACACAC;
   font-size: 12px;
@@ -4218,7 +4229,6 @@ body {
 .worker-review {
   position: relative;
   margin-bottom: 1.5rem;
-  max-width: 690px;
   border: none;
   padding: 0; }
   @media (min-width: 992px) {
@@ -4248,11 +4258,9 @@ body {
     .worker-review-footer a {
       color: #1B57CD; }
 
-.addreview-wrapper {
-  max-width: 690px; }
-  @media (min-width: 992px) {
-    .addreview-wrapper {
-      padding-left: 60px; } }
+@media (min-width: 992px) {
+  .addreview-wrapper {
+    padding-left: 60px; } }
 
 .b-userpic {
   display: inline-block; }
@@ -4604,10 +4612,7 @@ body {
   max-width: 940px; }
 
 .card-photoalbum {
-  background: #F7F7F7;
-  max-width: 491px;
-  margin-bottom: 1.5rem;
-  flex-shrink: 0; }
+  background: #F7F7F7; }
 
 .photo-bg-preview {
   display: block;

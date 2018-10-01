@@ -692,6 +692,9 @@ body {
 .row-cards-3 {
 	.card {margin-bottom: 20px;}
 }
+.row-cards-2-rows {
+	.card {margin-bottom: 1.5rem;}
+}
 
 .main-content .col-sidebar {
 	@media (max-width: $screen-sm-max) {
@@ -747,9 +750,14 @@ body {
 			}			
 		}
 	}
-	.row-cards-photos {
-		//display: flex;
-		//justify-content: space-between;
+	.row-cards-2-rows {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		.card {
+			width: 49%;
+			flex-shrink: 0;			
+		}
 	}
 }
 
@@ -2035,7 +2043,6 @@ body {
 .worker-review {
 	position: relative;
 	margin-bottom: 1.5rem;
-	max-width: 690px;
 	border: none;
 	padding: 0;
 	@media (min-width: $screen-md-min) {
@@ -2068,7 +2075,6 @@ body {
 	}
 }
 .addreview-wrapper {
-	max-width: 690px;
 	@media (min-width: $screen-md-min) {
 		padding-left: 60px;
 	}
@@ -2407,9 +2413,6 @@ body {
 
 .card-photoalbum {
 	background: $gray-bg;
-	max-width: 491px;
-	margin-bottom: 1.5rem;
-	flex-shrink: 0;
 }
 .photo-bg-preview {
 	display: block;
