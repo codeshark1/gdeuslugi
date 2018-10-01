@@ -4649,6 +4649,8 @@ body {
     margin-right: 16px; }
   .card-dash-check-gallery-hero .msg-text {
     margin-top: 8px; }
+  .card-dash-check-gallery-hero:last-child {
+    margin-bottom: 0; }
 
 .card-dash-check-thumbs .wrapper, .card-dash-check-thumbs-wrp {
   position: relative;

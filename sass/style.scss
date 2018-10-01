@@ -2440,6 +2440,7 @@ body {
 	margin-bottom: 24px;
 	.rating,.card-dash-check-status {margin-right: 16px;}
 	.msg-text {margin-top: 8px;}
+	&:last-child {margin-bottom: 0;}
 }
 
 .card-dash-check-thumbs {	
