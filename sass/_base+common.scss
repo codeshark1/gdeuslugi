@@ -170,9 +170,11 @@ button {cursor: pointer;}
 
 .btn-default-color {
   @include btn-stroked($green);
+  .icon-svg {fill: $green}
   &:hover {
     background: $green;
     color: #fff !important;
+    .icon-svg {fill: #fff}
   }  
 }
 
@@ -307,7 +309,7 @@ select {padding: 12px 8px;
 textarea {
   resize: vertical;
   min-height: 100px;
-  padding: 16px 8px;
+  padding: 8px;
   @media (min-width: $screen-sm-min) {
     padding: 16px;
   }
@@ -472,9 +474,10 @@ input[type=checkbox] {cursor: pointer;}
 .input-addition {
 	text-align: right;
 	position: relative;
-	top: -16px;
+	top: -8px;
   font-size: .9rem;
   color: $gray;
+  @media (min-width: $screen-sm-min) {top: -16px;}
 }
 
 .inp-text-stand,
@@ -500,11 +503,13 @@ input[type=checkbox] {cursor: pointer;}
 }
 
 .inp-date-wrapper {
-  width: 340px;
-  display: flex;
-  justify-content: space-between;
-  .inp-date-col {width: 160px;}
+  @media (min-width: $screen-sm-min) {
+    width: 435px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
+.inp-date-col {width: 200px;}
 .inp-date {}
 
 

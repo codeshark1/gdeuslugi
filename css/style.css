@@ -205,9 +205,13 @@ button {
   color: #1B998B !important;
   border-radius: 3px;
   padding: 8px 16px; }
+  .btn-default-color .icon-svg {
+    fill: #1B998B; }
   .btn-default-color:hover {
     background: #1B998B;
     color: #fff !important; }
+    .btn-default-color:hover .icon-svg {
+      fill: #fff; }
 
 .btn-icon {
   background: none;
@@ -349,7 +353,7 @@ select {
 textarea {
   resize: vertical;
   min-height: 100px;
-  padding: 16px 8px; }
+  padding: 8px; }
   @media (min-width: 768px) {
     textarea {
       padding: 16px; } }
@@ -552,9 +556,12 @@ input[type=checkbox] {
 .input-addition {
   text-align: right;
   position: relative;
-  top: -16px;
+  top: -8px;
   font-size: .9rem;
   color: #666; }
+  @media (min-width: 768px) {
+    .input-addition {
+      top: -16px; } }
 
 @media (min-width: 768px) {
   .inp-text-stand,
@@ -587,12 +594,14 @@ input[type=checkbox] {
   vertical-align: baseline;
   margin-bottom: 1rem; }
 
-.inp-date-wrapper {
-  width: 340px;
-  display: flex;
-  justify-content: space-between; }
-  .inp-date-wrapper .inp-date-col {
-    width: 160px; }
+@media (min-width: 768px) {
+  .inp-date-wrapper {
+    width: 435px;
+    display: flex;
+    justify-content: space-between; } }
+
+.inp-date-col {
+  width: 200px; }
 
 /* SEARCH FORM */
 .form-search {
