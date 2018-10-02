@@ -2657,16 +2657,6 @@ body {
     left: 0;
     top: 11px; }
 
-@media (max-width: 767px) {
-  .inp-sel-sort .lbl-before {
-    display: block;
-    margin-bottom: 8px; } }
-@media (min-width: 768px) {
-  .inp-sel-sort {
-    text-align: right; } }
-.inp-sel-sort select {
-  width: auto; }
-
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */
@@ -4196,22 +4186,28 @@ body {
 /* TASKS */
 .heading-task-wrapper {
   position: relative;
-  padding-top: 10px; }
+  padding-top: 10px;
+  margin-bottom: 2rem; }
   .heading-task-wrapper .btn-edit {
     position: absolute;
     right: 0;
     top: 0; }
   .heading-task-wrapper--title {
-    margin-bottom: 1.5rem; }
+    margin-bottom: 0.5rem; }
+    @media (max-width: 767px) {
+      .heading-task-wrapper--title .heading-task {
+        margin-bottom: 0.5rem; } }
     @media (min-width: 768px) {
       .heading-task-wrapper--title {
         display: flex;
         justify-content: space-between; } }
 
+.date-task, .category-task {
+  color: #ACACAC; }
+
 .date-task {
-  color: #ACACAC;
-  font-size: 0.9rem;
-  margin-bottom: .5rem; }
+  margin-bottom: .5rem;
+  font-size: 0.9rem; }
 
 .heading-task {
   font-weight: normal;
@@ -4824,6 +4820,20 @@ body {
       border: none; }
   .notifications-table-v2 tr:last-child td {
     border: none; }
+
+@media (max-width: 500px) {
+  .inp-sel-sort .lbl-before {
+    display: block;
+    margin-bottom: 8px; } }
+.inp-sel-sort select {
+  width: auto; }
+
+@media (min-width: 1200px) {
+  .row-heading-sort {
+    display: flex;
+    justify-content: space-between; }
+    .row-heading-sort .heading {
+      margin-top: 3px; } }
 
 /* ==========================================================================
    CHAT
