@@ -474,8 +474,19 @@ body {
 	.lbl-before {
 		position: absolute;
 		left: 0;
-		top: 8px;
+		top: 11px;
 	}
+}
+
+
+.inp-sel-sort {	
+	@media (max-width: $screen-xs-max) {
+		.lbl-before {display: block; margin-bottom: 8px;}
+	}
+	@media (min-width: $screen-sm-min) {
+		text-align: right;		
+	}
+	select {width: auto}
 }
 /* ==========================================================================
    NAVIGATION
@@ -2247,6 +2258,7 @@ body {
 			padding-top: 1rem;
 		}
 	}
+	.btn+.btn {margin-left: 1rem}
 }
 .card-dash-check-cont--row-alltime {
 	display: flex;
