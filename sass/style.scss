@@ -2258,7 +2258,9 @@ body {
 			padding-top: 1rem;
 		}
 	}
-	.btn+.btn {margin-left: 1rem}
+	.card-dash-check-cont--left {
+		.btn+.btn {margin-left: 1rem}
+	}
 }
 .card-dash-check-cont--row-alltime {
 	display: flex;

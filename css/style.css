@@ -4439,7 +4439,7 @@ body {
   @media (max-width: 767px) {
     .card-dash-check-cont--row-border {
       padding-top: 1rem; } }
-.card-dash-check-cont--row .btn + .btn {
+.card-dash-check-cont--row .card-dash-check-cont--left .btn + .btn {
   margin-left: 1rem; }
 
 .card-dash-check-cont--row-alltime {
