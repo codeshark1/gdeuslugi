@@ -2090,6 +2090,8 @@ body {
 
 .b-userpic {
 	display: inline-block;
+	border: none;
+	&:hover {border: none;}
 	img {max-width: 100%;border-radius: 100%;}	
 }
 
@@ -2333,7 +2335,9 @@ body {
 	padding-right: 30px !important;
 	.btn-fav {position: absolute; right: 0;top: 0;}
 }
-
+.name {
+	a {@include link($blue-dark)}
+}
 .card-dash-half {
 	.card-dash-check-descr {
 		max-width: unset;
@@ -2735,7 +2739,6 @@ body {
 
 
 .chat-message-area {
-	//padding-top: 32px;
 	padding-bottom: 32px;
 }
 
@@ -2756,11 +2759,16 @@ body {
 	@media (min-width: $screen-md-min) {max-width: 45%;}
 }
 .chat-message-photo {
-	max-width: 340px !important;
+	@media (min-width: $screen-sm-min) {
+		max-width: 340px !important;
+	}
 }
 
 .chat-message-received {
-	.chat-message-wrapper {padding-left: 64px;}	
+	.chat-message-wrapper {
+		padding-left: 48px;
+		@media (min-width: $screen-sm-min) {padding-left: 64px;}
+	}	
 	.chat-message-text {
 		background: #F0F0F0;
 		border: 1px solid #E5E5E5;
@@ -2834,6 +2842,26 @@ body {
 	}
 }
 
+.chat-modal-wrapper {
+	padding-bottom: 2rem;
+	position: relative;
+	.chat-header-center {padding-left: 0;padding-right: 0; border: none}
+	.chat-header, .chat-message-area,.chat-footer-btns {padding: 0 1rem}
+	.chat-messagebox {margin: 0 1rem}
+	@media (min-width: $screen-sm-min) {
+		.chat-header, .chat-message-area, .chat-footer-btns {padding: 0 2rem}
+		.chat-messagebox {margin: 0 2rem}
+	}
+	.btn-closemodal {
+		right: 2rem; top: 2rem;
+		@media (min-width: $screen-sm-min) {
+		}
+	}
+}
+.chat-footer-btns {
+	display: flex;
+	justify-content: space-between;
+}
 /* ==========================================================================
    REGISTRATION
    ========================================================================== */

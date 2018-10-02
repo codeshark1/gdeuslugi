@@ -4275,7 +4275,10 @@ body {
     padding-left: 60px; } }
 
 .b-userpic {
-  display: inline-block; }
+  display: inline-block;
+  border: none; }
+  .b-userpic:hover {
+    border: none; }
   .b-userpic img {
     max-width: 100%;
     border-radius: 100%; }
@@ -4534,6 +4537,12 @@ body {
     position: absolute;
     right: 0;
     top: 0; }
+
+.name a {
+  color: #2E3047;
+  border-bottom: 1px solid rgba(46, 48, 71, 0.3); }
+  .name a:hover {
+    border-bottom: 1px solid #2E3047; }
 
 .card-dash-half .card-dash-check-descr {
   max-width: unset;
@@ -4965,11 +4974,15 @@ body {
     .chat-message-text {
       max-width: 45%; } }
 
-.chat-message-photo {
-  max-width: 340px !important; }
+@media (min-width: 768px) {
+  .chat-message-photo {
+    max-width: 340px !important; } }
 
 .chat-message-received .chat-message-wrapper {
-  padding-left: 64px; }
+  padding-left: 48px; }
+  @media (min-width: 768px) {
+    .chat-message-received .chat-message-wrapper {
+      padding-left: 64px; } }
 .chat-message-received .chat-message-text {
   background: #F0F0F0;
   border: 1px solid #E5E5E5; }
@@ -5040,6 +5053,30 @@ body {
       fill: #ACACAC; }
     .chat-messagebox .btn-icon:hover svg {
       fill: #666666; }
+
+.chat-modal-wrapper {
+  padding-bottom: 2rem;
+  position: relative; }
+  .chat-modal-wrapper .chat-header-center {
+    padding-left: 0;
+    padding-right: 0;
+    border: none; }
+  .chat-modal-wrapper .chat-header, .chat-modal-wrapper .chat-message-area, .chat-modal-wrapper .chat-footer-btns {
+    padding: 0 1rem; }
+  .chat-modal-wrapper .chat-messagebox {
+    margin: 0 1rem; }
+  @media (min-width: 768px) {
+    .chat-modal-wrapper .chat-header, .chat-modal-wrapper .chat-message-area, .chat-modal-wrapper .chat-footer-btns {
+      padding: 0 2rem; }
+    .chat-modal-wrapper .chat-messagebox {
+      margin: 0 2rem; } }
+  .chat-modal-wrapper .btn-closemodal {
+    right: 2rem;
+    top: 2rem; }
+
+.chat-footer-btns {
+  display: flex;
+  justify-content: space-between; }
 
 /* ==========================================================================
    REGISTRATION
