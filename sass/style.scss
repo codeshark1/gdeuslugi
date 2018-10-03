@@ -478,7 +478,49 @@ body {
 	}
 }
 
+.list-categs-choose {	
+	@media (min-width: 500px) {
+		columns: 2;
+	}
+	.link {
+		@include link-local($link-text);
+	}
+	li {
+		margin-bottom: 8px;
+		padding: 4px 6px;
+	}
+	.selected {
+		background: $gray-dark;
+		border-radius: 4px;
+		.link {
+			color: #fff;
+			border: none;			
+		}
+	}
+}
 
+.categs-choice-title-wrapper {margin-bottom: 1rem;}
+.categs-choice-wrapper {
+	padding-left: 1rem;	
+	.checkbox {margin-right: 0.5rem;}
+}
+.categs-choice-title {
+	@include link-local($base-text);
+	color: $blue-dark;
+	margin-right: .5rem;
+	&:last-child {margin-right: 0;}
+}
+.categs-choice-chosenamount {
+	color: $gray-text;
+	font-size: 0.9rem;
+}
+.categs-choice-checkbox {
+	margin-bottom: 1rem;
+	display: block;
+}
+.categs-choice-subwrapper {margin-bottom: 1rem;
+	&:last-child {margin-bottom: 0;}
+}
 /* ==========================================================================
    NAVIGATION
    ========================================================================== */

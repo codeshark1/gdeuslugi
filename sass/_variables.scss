@@ -66,8 +66,7 @@ $blue-bright: #1B57CD;
 
 @mixin link-local($color) {
     color: $color; 
-    border-bottom: 1px dashed rgba($color,.5);
-    padding-bottom: 2px;
+    border-bottom: 1px dashed rgba($color,.5);    
     cursor: pointer;
     &:hover {border-bottom: 1px solid rgba($color,.5); text-decoration: none;}
 }

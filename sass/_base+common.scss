@@ -325,8 +325,14 @@ fieldset {
   margin: 0 0 16px 0;
   @media (min-width: $screen-sm-min) {margin-bottom: 24px;}
 }
+.input-group {
+  input, select {margin-bottom: 0;}
+  &:last-child {margin-bottom: 0;}
+}
 
-
+.input-inline {width: auto; margin-right: 1rem !important;
+  &:last-child {margin-right: 0 !important;}
+}
 .input-short {width: 96px !important;}
 
 .row-form textarea {margin-bottom: 0;}
