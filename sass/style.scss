@@ -2742,17 +2742,21 @@ body {
 	padding-bottom: 32px;
 }
 
+.chat-date, .chat-message-time {
+	color: $gray-text;
+}
 .chat-date {
 	text-align: center;
-	color: $gray-text;
 	margin: 32px 0;
 }
+.chat-message-time {font-size: 14px; margin-bottom: 4px;}
 
 .chat-message {	
 	margin-bottom: 24px;
 }
 .chat-message-wrapper {position: relative;}
 
+.chat-message-time {font-size: 14px;}
 .chat-message-text {
 	padding: 16px 24px;
 	display: inline-block;
@@ -2779,6 +2783,7 @@ body {
 }
 .chat-message-sent {
 	overflow: hidden;
+	.chat-message-time {text-align: right;}
 	.chat-message-text {
 		background: #C7E5E2;
 	}

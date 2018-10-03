@@ -4956,16 +4956,25 @@ body {
 .chat-message-area {
   padding-bottom: 32px; }
 
+.chat-date, .chat-message-time {
+  color: #ACACAC; }
+
 .chat-date {
   text-align: center;
-  color: #ACACAC;
   margin: 32px 0; }
+
+.chat-message-time {
+  font-size: 14px;
+  margin-bottom: 4px; }
 
 .chat-message {
   margin-bottom: 24px; }
 
 .chat-message-wrapper {
   position: relative; }
+
+.chat-message-time {
+  font-size: 14px; }
 
 .chat-message-text {
   padding: 16px 24px;
@@ -4991,6 +5000,8 @@ body {
 
 .chat-message-sent {
   overflow: hidden; }
+  .chat-message-sent .chat-message-time {
+    text-align: right; }
   .chat-message-sent .chat-message-text {
     background: #C7E5E2; }
   .chat-message-sent .chat-message-text, .chat-message-sent .chat-message-photo {
