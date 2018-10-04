@@ -46,12 +46,6 @@
                     <label for="inp-offer-title" class="lbl lbl-top">Название</label>
                     <input type="text" id="inp-offer-title" class="inp-text-stand">
 
-                    <label for="inp-offer-categ" class="lbl lbl-top">Выберите категорию:</label>
-                    <select id="inp-offer-categ" class="inp-text-stand">
-                        <option>Выберите вариант</option>
-                        <option>Ремонт квартир под ключ</option>
-                    </select>
-
                     <label for="inp-offer-descr-1" class="lbl lbl-top">Краткое описание</label>
                     <textarea type="text" id="inp-offer-descr-1"  class="inp-text-stand" placeholder="Опишите что нужно сделать в 2 словах"></textarea>
                     
@@ -59,13 +53,6 @@
                     <select id="inp-offer-town" class="inp-text-stand">
                         <option value="spb">Санкт - Петербург</option>
                     </select>
-
-                    <div class="inp-lbl-sel-inline inp-text-stand">
-                        <label class="lbl-before" for="measure-order">За</label>
-                        <select name="measure-order" id="measure-order">
-                            <option value="meter">Погонный метр</option>
-                        </select>
-                    </div><!-- /.inp-lbl-sel-inline -->                                        
 
                     <div class="input-group">
                         <label class="lbl-before" for="price-start">От</label>
@@ -75,15 +62,82 @@
                         <input type="text" class="input-short" value="111 000" id="price-end">
                         <span class="lbl-after">руб.</span>                                          
                     </div>
+
+
+                    <div class="inp-lbl-sel-inline inp-text-stand">
+                        <label class="lbl-before" for="measure-order">За</label>
+                        <select name="measure-order" id="measure-order">
+                            <option value="meter">Погонный метр</option>
+                        </select>
+                    </div><!-- /.inp-lbl-sel-inline -->                                                            
+
+                    <button type="button" class="btn btn-second">Подробно описать заказ</button>
+                    <button type="submit" class="btn btn-stroked">Добавить заказ</button>
                 </div><!-- /.form-offer-wrapper -->
                 
                 <div class="form-offer-wrapper">
+                    <div class="form-offer-search-wrapper">
+                        <h2 class="heading heading-form-offer">Найти категорию заказа</h2>
+                        <label for="inp-offer-search" class="lbl lbl-top">Услуга/мастер</label>
+                        <input type="search" class="inp-text-stand" id="inp-offer-search" placeholder="Начните вводить название...">
+                        <p class="heading heading-form-offer heading-line"><span>или указать вручную</span></p>
+
+                        <label for="inp-offer-categ" class="lbl lbl-top">Выберите категорию:</label>
+                        <select id="inp-offer-categ" class="inp-text-stand">
+                            <option>Выберите вариант</option>
+                            <option>Ремонт квартир под ключ</option>
+                        </select>
+    
+                        <h2 class="heading">Выбрать оказываемые услуги</h2>
+    
+                        <label>
+                            <span class="lbl lbl-top">Категория услуги</span>
+                            <select>
+                                <option>Ремонт и строительство</option>
+                            </select>
+                        </label>
+        
+                        <label>
+                            <span class="lbl lbl-top">Уточните услугу</span>
+                            <select>
+                                <option>Ремонт и строительство</option>
+                            </select>
+                        </label>                
+        
+                        <div>
+                            <h3 class="subheading">Выбор услуг</h3>
+                            
+                            <ul class="list-categs-choose">
+                                <li><a class="link" href="#">Отделка стен</a></li>
+                                <li><a class="link" href="#">Монтаж потолков</a></li>
+                                <li><a class="link" href="#">Устройство потолков</a></li>
+                                <li><a class="link" href="#">Отделка балконов, лоджии и эркеров</a></li>
+                                <li><a class="link" href="#">Отделка мансард и террас</a></li>
+                                <li><a class="link" href="#">Отделка окон</a></li>
+                                <li><a class="link" href="#">Отдепкз дверей</a></li>
+                                <li><a class="link" href="#">Отделка квашир, коттеджей, домов и других помещений</a></li>
+                                <li><a class="link" href="#">Отделка балконов, лоджии и эркеров</a></li>
+                                <li><a class="link" href="#">Отделка мансард и террас</a></li>
+                                <li><a class="link" href="#">Отделка окон</a></li>
+                                <li><a class="link" href="#">Отделка стен</a></li>
+                                <li><a class="link" href="#">Монтаж потолков</a></li>
+                                <li><a class="link" href="#">Устройство потолков</a></li>
+                                <li><a class="link" href="#">Отделка балконов, лоджии и эркеров</a></li>
+                                <li><a class="link" href="#">Отделка мансард и террас</a></li>
+                                <li><a class="link" href="#">Отделка окон</a></li>
+                                <li><a class="link" href="#">Отдепкз дверей</a></li>
+                                <li><a class="link" href="#">Отделка квашир, коттеджей, домов и других помещений</a></li>
+                                <li><a class="link" href="#">Отделка балконов, лоджии и эркеров</a></li>
+                            </ul>
+                        </div>                    
+                    </div><!-- /.form-offer-search-wrapper -->
+
                     <h2 class="heading">Дополнительная информация</h2>
 
                     <label for="inp-offer-descr-2" class="lbl lbl-top">Подробное описание</label>
                     <textarea type="text" id="inp-offer-descr-2" class="inp-text-stand" placeholder="Напишите подробное описание задачи"></textarea>
     
-                    <label for="inp-offer-details" class="lbl lbl-top">Детали заказа</label>
+                    <label for="inp-offer-details" class="lbl lbl-top">Указать особые требования (курсивом, при нажатии выводится окно ниже)</label>
                     <textarea type="text" id="inp-offer-details" class="inp-text-stand" placeholder="Уточните детали заказа"></textarea>
                     
                     <div class="inp-date-wrapper">
@@ -109,9 +163,6 @@
                     <select class="inp-text-stand" id="inp-offer-metro">
                         <option value="">Выберите метро</option>
                     </select>
-                    
-<!--                <label for="inp-offer-attach" class="lbl-icon lbl-photo">прикрепить фото</label>
-                    <input type="file" name="pic" accept="image/*" id="inp-offer-attach" class="inp-offer-file"> -->  
     
                     <p class="lbl lbl-top">Оплата</p>
                     <div class="input-group">

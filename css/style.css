@@ -132,7 +132,7 @@ button {
 .btn-main {
   background: #FAC917;
   font-weight: 500;
-  color: #585858 !important;
+  color: #2E3047 !important;
   box-shadow: 0 0 5px 0 rgba(250, 201, 23, 0.75), inset 0 0 10px 0 rgba(238, 191, 22, 0.75); }
   .btn-main:hover {
     background: #fbcf30;
@@ -361,6 +361,7 @@ input[type="url"],
 input[type="tel"],
 input[type="number"],
 input[type="date"],
+input[type="search"],
 select,
 textarea,
 .input-group,
@@ -375,6 +376,7 @@ fieldset {
     input[type="tel"],
     input[type="number"],
     input[type="date"],
+    input[type="search"],
     select,
     textarea,
     .input-group,
@@ -1089,7 +1091,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     left: 0;
     right: 0;
-    top: 10px;
+    top: 50%;
     position: absolute;
     background: #E5E5E5; }
 
@@ -3662,6 +3664,37 @@ body {
   margin-bottom: 0; }
 .form-offer .input-group:last-child {
   margin-bottom: 0; }
+.form-offer .btn {
+  padding: .85rem 1rem; }
+  @media (max-width: 767px) {
+    .form-offer .btn {
+      width: 100%; }
+      .form-offer .btn.btn-second {
+        margin-bottom: 1.5rem; } }
+@media (min-width: 768px) {
+  .form-offer .btn-second {
+    margin-right: 2rem; } }
+.form-offer .btn-main {
+  width: 100%; }
+  @media (min-width: 768px) {
+    .form-offer .btn-main {
+      width: 435px; } }
+.form-offer .form-offer-search-wrapper {
+  border: 1px solid #ACACAC;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem; }
+.form-offer .heading-line {
+  font-size: 1.3rem; }
+  .form-offer .heading-line:before, .form-offer .heading-line:after {
+    background: #ACACAC; }
+  .form-offer .heading-line span {
+    background: #E5E5E5; }
+
+.heading-form-offer {
+  margin: 0 0 2rem 0;
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-align: center; }
 
 .inp-offer-file {
   width: 0.1px;

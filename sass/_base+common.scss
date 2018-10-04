@@ -88,7 +88,6 @@ button {cursor: pointer;}
   border-radius: 3px;
   padding: 14px 16px;
   color: $green;
-
   svg {margin-right: 4px;
     &:last-child {margin-right: 0;}
   }
@@ -101,11 +100,10 @@ button {cursor: pointer;}
   $btn-main-bg: $action;
   background: $btn-main-bg;
   font-weight: 500;
-  color: #585858 !important;
+  color: $blue-dark !important;
   box-shadow: 
     0 0 5px 0 rgba($btn-main-bg, .75),
-    inset 0 0 10px 0 rgba(rgb(238, 191, 22), .75)
-  ;
+    inset 0 0 10px 0 rgba(rgb(238, 191, 22), .75);
   &:hover {
     background: lighten($btn-main-bg, 5%);
     box-shadow: 0 0 10px 0 $btn-main-bg;
@@ -317,6 +315,7 @@ input[type="url"],
 input[type="tel"], 
 input[type="number"], 
 input[type="date"], 
+input[type="search"], 
 select,
 textarea, 
 .input-group,
@@ -999,7 +998,7 @@ h1, h2, h3, h4, h5, h6 {font-weight: 500; color: $heading-text}
     height: 1px;
     width: 100%;
     left: 0;right: 0;
-    top: 10px;
+    top: 50%;
     position: absolute;
     background: $gray-border;
   }
