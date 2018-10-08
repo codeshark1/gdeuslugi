@@ -4560,7 +4560,7 @@ body {
   margin-right: 16px; }
 @media (min-width: 768px) {
   .card-dash-check-cont--right {
-    max-width: 300px;
+    max-width: 360px;
     flex-shrink: 0;
     text-align: right; } }
 

@@ -162,7 +162,7 @@ jQuery(document).ready(function($){
 
 
     /* COMPARE LINK VISUALS */
-    $('.link-compare').click(function(e){
+/*     $('.link-compare').click(function(e){
         e.preventDefault();
     });
     tippy('.link-compare', {
@@ -174,14 +174,11 @@ jQuery(document).ready(function($){
             }
             setTimeout(delayHide, 2000);
         }
-    });  
+    });   */
     
     
     $('.card-dash-master-orders-note').hide();
-    $('.card-dash-master-orders').hide();
-
-
-        
+    $('.card-dash-master-orders').hide();        
     $('.card-dash-check-tablink').click(function(){
         var tab_id = $(this).attr('data-tab');
 
